@@ -1,0 +1,142 @@
+﻿@model WebsiteSUPPORTASU.Models.ParticipantModel
+
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+@ViewBag.ERROR
+<br /><br /><br />
+    <div class="grid_5 alpha reg">
+@using (Html.BeginForm())
+{
+        <h4 class="label">
+            @Html.LabelFor(model => model.FullName)*
+        </h4>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FullName)
+            @Html.ValidationMessageFor(model => model.FullName)
+        </div>
+
+		 <h4 class="label">
+            @Html.LabelFor(model => model.Email)*
+        </h4>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+		
+        <h4 class="label">
+            @Html.LabelFor(model => model.Mobile)*
+        </h4>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Mobile)
+            @Html.ValidationMessageFor(model => model.Mobile)
+        </div>
+
+        <h4 class="label">
+            @Html.LabelFor(model => model.HomePhone)
+        </h4>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhone)
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+		
+        <h4 class="label">
+            @Html.LabelFor(model => model.College)*
+        </h4>
+        <div class="editor-field">
+		<select class="input" name="College">
+					<option disabled="disabled">Select College</option>
+                    
+                    @if (@ViewBag.Colleges.Count != 0)
+                    {
+                        foreach (var College in @ViewBag.Colleges)
+                        {
+                        <option value="@College.ID">@College.Name</option>
+                        }
+                    }
+				</select>
+        </div>
+        
+        <h4 class="label">
+            @Html.LabelFor(model => model.University)*
+        </h4>
+        <div class="editor-field">
+				<select class="input" name="University">
+					<option disabled="disabled">Select University</option>
+                    
+                    @if (@ViewBag.Universities.Count != 0)
+                    {
+                        foreach (var University in @ViewBag.Universities)
+                        {
+                        <option value="@University.ID">@University.Name</option>
+                        }
+                    }
+				</select>
+        </div>
+                    if (@ViewBag.Workshops != null)
+                    {
+		<h4 class="label">
+            @Html.LabelFor(model => model.Workshop)
+        </h4>
+        <div class="editor-field">
+				<select class="input" name="Workshop">
+					<option disabled="disabled">Select Workshop</option>
+                    
+                    @if (@ViewBag.Workshops.Count != 0)
+                    {
+                        foreach (var Workshop in @ViewBag.Workshops)
+                        {
+                        <option value="@Workshop.ID">@Workshop.Name</option>
+                        }
+                    }
+				</select>
+        </div>
+                    }
+                    if (@ViewBag.Interviews != null)
+                    {
+        <h4 class="label">
+            @Html.LabelFor(model => model.Interview)
+        </h4>
+        <div class="editor-field">
+            <select class="input" name="Interview">
+					<option disabled="disabled">"Select Appointment"</option>
+                    
+                    @if (@ViewBag.Interviews.Count != 0)
+                    {
+                        foreach (var Interview in @ViewBag.Interviews)
+                        {
+                        <option value="@Interview.ID">@Interview.Name</option>
+                        }
+                    }
+				</select>
+        </div>
+                    }
+    if (@ViewBag.Members != null)
+    {
+    <h4 class="label">
+            @Html.LabelFor(model => model.Member)
+        </h4>
+        <div class="editor-field">
+		<select class="input" name="Member">
+					<option disabled="disabled">Select Member</option>
+                    
+                    @if (@ViewBag.Members.Count != 0)
+                    {
+                        foreach (var Member in @ViewBag.Members)
+                        {
+                        <option value="@Member.ID">@Member.ID</option>
+                        }
+                    }
+				</select>
+        </div>
+    }
+        <h6 style="margin-left:15px">*Please note that all fields marked with * are required.</h6>
+		<h6 style="margin-left:15px">*Please note that your barcode will be sent to this email.</h6>
+ 
+		<input class="submit" type="submit" name="submit" value="Done" />
+}
+
+	</div>
+    <div class="grid_7 omega">
+		<img src="@Url.Content("~/Content/images/reg_closed.png")"/>
+     </div>

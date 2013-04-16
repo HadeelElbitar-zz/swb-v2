@@ -1,0 +1,43 @@
+﻿<script type="text/javascript">
+    function GetNewSponsor(id) {
+    
+        var url = '@Url.Action("GetPartialView", "Sponsors", null, Request.Url.Scheme)/' + id;
+        $.ajax({ url: url }).done(function (data) {
+            $("#left-menu").html(data);
+        });
+        url = '@Url.Action("GetEventName", "Events", null, Request.Url.Scheme)/' + id;
+        $.ajax({ url: url }).done(function (data) {
+            event_logo.src = 'Content/images/events/'+ data + '/' + data + '.png';
+        });
+    }
+    $(function () {
+        GetNewSponsor(@ViewBag.EventsList[0].ID);
+    });
+</script>
+@{
+    ViewBag.Title = "Sponsors | Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="grid_12" id="content">
+    @if (@ViewBag.EventsList.Count != 0)
+    {
+          
+        <div class="grid_2 alpha">
+            <img id="event_logo" src="" />
+            @foreach (var Event in @ViewBag.EventsList)
+            {
+                <div style="margin-bottom:9px" class="grid_2 alpha" id="button">
+                    <a onclick="GetNewSponsor(@Event.ID)" href="#">
+                        <img width="5px" id="small_logo" src="@Url.Content("~/Content/images/events/" + @Event.Name + "/" + @Event.Name + ".png")"/>
+                        <p  id="buttontext">@Event.Name</p>
+                    </a>
+                </div>
+            }
+        </div>
+
+    }
+    
+        <div id="left-menu">
+
+        </div>
+</div>

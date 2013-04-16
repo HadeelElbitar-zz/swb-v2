@@ -1,0 +1,45 @@
+﻿<script type="text/javascript">
+    function GetNewGallery(id) {
+        var url = '@Url.Action("GetPartialView", "Gallery", null, Request.Url.Scheme)/' + id;
+        $.ajax({ url: url }).done(function (data) {
+            $("#left-menu").html(data);
+        });
+        url = '@Url.Action("GetEventName", "Events", null, Request.Url.Scheme)/' + id;
+        $.ajax({ url: url }).done(function (data) {
+            event_logo.src = 'Content/images/events/'+ data + '/' + data + '.png';
+        });
+    }
+    $(function () {
+        GetNewGallery(@ViewBag.EventsList[0].ID);
+    });
+</script>
+@{
+    ViewBag.Title = "Gallery | Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<div class="grid_12" id="content">
+    @if (@ViewBag.EventsList.Count != 0)
+    {
+           
+        <div class="grid_2 alpha">
+            <img id="event_logo" src="" />
+            @foreach (var Event in @ViewBag.EventsList)
+            {
+                <div class="grid_2 alpha" id="button">
+                    <a onclick="GetNewGallery(@Event.ID)" href="#">
+                        <img id="small_logo" src="@Url.Content("~/Content/images/events/" + @Event.Name + "/" + @Event.Name + ".png")"/>
+                        <p id="buttontext">
+                            @Event.Name
+                        </p>
+                    </a>
+                </div>
+            }
+        </div>
+    }
+    
+    
+        <div id="left-menu">
+
+        </div>
+
+</div>

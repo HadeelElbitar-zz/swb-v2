@@ -1,0 +1,449 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BD3A82E9-89B3-4338-B762-88BF67476AAA}</ProjectGuid>
+    <ProjectTypeGuids>{E53F8FEA-EAE0-44A6-8774-FFD645390401};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>WebsiteSUPPORTASU</RootNamespace>
+    <AssemblyName>WebsiteSUPPORTASU</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.4.1.10331.0\lib\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Web.Mvc, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.WebPages.Deployment, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AboutUsController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ContactUSController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
+    <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Models\CollegeModel.cs" />
+    <Compile Include="Models\CommitteeModel.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\RegistrationController.cs" />
+    <Compile Include="Controllers\SupportiansController.cs" />
+    <Compile Include="Controllers\SponsorsController.cs" />
+    <Compile Include="Models\HRDroopOff.cs" />
+    <Compile Include="Models\PositionModel.cs" />
+    <Compile Include="Models\Tages.cs" />
+    <Compile Include="Models\UniversityModel.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\AboutUs.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\ContactUS.cs" />
+    <Compile Include="Models\EventModel.cs" />
+    <Compile Include="Models\GalleryModel.cs" />
+    <Compile Include="Models\MembersModel.cs" />
+    <Compile Include="Models\ParticipantModel.cs" />
+    <Compile Include="Views\SponsorModel.cs" />
+    <Compile Include="Models\StaticPagesModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\960_12_col.css" />
+    <Content Include="Content\css\960_16_col.css" />
+    <Content Include="Content\css\mystyle.css" />
+    <Content Include="Content\css\normalize.css" />
+    <Content Include="Content\images\abo gbal.png" />
+    <Content Include="Content\images\banner_03.png" />
+    <Content Include="Content\images\banner_06.png" />
+    <Content Include="Content\images\banner_09.png" />
+    <Content Include="Content\images\banner_bg_02.png" />
+    <Content Include="Content\images\bg.png" />
+    <Content Include="Content\images\bg_L_menu.png" />
+    <Content Include="Content\images\buttons_03.png" />
+    <Content Include="Content\images\buttons_04.png" />
+    <Content Include="Content\images\buttons_05.png" />
+    <Content Include="Content\images\buttons_06.png" />
+    <Content Include="Content\images\buttons_07.png" />
+    <Content Include="Content\images\buttons_hover_03.png" />
+    <Content Include="Content\images\buttons_hover_04.png" />
+    <Content Include="Content\images\buttons_hover_05.png" />
+    <Content Include="Content\images\buttons_hover_06.png" />
+    <Content Include="Content\images\buttons_hover_07.png" />
+    <Content Include="Content\images\cell.png" />
+    <Content Include="Content\images\contact.png" />
+    <Content Include="Content\images\cont_ev.png" />
+    <Content Include="Content\images\events\academy.png" />
+    <Content Include="Content\images\events\BG.png" />
+    <Content Include="Content\images\events\Career Key\Career Key.png" />
+    <Content Include="Content\images\events\Career Key\Career Key_logo.png" />
+    <Content Include="Content\images\events\Career Key\Career Key_Main.png" />
+    <Content Include="Content\images\events\career.png" />
+    <Content Include="Content\images\events\Droop Off\Droop Off.png" />
+    <Content Include="Content\images\events\Droop Off\Droop Off_logo.png" />
+    <Content Include="Content\images\events\Droop Off\Droop Off_Main.png" />
+    <Content Include="Content\images\events\Droop Off\Support Conference Cover_Slice.jpg" />
+    <Content Include="Content\images\events\Kabbar Mo5ak\Kabbar Mo5ak.png" />
+    <Content Include="Content\images\events\Kabbar Mo5ak\Kabbar Mo5ak_logo.png" />
+    <Content Include="Content\images\events\Kabbar Mo5ak\Kabbar Mo5ak_Main.png" />
+    <Content Include="Content\images\events\kbr.png" />
+    <Content Include="Content\images\events\pen.png" />
+    <Content Include="Content\images\events\PenTalk\PenTalk.png" />
+    <Content Include="Content\images\events\PenTalk\PenTalk_logo.png" />
+    <Content Include="Content\images\events\PenTalk\PenTalk_Main.png" />
+    <Content Include="Content\images\events\rec_10.png" />
+    <Content Include="Content\images\events\rec_11.png" />
+    <Content Include="Content\images\events\rec_13.png" />
+    <Content Include="Content\images\events\smart.png" />
+    <Content Include="Content\images\events\SmarTech\SmarTech.png" />
+    <Content Include="Content\images\events\SmarTech\SmarTech_logo.png" />
+    <Content Include="Content\images\events\SmarTech\SmarTech_Main.png" />
+    <Content Include="Content\images\events\suppo.png" />
+    <Content Include="Content\images\events\SUPPOLOGY\SUPPOLOGY.png" />
+    <Content Include="Content\images\events\SUPPOLOGY\SUPPOLOGY_logo.png" />
+    <Content Include="Content\images\events\SUPPOLOGY\SUPPOLOGY_Main.png" />
+    <Content Include="Content\images\events\SUPPORT Academy\SUPPORT Academy.png" />
+    <Content Include="Content\images\events\SUPPORT Academy\SUPPORT Academy_logo.png" />
+    <Content Include="Content\images\events\SUPPORT Academy\SUPPORT Academy_Main.png" />
+    <Content Include="Content\images\events\SUPPORT’11 Sessions\SUPPORT’11 Sessions.png" />
+    <Content Include="Content\images\events\SUPPORT’11 Sessions\SUPPORT’11 Sessions_logo.png" />
+    <Content Include="Content\images\events\SUPPORT’11 Sessions\SUPPORT’11 Sessions_Main.png" />
+    <Content Include="Content\images\events\Technology Day\Technology Day.png" />
+    <Content Include="Content\images\events\Technology Day\Technology Day_logo.png" />
+    <Content Include="Content\images\events\Technology Day\Technology Day_Main.png" />
+    <Content Include="Content\images\events\tech_day.png" />
+    <Content Include="Content\images\events\u-earn.png" />
+    <Content Include="Content\images\events\U-Earn\U-Earn.png" />
+    <Content Include="Content\images\events\U-Earn\U-Earn_logo.png" />
+    <Content Include="Content\images\events\U-Earn\U-Earn_Main.png" />
+    <Content Include="Content\images\event_logos_20.png" />
+    <Content Include="Content\images\event_logos_23.png" />
+    <Content Include="Content\images\event_logos_25.png" />
+    <Content Include="Content\images\event_logos_27.png" />
+    <Content Include="Content\images\event_logos_29.png" />
+    <Content Include="Content\images\event_logos_30.png" />
+    <Content Include="Content\images\event_logos_32.png" />
+    <Content Include="Content\images\event_logos_33.png" />
+    <Content Include="Content\images\Google.png" />
+    <Content Include="Content\images\Google_hover.png" />
+    <Content Include="Content\images\hover_13.png" />
+    <Content Include="Content\images\icon.png" />
+    <Content Include="Content\images\nav_10.png" />
+    <Content Include="Content\images\nav_11.png" />
+    <Content Include="Content\images\nav_12.png" />
+    <Content Include="Content\images\nav_13.png" />
+    <Content Include="Content\images\nav_14.png" />
+    <Content Include="Content\images\nav_15.png" />
+    <Content Include="Content\images\nav_16.png" />
+    <Content Include="Content\images\nav_17.png" />
+    <Content Include="Content\images\nav_hover_10.png" />
+    <Content Include="Content\images\nav_hover_11.png" />
+    <Content Include="Content\images\nav_hover_12.png" />
+    <Content Include="Content\images\nav_hover_13.png" />
+    <Content Include="Content\images\nav_hover_14.png" />
+    <Content Include="Content\images\nav_hover_15.png" />
+    <Content Include="Content\images\nav_hover_16.png" />
+    <Content Include="Content\images\nav_hover_17.png" />
+    <Content Include="Content\images\reg.png" />
+    <Content Include="Content\images\reg_closed.png" />
+    <Content Include="Content\images\reg_ev.png" />
+    <Content Include="Content\images\sep.png" />
+    <Content Include="Content\images\Slider\Support Conference Cover_Slice.jpg" />
+    <Content Include="Content\images\socialBG_03.png" />
+    <Content Include="Content\images\social_03.png" />
+    <Content Include="Content\images\social_04.png" />
+    <Content Include="Content\images\social_05.png" />
+    <Content Include="Content\images\social_behavior_03.png" />
+    <Content Include="Content\images\social_behavior_04.png" />
+    <Content Include="Content\images\social_behavior_05.png" />
+    <Content Include="Content\images\Sponsors\Abo Gabal.png" />
+    <Content Include="Content\images\Sponsors\Ain Shams University Student Union.png" />
+    <Content Include="Content\images\Sponsors\Coca Cola.png" />
+    <Content Include="Content\images\Sponsors\connect 4.png" />
+    <Content Include="Content\images\Sponsors\ITWORX.png" />
+    <Content Include="Content\images\Sponsors\kee.png" />
+    <Content Include="Content\images\Sponsors\LinkDevelopment.png" />
+    <Content Include="Content\images\Sponsors\Microsoft.png" />
+    <Content Include="Content\images\Sponsors\Open Vision.png" />
+    <Content Include="Content\images\Sponsors\PROEYE.png" />
+    <Content Include="Content\images\Sponsors\Quality Zone.png" />
+    <Content Include="Content\images\Sponsors\Rageb.png" />
+    <Content Include="Content\images\Sponsors\rahgeb.png" />
+    <Content Include="Content\images\Sponsors\Sama IT.png" />
+    <Content Include="Content\images\Sponsors\Santeon.png" />
+    <Content Include="Content\images\Sponsors\SilverKey.png" />
+    <Content Include="Content\images\Sponsors\Tech Planet.png" />
+    <Content Include="Content\images\Sponsors\Zedny.png" />
+    <Content Include="Content\images\Sponsors\الإتحاد العربي للصحفين الشبان.png" />
+    <Content Include="Content\images\sub_event_03.png" />
+    <Content Include="Content\images\sub_event_logo_03.png" />
+    <Content Include="Content\images\supportians.png" />
+    <Content Include="Content\images\Supportians\Supportians.png" />
+    <Content Include="Content\images\twitter_03.png" />
+    <Content Include="Content\images\twitt_11.png" />
+    <Content Include="Content\scripts\jquery-1.9.0.min.js" />
+    <Content Include="Content\scripts\jquery.nivo.slider.js" />
+    <Content Include="Content\scripts\jquery.nivo.slider.pack.js" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Content\slider\arrows.png" />
+    <Content Include="Content\slider\bullets.png" />
+    <Content Include="Content\slider\default.css" />
+    <Content Include="Content\slider\loading.gif" />
+    <Content Include="Content\slider\nivo-slider.css" />
+    <Content Include="Content\slider\style.css" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\themes\base\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\themes\base\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\themes\base\jquery.ui.accordion.css" />
+    <Content Include="Content\themes\base\jquery.ui.all.css" />
+    <Content Include="Content\themes\base\jquery.ui.autocomplete.css" />
+    <Content Include="Content\themes\base\jquery.ui.base.css" />
+    <Content Include="Content\themes\base\jquery.ui.button.css" />
+    <Content Include="Content\themes\base\jquery.ui.core.css" />
+    <Content Include="Content\themes\base\jquery.ui.datepicker.css" />
+    <Content Include="Content\themes\base\jquery.ui.dialog.css" />
+    <Content Include="Content\themes\base\jquery.ui.progressbar.css" />
+    <Content Include="Content\themes\base\jquery.ui.resizable.css" />
+    <Content Include="Content\themes\base\jquery.ui.selectable.css" />
+    <Content Include="Content\themes\base\jquery.ui.slider.css" />
+    <Content Include="Content\themes\base\jquery.ui.tabs.css" />
+    <Content Include="Content\themes\base\jquery.ui.theme.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.5.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.5.1.js" />
+    <Content Include="Scripts\jquery-1.5.1.min.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.js" />
+    <Content Include="Scripts\jquery-ui-1.8.11.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\modernizr-1.7.js" />
+    <Content Include="Scripts\modernizr-1.7.min.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Scripts\jquery.unobtrusive-ajax.js" />
+    <Content Include="Scripts\jquery.unobtrusive-ajax.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\WebsiteSUPPORTASUCore\WebsiteSUPPORTASUCore.csproj">
+      <Project>{5A1FECEC-1C9D-4DFA-8803-C3E003D693CC}</Project>
+      <Name>WebsiteSUPPORTASUCore</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\WebsiteSUPPORTASUDomain\WebsiteSUPPORTASUDomain.csproj">
+      <Project>{128B0486-C425-45EA-9940-1755F07689A5}</Project>
+      <Name>WebsiteSUPPORTASUDomain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Events\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Events\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\EditEvent.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\SelectDelete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\SelectEdit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Admin\AddGallery.cshtml" />
+    <Content Include="Views\Admin\EditGallery.cshtml" />
+    <Content Include="Views\Gallery\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Sponsors\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallery\Gallery.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\AboutUs\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Supportians\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\ContactUS\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\Thanks.cshtml" />
+    <Content Include="Views\Events\Description.cshtml" />
+    <Content Include="Views\Admin\ChangePassword.cshtml" />
+    <Content Include="Views\Admin\ChangePasswordSuccess.cshtml" />
+    <Content Include="Views\Admin\LogOn.cshtml" />
+    <Content Include="Views\Admin\Register.cshtml" />
+    <Content Include="Views\Admin\AddStaticPage.cshtml" />
+    <Content Include="Views\Admin\AddEvent.cshtml" />
+    <Content Include="Views\Events\RegistrationClosed.cshtml" />
+    <Content Include="Views\Admin\Admin.cshtml" />
+    <Content Include="Views\Admin\EditStaticPage.cshtml" />
+    <Content Include="Views\Admin\AddSponsor.cshtml" />
+    <Content Include="Views\Admin\EditSponsor.cshtml" />
+    <Content Include="Views\Admin\AddMember.cshtml" />
+    <Content Include="Views\Admin\AddCommittee.cshtml" />
+    <Content Include="Views\Admin\EditCommittee.cshtml" />
+    <Content Include="Views\Admin\AddCollege.cshtml" />
+    <Content Include="Views\Admin\EditCollege.cshtml" />
+    <Content Include="Views\Admin\AddUniversity.cshtml" />
+    <Content Include="Views\Admin\EditUniversity.cshtml" />
+    <Content Include="Views\Admin\AddPosition.cshtml" />
+    <Content Include="Views\Admin\EditPosition.cshtml" />
+    <Content Include="Views\Admin\SelectEditMember.cshtml" />
+    <Content Include="Views\Admin\SelectDeleteMember.cshtml" />
+    <Content Include="Views\Admin\EditMember.cshtml" />
+    <Content Include="Views\Admin\EventTagUniversity.cshtml" />
+    <Content Include="Views\Shared\_Admin_log_on.cshtml" />
+    <Content Include="Views\Registration\RegistrationClosed.cshtml" />
+    <Content Include="Views\Admin\EventTagSponsor.cshtml" />
+    <Content Include="Views\Registration\Registration.cshtml" />
+    <Content Include="Views\Events\Registration.cshtml" />
+    <Content Include="Views\Registration\FillForm.cshtml" />
+    <Content Include="Views\Registration\UserLogOn.cshtml" />
+    <Content Include="Views\Admin\DroopOff.cshtml" />
+    <Content Include="Views\Admin\DroopOffNotSeen.cshtml" />
+    <Content Include="Views\Admin\DroopOffSeen.cshtml" />
+    <Content Include="Views\Shared\_AdminHR.cshtml" />
+    <Content Include="Views\Admin\AdminHR.cshtml" />
+    <Content Include="Views\Admin\DroopOffSelect.cshtml" />
+    <Content Include="Views\Registration\SendEmail.cshtml" />
+    <Content Include="Views\Registration\AddBlock.cshtml" />
+    <Content Include="Views\Events\Live Streaming.cshtml" />
+    <Content Include="Views\Events\Map.cshtml" />
+    <None Include="Views\Sponsors\Sponsors.cshtml" />
+    <Content Include="Views\Shared\_Admin.cshtml" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>55312</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>
