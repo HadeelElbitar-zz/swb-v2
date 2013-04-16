@@ -1,0 +1,90 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@ViewBag.Title</title>
+<link href="@Url.Content("~/Content/css/normalize.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_12_col.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_16_col.css")" type="text/css" rel="stylesheet" />
+<link href="@Url.Content("~/Content/css/mystyle.css")" rel="stylesheet" type="text/css" />
+<link rel="icon" href="@Url.Content("~/Content/images/icon.png")" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+<h5 style="margin:20px;">
+<a href="@Url.Action("EventTagUniversity", "Admin")">Event Tag University</a> | 
+<a href="@Url.Action("EventTagSponsor", "Admin")">Event Tag Sponsor</a> | 
+<a></a> | 
+<a></a> | 
+<a></a>
+</h5>
+
+
+    <div class=" push_5 grid_5">
+    <h6>
+        <li><a>Member</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddMember", "Admin")" class="icon list">AddMember</a></li>
+                <li><a href="@Url.Action("EditMember", "Admin")" class="icon list">EdiMembert</a></li>
+                <li><a href="@Url.Action("DeleteMember", "Admin")" class="icon list">DeleteMember</a></li>
+            </ul>
+        </li>
+         <li><a>Gallery</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddGallery", "Admin")" class="icon list">AddGallery</a></li>
+                <li><a href="@Url.Action("EditGallery", "Admin")" class="icon list">EditGallery</a></li>
+                <li><a href="@Url.Action("DeleteGallery", "Admin")" class="icon list">DeleteGallery</a></li>
+            </ul>
+        </li>
+         <li><a>Sponsor</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddSponsor", "Admin")" class="icon list">AddSponsor</a></li>
+                <li><a href="@Url.Action("EditSponsor", "Admin")" class="icon list">EditSponsor</a></li>
+                <li><a href="@Url.Action("DeleteSponsor", "Admin")" class="icon list">DeleteSponsor</a></li>
+            </ul>
+        </li>
+         <li><a>StaticPage</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddStaticPage", "Admin")" class="icon list">AddStaticPage</a></li>
+                <li><a href="@Url.Action("EditStaticPage", "Admin")" class="icon list">EditStaticPage</a></li>
+                <li><a href="@Url.Action("DeleteStaticPage", "Admin")" class="icon list">DeleteStaticPage</a></li>
+            </ul>
+        </li>
+         <li><a>Event</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddEvent", "Admin")" class="icon list">AddEvent</a></li>
+                <li><a href="@Url.Action("EditEvent", "Admin")" class="icon list">EditEvent</a></li>
+                <li><a href="@Url.Action("DeleteEvent", "Admin")" class="icon list">DeleteEvent</a></li>
+            </ul>
+        </li>
+        <li><a>Extra Data</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("AddCommittee", "Admin")" class="icon list">AddCommittee</a></li>
+                <li><a href="@Url.Action("EditCommittee", "Admin")" class="icon list">EditCommittee</a></li>
+                <li><a href="@Url.Action("DeleteCommittee", "Admin")" class="icon list">DeleteCommittee</a></li>
+                
+                <li><a href="@Url.Action("AddCollege", "Admin")" class="icon list">AddCollege</a></li>
+                <li><a href="@Url.Action("EditCollege", "Admin")" class="icon list">EditCollege</a></li>
+                <li><a href="@Url.Action("DeleteCollege", "Admin")" class="icon list">DeleteCollege</a></li>
+                
+                <li><a href="@Url.Action("AddUniversity", "Admin")" class="icon list">AddUniversity</a></li>
+                <li><a href="@Url.Action("EditUniversity", "Admin")" class="icon list">EditUniversity</a></li>
+                <li><a href="@Url.Action("DeleteUniversity", "Admin")" class="icon list">DeleteUniversity</a></li>
+                
+                <li><a href="@Url.Action("AddPosition", "Admin")" class="icon list">AddPosition</a></li>
+                <li><a href="@Url.Action("EditPosition", "Admin")" class="icon list">EditPosition</a></li>
+                <li><a href="@Url.Action("DeletePosition", "Admin")" class="icon list">DeletePosition</a></li>
+            
+            </ul>
+        </li>
+        </h6>
+    </div>
+    
+    <br /><br /><br />
+    <div class="container_16" id="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

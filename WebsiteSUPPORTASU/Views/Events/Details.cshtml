@@ -1,0 +1,36 @@
+﻿@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<script type="text/javascript">
+    function GetNewPartialView(id, event_id) {
+        var url = '@Url.Action("GetPartialView", "Events", null, Request.Url.Scheme)/'+ id+event_id;
+        $.ajax({ url: url }).done(function (data) {
+            $("#left-menu").html(data);
+        });
+    }
+    $(function () {
+        GetNewPartialView(1, @ViewBag.Event.ID);
+    });
+</script>
+
+<div class="grid_12" id="content">
+    <div class="grid_2 alpha " id="">
+      <img id='event_logo' src="@Url.Content("~/Content/images/events/"+@ViewBag.Event.Name+"/"+@ViewBag.Event.Name+".png")" />
+    	<div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(1,@ViewBag.Event.ID)"><p id="buttontext">Description</p></a></div>
+		<div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(2,@ViewBag.Event.ID)"><p id="buttontext">Sponsors</p></a></div>
+    	<div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(3,@ViewBag.Event.ID)"><p id="buttontext">Gallery</p></a></div>
+    	<div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(4,@ViewBag.Event.ID)"><p id="buttontext">Registration</p></a></div>
+        @if (@ViewBag.Event.ID == 11)
+        {
+            <div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(5,@ViewBag.Event.ID)"><p id="buttontext">Live Streaming</p></a></div>
+            <div class="grid_2 alpha" id="button"><a herf="#" onclick="GetNewPartialView(6,@ViewBag.Event.ID)"><p id="buttontext">Map for directions</p></a></div>
+        }
+    </div>
+
+    <div id= "left-menu">
+    
+    </div>
+    
+</div>

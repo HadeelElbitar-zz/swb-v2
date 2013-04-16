@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@ViewBag.Title</title>
+<link href="@Url.Content("~/Content/css/normalize.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_12_col.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_16_col.css")" type="text/css" rel="stylesheet" />
+<link href="@Url.Content("~/Content/css/mystyle.css")" rel="stylesheet" type="text/css" />
+<link rel="icon" href="@Url.Content("~/Content/images/icon.png")" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class=" push_5 grid_5">
+    <h6>
+        <li><a>Droop Off</a>
+            <ul class="subnav">
+                <li><a href="@Url.Action("DroopOffSeen", "Admin")" class="icon list">Droop Off Seen Participants</a></li>
+                <li><a href="@Url.Action("DroopOffNotSeen", "Admin")" class="icon list">Droop Off Not Seen Participants</a></li>
+            </ul>
+        </li>
+        </h6>
+    </div>
+    
+    <br /><br /><br />
+    <div class="container_16" id="content">
+        @RenderBody()
+    </div>
+</body>
+</html>

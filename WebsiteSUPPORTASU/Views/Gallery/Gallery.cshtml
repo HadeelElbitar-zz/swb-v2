@@ -1,0 +1,41 @@
+﻿<div class="grid_10 alpha omega" id="left_menu">
+    <h2 id="evnt_Name">@ViewBag.CurrentEventName Gallery</h2>
+    @if (@ViewBag.CurrentEventVideos.Count != 0)
+    {
+        <div class="mainspon">
+            <h3 class="grid_10 alpha mainspon_p">
+                <img class="icn" src="@Url.Content("~/Content/images/cell.png")"/>
+                Videos
+                <img class="lin" src="@Url.Content("~/Content/images/sep.png")"/>
+            </h3>
+        </div>
+                                 foreach (var Video in @ViewBag.CurrentEventVideos)
+                                 {
+        <div class="grid_3" id="video_style">
+            <iframe  height="200" src="@Video.Location" frameborder="0" allowfullscreen></iframe>
+        </div>
+                                 }
+    }
+    @if (@ViewBag.CurrentEventImages.Count != 0)
+    {
+        <div class="grid_10 alpha mainspon">
+            <h3 class="grid_10 alpha mainspon_p">
+                <img class="icn" src="@Url.Content("~/Content/images/cell.png")"/>
+                Photos
+                <img class="lin" src="@Url.Content("~/Content/images/sep.png")"/>
+            </h3>
+        </div>
+                                 foreach (var Photo in @ViewBag.CurrentEventImages)
+                                 {
+        <div class="grid_3 alpha">
+            <img src="@Url.Content("~/Content/images/" + @ViewBag.CurrentEventName + "/" + @Photo.Name + ".png")" id="album_style"/>
+        </div>
+                                 }
+    }
+    
+    @if (@ViewBag.CurrentEventImages.Count == 0 && @ViewBag.CurrentEventVideos.Count == 0)
+    {
+        <br /><br /><br /><br /><br />
+          <h3 style="margin-left:150px"> There is no Gallery for this Event :( :(</h3>
+    }
+</div>

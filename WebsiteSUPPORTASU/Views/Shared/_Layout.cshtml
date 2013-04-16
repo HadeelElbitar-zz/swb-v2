@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>@ViewBag.Title</title>
+<link href="@Url.Content("~/Content/css/normalize.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_12_col.css")" type="text/css" rel="stylesheet" />
+<link  href="@Url.Content("~/Content/css/960_16_col.css")" type="text/css" rel="stylesheet" />
+<link href="@Url.Content("~/Content/css/mystyle.css")" rel="stylesheet" type="text/css" />
+<link rel="icon" href="@Url.Content("~/Content/images/icon.png")" />
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+
+<body>
+  <div class="headerwarpper" >
+    <div class="container_16">
+        
+      <div class="grid_6 sName">
+            <img src="@Url.Content("~/Content/images/banner_03.png")" />
+      </div><!--end logo1-->
+    
+
+      <div class=" push_6 grid_6 omega sName1">
+           <div class="push_1" id="social">
+               <a href="http://www.fb.me/SUPPORT.FCIS"><img  src="@Url.Content("~/Content/images/social_03.png")"  /> 
+             <span><img src="@Url.Content("~/Content/images/social_behavior_03.png")"  /></span></a>
+           </div>
+               
+            <div class="push_1 socialpos" id="social"> 
+            <a href="http://www.twitter.com/SupportASU"><img  src="@Url.Content("~/Content/images/social_04.png")"  /> 
+                <span><img src="@Url.Content("~/Content/images/social_behavior_04.png")"  /></span></a>
+            </div>
+                
+            <div class="push_1 socialpos" id="social">
+            <a href="http://www.youtube.com/user/SUPPORTOrganization"><img  src="@Url.Content("~/Content/images/social_05.png")"  /> 
+                <span><img src="@Url.Content("~/Content/images/social_behavior_05.png")"  /></span></a>
+            </div>
+            
+            <div class="push_1 socialpos" id="social">
+            <a href="https://plus.google.com/u/0/107186631445377259065"><img  src="@Url.Content("~/Content/images/google.png")"  /> 
+                <span><img src="@Url.Content("~/Content/images/google_hover.png")"  /></span></a>
+            </div>
+      </div> <!--end social-->
+    </div><!--end contanier-->
+  </div> <!--end banner-->  
+    
+<div class="container_12">
+    <div class="grid_12" id="nav">
+            <div id="but"><a href="@Url.Action("Index", "Home")"> <img src="@Url.Content("~/Content/images/nav_10.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "Events")"> <img src="@Url.Content("~/Content/images/nav_11.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "Supportians")"> <img src="@Url.Content("~/Content/images/nav_12.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "Sponsors")"> <img src="@Url.Content("~/Content/images/nav_13.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "Gallery")"> <img src="@Url.Content("~/Content/images/nav_14.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "Registration")"> <img src="@Url.Content("~/Content/images/nav_15.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "AboutUs")"> <img src="@Url.Content("~/Content/images/nav_16.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+            <div id="but"><a href="@Url.Action("Index", "ContactUs")"> <img src="@Url.Content("~/Content/images/nav_17.png")"/><span><img src="@Url.Content("~/Content/images/nav_hover_15.png")"/></span></a></div>
+    </div>  <!--end buttons-->
+    <br /><br /><br /><br /><br /><br />
+    @RenderBody()
+</div>
+
+    
+<footer>
+    <div class="container_16" id="footer">
+        <div class="push_9 grid_6 ">
+          <p id="footer_p">Copyrights is reserved | SUPPORT &copy;</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

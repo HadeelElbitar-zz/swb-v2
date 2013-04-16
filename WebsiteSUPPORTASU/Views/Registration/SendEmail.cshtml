@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "SendEmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>SendEmail</h2>
+
+@Html.ValidationSummary()
+<form action="@Url.Action("SendEmail", "Registration")" method="post">
+
+<input name="Barcode" type="text" />
+<button>ReSend</button>
+</form>

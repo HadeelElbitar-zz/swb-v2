@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "Select";
+    Layout = "~/Views/Shared/_AdminHR.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    if (@ViewBag.Participants != null)
+    {
+    <select class="input" name="Participant">
+@foreach (var Participant in @ViewBag.Participants)
+{
+    <option value="@Participant.Barcode">@Participant.FullName</option>
+}
+</select>
+<button>Edit</button>
+}
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div
