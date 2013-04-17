@@ -14,10 +14,12 @@ using WebsiteSUPPORTASUCore;
     {
 
         ContactUsService core;
+        AdminService objAdmin;
 
         public ContactUSController()
         {
             core = new ContactUsService();
+        objAdmin = new AdminService();
         }
 
         public ActionResult Index()
@@ -35,6 +37,39 @@ using WebsiteSUPPORTASUCore;
                 return View("../Shared/Thanks");
          
         }
-       
+
+        /****** Contact US ******/
+
+        [Authorize(Users = "Admin")]
+        public ActionResult DeleteContact()
+        {
+            ViewBag.ElementsNames = objAdmin.ContactUsCore.GetContacts().ToList();
+            return View("SelectDelete");
+        }
+
+        //[HttpPost]
+        //public ActionResult Edit(int id, ContactUS contact)
+        //{
+        //    WebsiteSUPPORTASUCore.ContactUsService EditContact = new WebsiteSUPPORTASUCore.ContactUsService();
+        //    EditContact.Ed(contact.Name, contact.Email, contact.Subject, contact.Message);
+        //    return View("Updated");
+        //}
+
+        [HttpPost]
+        public ActionResult DeleteContact(FormCollection form)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                int id = int.Parse(form["Elements"]);
+                objAdmin.ContactUsCore.DeleteContact(id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return RedirectToAction("DeleteContact");
+            }
+        }
+
     }
 }
