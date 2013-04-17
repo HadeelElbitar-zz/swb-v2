@@ -39,7 +39,7 @@ namespace WebsiteSUPPORTASU.Models
         [Authorize(Users = "admin")]
         public ActionResult AddStaticPage()
         {
-            return View();
+            return View("../Admin/AddStaticPage");
         }
 
         //
