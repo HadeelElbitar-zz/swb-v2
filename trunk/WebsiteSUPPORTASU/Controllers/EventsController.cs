@@ -8,16 +8,19 @@ namespace WebsiteSUPPORTASU.Models
     using System.Web.Mvc;
     using WebsiteSUPPORTASUCore;
     using WebsiteSUPPORTASU.Models;
+    using WebsiteSUPPORTASUDomain;
 
     using EventsNames = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.EventsName>;
 
     public class EventsController : Controller
     {
         WebsiteSUPPORTASUCore.EventService EventsCore;
+        AdminService objAdmin;
 
         public EventsController()
         {
             EventsCore = new EventService();
+        objAdmin = new AdminService();
         }
 
         //
@@ -79,6 +82,96 @@ namespace WebsiteSUPPORTASU.Models
         public string GetEventName(int ID)
         {
             return EventsCore.GetEventsNames().ToList().Find(x => x.ID == ID).Name;
+        }
+
+
+        // GET: /Events/Add
+
+        [Authorize(Users = "Admin")]
+        public ActionResult AddEvent()
+        {
+            return View();
+        }
+
+        //
+        // POST: /Events/Add
+
+        [HttpPost]
+        public ActionResult AddEvent(EventModel eEvent)
+        {
+            if (ModelState.IsValid)
+            {
+                objAdmin.EventsCore.AddEvent(eEvent.Name, eEvent.StartDate, eEvent.EndDate, eEvent.FullDescription, eEvent.ShortDescrption, eEvent.Comments);
+                return RedirectToAction("AddEvent");
+            }
+            else
+            {
+                return View();
+            }
+        }
+
+        //
+        // GET: /Events/Edit/5
+        [Authorize(Users = "Admin")]
+        public ActionResult EditEvent()
+        {
+            ViewBag.ElementsNames = objAdmin.EventsCore.GetEventsNames().ToList();
+            return View("SelectEdit");
+        }
+
+        //
+        // POST: /Events/Edit/5
+
+        [HttpPost]
+        public ActionResult EditEvent(EventModel Event, FormCollection form)
+        {
+            if (ModelState.IsValid)
+            {
+                int ID = Event.ID;
+                objAdmin.EventsCore.EditEvent(ID, Event.Name, Event.StartDate, Event.EndDate, Event.FullDescription, Event.ShortDescrption, Event.Comments);
+                return RedirectToAction("EditEvent");
+            }
+            else
+            {
+                int ID = int.Parse(form["Elements"]);
+                Event eEvent = objAdmin.EventsCore.GetEvent(ID).FirstOrDefault();
+                Event.ID = ID;
+                Event.Name = eEvent.Name;
+                Event.StartDate = eEvent.StartDate;
+                Event.EndDate = eEvent.EndDate;
+                Event.FullDescription = eEvent.Description;
+                Event.ShortDescrption = eEvent.ShortDescription;
+                Event.Comments = eEvent.Comments;
+                return View("EditEvent", Event);
+            }
+        }
+
+        //
+        // GET: /Events/Delete/5
+        [Authorize(Users = "Admin")]
+        public ActionResult DeleteEvent()
+        {
+            ViewBag.ElementsNames = objAdmin.EventsCore.GetEventsNames().ToList();
+            return View("SelectDelete");
+        }
+
+        //
+        // POST: /Events/Delete/5
+
+        [HttpPost]
+        public ActionResult DeleteEvent(FormCollection form)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                int id = int.Parse(form["Elements"]);
+                objAdmin.EventsCore.DeleteEvent(id);
+                return RedirectToAction("DeleteEvent");
+            }
+            catch
+            {
+                return View("SelectDelete");
+            }
         }
 
     }
