@@ -67,8 +67,9 @@ namespace WebsiteSUPPORTASU.Models
         [Authorize(Users = "Admin")]
         public ActionResult EditStaticPage()
         {
+           
             ViewBag.ElementsNames = objAdmin.StaticPageCore.GetStaticPages().ToList();
-            return View("SelectEdit");
+            return View("../Admin/EditStaticPage");
         }
 
         //
@@ -79,9 +80,10 @@ namespace WebsiteSUPPORTASU.Models
         {
             if (ModelState.IsValid)
             {
+                StaticPagesModel model;
                 int ID = Page.ID;
                 objAdmin.StaticPageCore.EditStaticPage(ID, Page.Name, Page.Content);
-                return RedirectToAction("EditStaticPage");
+                return RedirectToAction("EditStaticPage", "model");
             }
             else
             {
@@ -101,7 +103,7 @@ namespace WebsiteSUPPORTASU.Models
         public ActionResult DeleteStaticPage()
         {
             ViewBag.ElementsNames = objAdmin.StaticPageCore.GetStaticPages().ToList();
-            return View("SelectDelete");
+            return View("../Admin/SelectDelete");
         }
 
         //

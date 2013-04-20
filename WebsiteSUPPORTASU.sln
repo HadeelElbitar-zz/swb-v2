@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteSUPPORTASU", "WebsiteSUPPORTASU\WebsiteSUPPORTASU.csproj", "{BD3A82E9-89B3-4338-B762-88BF67476AAA}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebsiteSUPPORTASUCore", "WebsiteSUPPORTASUCore\WebsiteSUPPORTASUCore.csproj", "{5A1FECEC-1C9D-4DFA-8803-C3E003D693CC}"

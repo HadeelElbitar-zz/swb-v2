@@ -24,6 +24,7 @@ using StaticPage = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.Stat
         public void AddStaticPage(string name, string text)
         {
             model.AddStaticPage(name, text);
+            
         }
 
         public void DeleteStaticPage(int id)
@@ -35,6 +36,7 @@ using StaticPage = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.Stat
         public void EditStaticPage(int id, string name, string text)
         {
             model.EditStaticPage(id, name, text);
+         
         }
 
         public StaticPage GetStaticPage(string Name)
