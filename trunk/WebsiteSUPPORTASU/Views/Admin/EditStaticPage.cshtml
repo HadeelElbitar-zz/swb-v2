@@ -14,12 +14,19 @@
     @Html.ValidationSummary(true)
     <fieldset>
         <legend>StaticPagesModel</legend>
-
+        
+        
         <div class="editor-label">
             @Html.LabelFor(model => model.ID)
         </div>
         <div class="editor-field" >
-            <input name="ID" type="text" readonly="readonly" value="@Model.ID" />
+
+            @if(@Model.ID != null){
+                
+            <input name="ID" type="text" readonly="readonly"  value="@Model.ID" />
+            }
+
+
             @Html.ValidationMessageFor(model => model.ID)
         </div>
 
@@ -46,5 +53,5 @@
 }
 
 <div>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "EditStaticPage")
 </div>

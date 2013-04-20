@@ -8,12 +8,15 @@
 //------------------------------------------------------------------------------
 
 using System;
+using System.ComponentModel;
+using System.Data.EntityClient;
 using System.Data.Objects;
 using System.Data.Objects.DataClasses;
-using System.Data.EntityClient;
-using System.ComponentModel;
-using System.Xml.Serialization;
+using System.Linq;
 using System.Runtime.Serialization;
+using System.Xml.Serialization;
+
+using WebsiteSUPPORTASUDomain;
 
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
@@ -716,6 +719,7 @@ namespace WebsiteSUPPORTASUDomain
         private ObjectSet<Participant> _Participant;
 
         #endregion
+
         #region AddTo Methods
     
         /// <summary>
@@ -1031,6 +1035,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Function Imports
     
         /// <summary>
@@ -4087,13 +4092,73 @@ namespace WebsiteSUPPORTASUDomain
         {
             return base.ExecuteFunction<Participant>("GetParticipants", mergeOption);
         }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        public int DeleteStaticPage1(Nullable<global::System.Int32> iD)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("DeleteStaticPage1", iDParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        /// <param name="name">No Metadata Documentation available.</param>
+        /// <param name="text">No Metadata Documentation available.</param>
+        public int EditStaticPage1(Nullable<global::System.Int32> iD, global::System.String name, global::System.String text)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter nameParameter;
+            if (name != null)
+            {
+                nameParameter = new ObjectParameter("Name", name);
+            }
+            else
+            {
+                nameParameter = new ObjectParameter("Name", typeof(global::System.String));
+            }
+    
+            ObjectParameter textParameter;
+            if (text != null)
+            {
+                textParameter = new ObjectParameter("text", text);
+            }
+            else
+            {
+                textParameter = new ObjectParameter("text", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("EditStaticPage1", iDParameter, nameParameter, textParameter);
+        }
 
         #endregion
+
     }
-    
 
     #endregion
-    
+
     #region Entities
     
     /// <summary>
@@ -4122,6 +4187,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4224,6 +4290,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDescriptionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4316,6 +4383,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4368,6 +4436,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -4878,6 +4947,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -4958,6 +5028,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -4988,6 +5059,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5090,6 +5162,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLoweredPathChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5192,6 +5265,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5220,6 +5294,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5298,6 +5373,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5340,6 +5416,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5368,6 +5445,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5494,6 +5572,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5574,6 +5653,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5606,6 +5686,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5732,6 +5813,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5774,6 +5856,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -5804,6 +5887,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -5930,6 +6014,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDescriptionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -5994,6 +6079,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6022,6 +6108,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6103,6 +6190,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnIsCurrentVersionChanged();
 
         #endregion
+
     
     }
     
@@ -6138,6 +6226,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6312,6 +6401,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastActivityDateChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -6474,6 +6564,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -6514,6 +6605,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -6880,6 +6972,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDetailsChanged();
 
         #endregion
+
     
     }
     
@@ -6909,6 +7002,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7011,6 +7105,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -7059,6 +7154,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -7087,6 +7183,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7165,6 +7262,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDescriptionChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -7191,6 +7289,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -7223,6 +7322,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7349,6 +7449,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnMessageChanged();
 
         #endregion
+
     
     }
     
@@ -7384,6 +7485,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7582,6 +7684,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -7674,6 +7777,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -7700,6 +7804,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7757,6 +7862,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnNameChanged();
 
         #endregion
+
     
     }
     
@@ -7784,6 +7890,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7841,6 +7948,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnSponsorIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -7883,6 +7991,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -7909,6 +8018,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -7966,6 +8076,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnUniversityIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -8008,6 +8119,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -8038,6 +8150,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -8188,6 +8301,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -8230,6 +8344,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -8256,6 +8371,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -8313,6 +8429,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnIDChanged();
 
         #endregion
+
     
     }
     
@@ -8342,6 +8459,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -8444,6 +8562,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentChanged();
 
         #endregion
+
     
     }
     
@@ -8493,6 +8612,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -8859,6 +8979,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -9043,6 +9164,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -9069,6 +9191,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -9126,6 +9249,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnEventIDChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -9168,6 +9292,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -9194,6 +9319,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -9251,6 +9377,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnFullNameChanged();
 
         #endregion
+
     
     }
     
@@ -9290,6 +9417,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -9680,6 +9808,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnHRCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -9722,6 +9851,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -9748,6 +9878,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -9826,6 +9957,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -9852,6 +9984,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -9884,6 +10017,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -10034,6 +10168,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -10082,6 +10217,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -10112,6 +10248,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -10247,6 +10384,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnEventIDChanged();
 
         #endregion
+
     
     }
     
@@ -10276,6 +10414,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -10354,6 +10493,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnContentChanged();
 
         #endregion
+
     
     }
     
@@ -10383,6 +10523,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -10461,6 +10602,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLocationChanged();
 
         #endregion
+
     
         #region Navigation Properties
     
@@ -10531,6 +10673,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
     }
     
     /// <summary>
@@ -10559,6 +10702,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -10667,6 +10811,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDescriptionChanged();
 
         #endregion
+
     
     }
     
@@ -10722,6 +10867,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -11325,6 +11471,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastActivityDateChanged();
 
         #endregion
+
     
     }
     
@@ -11352,6 +11499,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -11433,6 +11581,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDataSizeChanged();
 
         #endregion
+
     
     }
     
@@ -11464,6 +11613,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -11599,6 +11749,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnDescriptionChanged();
 
         #endregion
+
     
     }
     
@@ -11634,6 +11785,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -11823,6 +11975,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastActivityDateChanged();
 
         #endregion
+
     
     }
     
@@ -11850,6 +12003,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -11907,6 +12061,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnRoleIdChanged();
 
         #endregion
+
     
     }
     
@@ -11938,6 +12093,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -12049,6 +12205,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLoweredPathChanged();
 
         #endregion
+
     
     }
     
@@ -12076,6 +12233,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -12157,6 +12315,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
     }
     
@@ -12182,6 +12341,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -12284,6 +12444,7 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnLastUpdatedDateChanged();
 
         #endregion
+
     
     }
     
@@ -12313,6 +12474,7 @@ namespace WebsiteSUPPORTASUDomain
         }
 
         #endregion
+
         #region Primitive Properties
     
         /// <summary>
@@ -12415,9 +12577,11 @@ namespace WebsiteSUPPORTASUDomain
         partial void OnCommentsChanged();
 
         #endregion
+
     
     }
 
     #endregion
+
     
 }

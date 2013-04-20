@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-    <Schema Namespace="websitedbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2005" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+    <Schema Namespace="websitedbModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
         <EntityContainer Name="websitedbModelStoreContainer">
           <EntitySet Name="aspnet_Applications" EntityType="websitedbModel.Store.aspnet_Applications" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="aspnet_Membership" EntityType="websitedbModel.Store.aspnet_Membership" store:Type="Tables" Schema="dbo" />
@@ -441,7 +441,7 @@
           <Property Name="Comments" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.EventSponsor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.EventSponsor' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="EventSponsor">
           <Key>
@@ -452,7 +452,7 @@
           <Property Name="SponsorID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.EventUniversity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.EventUniversity' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="EventUniversity">
           <Key>
@@ -503,7 +503,7 @@
           <Property Name="Comments" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.MemberEvent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.MemberEvent' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="MemberEvent">
           <Key>
@@ -570,7 +570,7 @@
           <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.UniversityCollege' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.UniversityCollege' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="UniversityCollege">
           <Key>
@@ -590,7 +590,7 @@
           <Property Name="Comments" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.EventsNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.EventsNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="EventsNames">
           <Key>
@@ -601,7 +601,7 @@
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="250" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.GalleryNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.GalleryNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="GalleryNames">
           <Key>
@@ -612,7 +612,7 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.MembersNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.MembersNames' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="MembersNames">
           <Key>
@@ -623,7 +623,7 @@
           <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.SponsorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.SponsorView' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="SponsorView">
           <Key>
@@ -639,7 +639,7 @@
           <Property Name="EventID" Type="int" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_Applications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_Applications' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_Applications">
           <Key>
@@ -653,7 +653,7 @@
           <Property Name="Description" Type="nvarchar" MaxLength="256" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_MembershipUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_MembershipUsers' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_MembershipUsers">
           <Key>
@@ -699,7 +699,7 @@
           <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_Profiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_Profiles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_Profiles">
           <Key>
@@ -711,7 +711,7 @@
           <Property Name="DataSize" Type="int" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_Roles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_Roles">
           <Key>
@@ -727,7 +727,7 @@
           <Property Name="Description" Type="nvarchar" MaxLength="256" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_Users' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_Users">
           <Key>
@@ -747,7 +747,7 @@
           <Property Name="LastActivityDate" Type="datetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_UsersInRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_UsersInRoles' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_UsersInRoles">
           <Key>
@@ -758,7 +758,7 @@
           <Property Name="RoleId" Type="uniqueidentifier" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_WebPartState_Paths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_WebPartState_Paths' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_WebPartState_Paths">
           <Key>
@@ -773,7 +773,7 @@
           <Property Name="LoweredPath" Type="nvarchar" Nullable="false" MaxLength="256" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_WebPartState_Shared' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_WebPartState_Shared' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_WebPartState_Shared">
           <Key>
@@ -785,7 +785,7 @@
           <Property Name="LastUpdatedDate" Type="datetime" Nullable="false" />
         </EntityType>
         <!--Errors Found During Generation:
-      warning 6002: The table/view 'C345526_support_site.dbo.vw_aspnet_WebPartState_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
+      warning 6002: The table/view 'SupportWebsite.dbo.vw_aspnet_WebPartState_User' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.
       -->
         <EntityType Name="vw_aspnet_WebPartState_User">
           <Key>
@@ -1490,12 +1490,6 @@
           <Parameter Name="TablesToDeleteFrom" Type="int" Mode="In" />
           <Parameter Name="NumTablesDeletedFrom" Type="int" Mode="InOut" />
         </Function>
-        <Function Name="aspnet_UsersInRoles_AddUsersToRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
-          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
-          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
-          <Parameter Name="CurrentTimeUtc" Type="datetime" Mode="In" />
-        </Function>
         <Function Name="aspnet_UsersInRoles_FindUsersInRole" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
           <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
@@ -1513,11 +1507,6 @@
           <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
           <Parameter Name="UserName" Type="nvarchar" Mode="In" />
           <Parameter Name="RoleName" Type="nvarchar" Mode="In" />
-        </Function>
-        <Function Name="aspnet_UsersInRoles_RemoveUsersFromRoles" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-          <Parameter Name="ApplicationName" Type="nvarchar" Mode="In" />
-          <Parameter Name="UserNames" Type="nvarchar" Mode="In" />
-          <Parameter Name="RoleNames" Type="nvarchar" Mode="In" />
         </Function>
         <Function Name="aspnet_WebEvent_LogEvent" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="EventId" Type="char" Mode="In" />
@@ -1563,7 +1552,7 @@
         <Function Name="Deletesponsor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="SponsorID" Type="int" Mode="In" />
         </Function>
-        <Function Name="DeleteText" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="DeleteStaticPage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
         </Function>
         <Function Name="DeleteUniversity" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
@@ -1602,7 +1591,7 @@
           <Parameter Name="Position" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="comments" Type="nvarchar(max)" Mode="In" />
         </Function>
-        <Function Name="EditText" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+        <Function Name="EditStaticPage" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
           <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="text" Type="nvarchar(max)" Mode="In" />
@@ -2171,6 +2160,14 @@
           </FunctionImport>
           <FunctionImport Name="GetOffParticipants" EntitySet="Participant" ReturnType="Collection(websitedbModel.Participant)" />
           <FunctionImport Name="GetParticipants" EntitySet="Participant" ReturnType="Collection(websitedbModel.Participant)" />
+          <FunctionImport Name="DeleteStaticPage1">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="EditStaticPage1">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="text" Mode="In" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="aspnet_Applications">
           <Key>
@@ -2201,14 +2198,14 @@
           <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
           <Property Name="IsApproved" Type="Boolean" Nullable="false" />
           <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
-          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
-          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="aspnet_Applications" Relationship="websitedbModel.FK__aspnet_Me__Appli__3C34F16F" FromRole="aspnet_Membership" ToRole="aspnet_Applications" />
           <NavigationProperty Name="aspnet_Users" Relationship="websitedbModel.FK__aspnet_Me__UserI__3D2915A8" FromRole="aspnet_Membership" ToRole="aspnet_Users" />
@@ -2231,7 +2228,7 @@
           </Key>
           <Property Name="PathId" Type="Guid" Nullable="false" />
           <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="aspnet_Paths" Relationship="websitedbModel.FK__aspnet_Pe__PathI__3E1D39E1" FromRole="aspnet_PersonalizationAllUsers" ToRole="aspnet_Paths" />
         </EntityType>
         <EntityType Name="aspnet_PersonalizationPerUser">
@@ -2242,7 +2239,7 @@
           <Property Name="PathId" Type="Guid" />
           <Property Name="UserId" Type="Guid" />
           <Property Name="PageSettings" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="aspnet_Paths" Relationship="websitedbModel.FK__aspnet_Pe__PathI__3F115E1A" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Paths" />
           <NavigationProperty Name="aspnet_Users" Relationship="websitedbModel.FK__aspnet_Pe__UserI__40058253" FromRole="aspnet_PersonalizationPerUser" ToRole="aspnet_Users" />
         </EntityType>
@@ -2254,7 +2251,7 @@
           <Property Name="PropertyNames" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="PropertyValuesString" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="PropertyValuesBinary" Type="Binary" Nullable="false" MaxLength="Max" FixedLength="false" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="aspnet_Users" Relationship="websitedbModel.FK__aspnet_Pr__UserI__40F9A68C" FromRole="aspnet_Profile" ToRole="aspnet_Users" />
         </EntityType>
         <EntityType Name="aspnet_Roles">
@@ -2288,7 +2285,7 @@
           <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
           <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
-          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
           <NavigationProperty Name="aspnet_Applications" Relationship="websitedbModel.FK__aspnet_Us__Appli__3864608B" FromRole="aspnet_Users" ToRole="aspnet_Applications" />
           <NavigationProperty Name="aspnet_Membership" Relationship="websitedbModel.FK__aspnet_Me__UserI__3D2915A8" FromRole="aspnet_Users" ToRole="aspnet_Membership" />
           <NavigationProperty Name="aspnet_PersonalizationPerUser" Relationship="websitedbModel.FK__aspnet_Pe__UserI__40058253" FromRole="aspnet_Users" ToRole="aspnet_PersonalizationPerUser" />
@@ -2300,8 +2297,8 @@
             <PropertyRef Name="EventId" />
           </Key>
           <Property Name="EventId" Type="String" Nullable="false" MaxLength="32" Unicode="false" FixedLength="true" />
-          <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" />
-          <Property Name="EventTime" Type="DateTime" Nullable="false" />
+          <Property Name="EventTimeUtc" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="EventTime" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="EventType" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="EventSequence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
           <Property Name="EventOccurrence" Type="Decimal" Nullable="false" Precision="19" Scale="0" />
@@ -2399,8 +2396,8 @@
           <Property Name="PositionID" Type="Int32" Nullable="false" />
           <Property Name="state" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
           <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="HireYear" Type="DateTime" Nullable="false" />
-          <Property Name="Birthdate" Type="DateTime" Nullable="false" />
+          <Property Name="HireYear" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="ProfilePicture" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="College" Relationship="websitedbModel.FK_Member_College" FromRole="Member" ToRole="College" />
@@ -2508,20 +2505,20 @@
           <Property Name="PasswordAnswer" Type="String" MaxLength="128" Unicode="true" FixedLength="false" />
           <Property Name="IsApproved" Type="Boolean" Nullable="false" />
           <Property Name="IsLockedOut" Type="Boolean" Nullable="false" />
-          <Property Name="CreateDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" />
-          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLoginDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastPasswordChangedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="LastLockoutDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="FailedPasswordAttemptCount" Type="Int32" Nullable="false" />
-          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="FailedPasswordAnswerAttemptCount" Type="Int32" Nullable="false" />
-          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" />
+          <Property Name="FailedPasswordAnswerAttemptWindowStart" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="ApplicationId" Type="Guid" Nullable="false" />
           <Property Name="UserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
           <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
-          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="vw_aspnet_Profiles">
           <Key>
@@ -2529,7 +2526,7 @@
             <PropertyRef Name="LastUpdatedDate" />
           </Key>
           <Property Name="UserId" Type="Guid" Nullable="false" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="DataSize" Type="Int32" />
         </EntityType>
         <EntityType Name="vw_aspnet_Roles">
@@ -2560,7 +2557,7 @@
           <Property Name="LoweredUserName" Type="String" Nullable="false" MaxLength="256" Unicode="true" FixedLength="false" />
           <Property Name="MobileAlias" Type="String" MaxLength="16" Unicode="true" FixedLength="false" />
           <Property Name="IsAnonymous" Type="Boolean" Nullable="false" />
-          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastActivityDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="vw_aspnet_UsersInRoles">
           <Key>
@@ -2589,7 +2586,7 @@
           </Key>
           <Property Name="PathId" Type="Guid" Nullable="false" />
           <Property Name="DataSize" Type="Int32" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <EntityType Name="vw_aspnet_WebPartState_User">
           <Key>
@@ -2598,7 +2595,7 @@
           <Property Name="PathId" Type="Guid" />
           <Property Name="UserId" Type="Guid" />
           <Property Name="DataSize" Type="Int32" />
-          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" />
+          <Property Name="LastUpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
         </EntityType>
         <Association Name="FK__aspnet_Me__Appli__3C34F16F">
           <End Role="aspnet_Applications" Type="websitedbModel.aspnet_Applications" Multiplicity="1" />
@@ -2802,8 +2799,8 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="Name" Nullable="false" MaxLength="250" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="StartDate" Nullable="false" />
-          <Property Type="DateTime" Name="EndDate" Nullable="false" />
+          <Property Type="DateTime" Name="StartDate" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="EndDate" Nullable="false" Precision="3" />
           <Property Type="String" Name="Description" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="ShortDescription" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Type="Boolean" Name="state" />
@@ -2880,17 +2877,17 @@
           </Key>
           <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Type="String" Name="FullName" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="12" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="Mobile" Nullable="false" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Type="String" Name="Email" Nullable="false" MaxLength="255" FixedLength="true" Unicode="true" />
-          <Property Type="String" Name="HomePhone" MaxLength="15" FixedLength="true" Unicode="true" />
+          <Property Type="String" Name="HomePhone" MaxLength="20" FixedLength="true" Unicode="true" />
           <Property Type="Int32" Name="CollegeID" Nullable="false" />
           <Property Type="Int32" Name="UniverstyID" Nullable="false" />
           <Property Type="Int32" Name="WorkshopID" />
           <Property Type="Int32" Name="InterviewID" />
           <Property Type="Int32" Name="EventID" Nullable="false" />
-          <Property Type="String" Name="Barcode" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Barcode" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="true" />
-          <Property Type="DateTime" Name="timestamp" Nullable="false" />
+          <Property Type="DateTime" Name="timestamp" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="PRID" />
           <Property Type="Boolean" Name="LogOn" />
           <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Participant_Member" FromRole="Participant" ToRole="Member" />
@@ -3204,13 +3201,11 @@
           <FunctionImportMapping FunctionImportName="DeleteMember" FunctionName="websitedbModel.Store.DeleteMember" />
           <FunctionImportMapping FunctionImportName="DeletePosition" FunctionName="websitedbModel.Store.DeletePosition" />
           <FunctionImportMapping FunctionImportName="Deletesponsor" FunctionName="websitedbModel.Store.Deletesponsor" />
-          <FunctionImportMapping FunctionImportName="DeleteStaticPage" FunctionName="websitedbModel.Store.DeleteText" />
           <FunctionImportMapping FunctionImportName="DeleteUniversity" FunctionName="websitedbModel.Store.DeleteUniversity" />
           <FunctionImportMapping FunctionImportName="EditCollege" FunctionName="websitedbModel.Store.EditCollege" />
           <FunctionImportMapping FunctionImportName="EditCommittee" FunctionName="websitedbModel.Store.EditCommittee" />
           <FunctionImportMapping FunctionImportName="editGallery" FunctionName="websitedbModel.Store.editGallery" />
           <FunctionImportMapping FunctionImportName="EditPosition" FunctionName="websitedbModel.Store.EditPosition" />
-          <FunctionImportMapping FunctionImportName="EditStaticPage" FunctionName="websitedbModel.Store.EditText" />
           <FunctionImportMapping FunctionImportName="EditUniversity" FunctionName="websitedbModel.Store.EditUniversity" />
           <FunctionImportMapping FunctionImportName="GetCollege" FunctionName="websitedbModel.Store.GetCollege" />
           <FunctionImportMapping FunctionImportName="GetColleges" FunctionName="websitedbModel.Store.GetColleges" />
@@ -3356,6 +3351,8 @@
           <FunctionImportMapping FunctionImportName="FirstFormFill" FunctionName="websitedbModel.Store.FirstFormFill" />
           <FunctionImportMapping FunctionImportName="GetOffParticipants" FunctionName="websitedbModel.Store.GetOffParticipants" />
           <FunctionImportMapping FunctionImportName="GetParticipants" FunctionName="websitedbModel.Store.GetParticipants" />
+          <FunctionImportMapping FunctionImportName="DeleteStaticPage1" FunctionName="websitedbModel.Store.DeleteStaticPage" />
+          <FunctionImportMapping FunctionImportName="EditStaticPage1" FunctionName="websitedbModel.Store.EditStaticPage" />
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

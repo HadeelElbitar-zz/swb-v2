@@ -8,6 +8,7 @@ namespace WebsiteSUPPORTASU.Models
 {
     public class StaticPagesModel
     {
+        
         public int ID { get; set; }
         [Required]
         public string Name { get; set; }
