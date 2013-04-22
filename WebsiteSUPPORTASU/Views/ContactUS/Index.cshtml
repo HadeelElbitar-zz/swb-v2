@@ -1,4 +1,4 @@
-﻿@model WebsiteSUPPORTASU.Models.ContactUS
+ @model WebsiteSUPPORTASU.Models.ContactUS
 
 @{
     ViewBag.Title = "Contact Us";
@@ -40,7 +40,7 @@
             @Html.LabelFor(model => model.Message)
         </h4>
         <div class="editor-field">
-				<textarea class="input" type="textarea" name="Message" rows="5" id="textarea"></textarea>
+				<textarea class="text-box" type="textarea" name="Message" rows="5" id="textarea"></textarea>
             @Html.ValidationMessageFor(model => model.Message)
         </div>
                 
