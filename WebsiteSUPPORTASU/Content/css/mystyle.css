@@ -396,8 +396,18 @@ a
         font-size:10px;
         line-height:0px;
 }
-
+.alarm{
+        color:#F00;
+        float:right;
+        margin-right:20px;
+        font-size:10px;
+        line-height:0px;
+}
 .text-box
+{
+        margin-left:30px;
+}
+.input
 {
         margin-left:30px;
 }
