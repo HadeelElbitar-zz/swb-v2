@@ -36,6 +36,11 @@ namespace WebsiteSUPPORTASUCore
             Model = new WebsiteSUPPORTASUDomain.websitedbEntities();
         }
 
+        public string SendBlockEmails(string EmailTo, string Subject, string Body)
+        {
+            return ParticipantCore.SendEMail("supp.f1.ort@gmail.com", EmailTo, Subject, Body);
+        }
+
         public Position GetPositions()
         {
             return Model.GetPositions();

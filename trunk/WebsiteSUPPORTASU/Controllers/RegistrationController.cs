@@ -238,7 +238,7 @@ using System.Web.Mvc;
             }
         }
 
-        [Authorize(Users = "admin")]
+        //[Authorize(Users = "admin")]
         public string SendBlock()
         {
             int x = 0;
@@ -251,12 +251,15 @@ using System.Web.Mvc;
                 {
                     x++;
                     if(p.HRComments != null || p.timestamp.Date.Equals(d)){
-                        Data += p.FullName + ", ";
-                        Data += p.Mobile + ", ";
-                        Data += p.Email + "<br/><br/>";
+                        Data += "<table border=\"1\"> <tr>";
+                        Data += "<td>" + x.ToString() + "</td>";
+                        Data += "<td>" + p.FullName + "</td>";
+                        Data += "<td>" + p.Mobile + "</td>";
+                        Data += "<td>" + p.Email + "</td>";
                         //AdminCore.ParticipantCore.SendEMail(p.FullName, p.Email);
                     }
                 }
+                Data += "</tr></table>" ;
                 return "Done" + x.ToString() + Data;
             }
             catch (Exception e)

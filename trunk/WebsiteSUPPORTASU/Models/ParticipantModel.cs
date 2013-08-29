@@ -30,4 +30,15 @@ namespace WebsiteSUPPORTASU.Models
 
         public int Member { get; set; }
     }
+
+    public class ParticipantsEmailsModel
+    {
+        public string Subject { get; set; }
+
+        public string body { get; set; }
+
+        public string[] Emails { get; set; }
+
+        public string OurEmail { get; set; }
+    }
 }
