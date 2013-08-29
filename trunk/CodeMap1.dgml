@@ -1,0 +1,365 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph DataVirtualized="True" Layout="Sugiyama" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+    <Node Id="(@1 @2 Type=ContactU)" Category="CodeSchema_Class" Bounds="139.103333333333,55,110.276666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="ContactU" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="ContactU" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7297 StartCharacterOffset=4 EndLineNumber=7297 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=EventsName)" Category="CodeSchema_Class" Bounds="149.726666666667,110,126.74,25" CodeSchemaProperty_IsPublic="True" CommonLabel="EventsName" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="EventsName" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7785 StartCharacterOffset=4 EndLineNumber=7785 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=GalleryName)" Category="CodeSchema_Class" Bounds="306.466666666667,110,129.106666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="GalleryName" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="GalleryName" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=8352 StartCharacterOffset=4 EndLineNumber=8352 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=Interview)" Category="CodeSchema_Class" Bounds="7.105427357601E-15,55,109.103333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Interview" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Interview" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=8438 StartCharacterOffset=4 EndLineNumber=8438 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=MembersName)" Category="CodeSchema_Class" Bounds="171.96,220,142.683333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="MembersName" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="MembersName" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=9300 StartCharacterOffset=4 EndLineNumber=9300 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=SponsorView)" Category="CodeSchema_Class" Bounds="625.423333333333,110,129.853333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="SponsorView" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="SponsorView" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=10225 StartCharacterOffset=4 EndLineNumber=10225 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=StaticPage)" Category="CodeSchema_Class" Bounds="567.733333333333,55,116.233333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="StaticPage" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="StaticPage" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=10393 StartCharacterOffset=4 EndLineNumber=10393 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=Workshop)" Category="CodeSchema_Class" Bounds="422.39,55,115.343333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Workshop" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Workshop" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=12453 StartCharacterOffset=4 EndLineNumber=12453 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=aspnet_SchemaVersions)" Category="CodeSchema_Class" Bounds="215.963333333333,330,187.61,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_SchemaVersions" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_SchemaVersions" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=6087 StartCharacterOffset=4 EndLineNumber=6087 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=aspnet_WebEvent_Events)" Category="CodeSchema_Class" Bounds="0,385,193.88,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_WebEvent_Events" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_WebEvent_Events" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=6572 StartCharacterOffset=4 EndLineNumber=6572 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_Applications)" Category="CodeSchema_Class" Bounds="0,330,185.963333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_Applications" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_Applications" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=10681 StartCharacterOffset=4 EndLineNumber=10681 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_MembershipUsers)" Category="CodeSchema_Class" Bounds="223.88,385,216.383333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_MembershipUsers" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_MembershipUsers" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=10820 StartCharacterOffset=4 EndLineNumber=10820 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_Profiles)" Category="CodeSchema_Class" Bounds="183.643333333333,275,159.63,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_Profiles" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_Profiles" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=11480 StartCharacterOffset=4 EndLineNumber=11480 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_Roles)" Category="CodeSchema_Class" Bounds="344.643333333333,220,149.25,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_Roles" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_Roles" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=11590 StartCharacterOffset=4 EndLineNumber=11590 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_Users)" Category="CodeSchema_Class" Bounds="523.893333333333,220,149.646666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_Users" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_Users" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=11758 StartCharacterOffset=4 EndLineNumber=11758 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_UsersInRoles)" Category="CodeSchema_Class" Bounds="433.573333333333,330,188.113333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_UsersInRoles" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_UsersInRoles" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=11984 StartCharacterOffset=4 EndLineNumber=11984 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_WebPartState_Paths)" Category="CodeSchema_Class" Bounds="506.783333333334,440,227.02,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_WebPartState_Paths" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_WebPartState_Paths" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=12070 StartCharacterOffset=4 EndLineNumber=12070 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_WebPartState_Shared)" Category="CodeSchema_Class" Bounds="-1.4210854715202E-14,495,235.03,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_WebPartState_Shared" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_WebPartState_Shared" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=12214 StartCharacterOffset=4 EndLineNumber=12214 EndCharacterOffset=4)" />
+    <Node Id="(@1 @2 Type=vw_aspnet_WebPartState_User)" Category="CodeSchema_Class" Bounds="470.263333333333,385,222.03,25" CodeSchemaProperty_IsPublic="True" CommonLabel="vw_aspnet_WebPartState_User" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="vw_aspnet_WebPartState_User" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=12324 StartCharacterOffset=4 EndLineNumber=12324 EndCharacterOffset=4)" />
+    <Node Id="@10" Category="CodeSchema_Class" Bounds="160.143333333333,165,130.246666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Users" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Users" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=6199 StartCharacterOffset=4 EndLineNumber=6199 EndCharacterOffset=4)" />
+    <Node Id="@11" Category="CodeSchema_Class" Bounds="247.36,0,100.893333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="College" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="College" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=6981 StartCharacterOffset=4 EndLineNumber=6981 EndCharacterOffset=4)" />
+    <Node Id="@12" Category="CodeSchema_Class" Bounds="7.105427357601E-15,110,119.726666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Committee" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Committee" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7162 StartCharacterOffset=4 EndLineNumber=7162 EndCharacterOffset=4)" />
+    <Node Id="@13" Category="CodeSchema_Class" Bounds="0,0,89.95,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Event" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Event" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7458 StartCharacterOffset=4 EndLineNumber=7458 EndCharacterOffset=4)" />
+    <Node Id="@14" Category="CodeSchema_Class" Bounds="320.39,165,133.493333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="EventSponsor" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="EventSponsor" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7871 StartCharacterOffset=4 EndLineNumber=7871 EndCharacterOffset=4)" />
+    <Node Id="@15" Category="CodeSchema_Class" Bounds="0,220,141.96,25" CodeSchemaProperty_IsPublic="True" CommonLabel="EventUniversity" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="EventUniversity" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=7999 StartCharacterOffset=4 EndLineNumber=7999 EndCharacterOffset=4)" />
+    <Node Id="@16" Category="CodeSchema_Class" Bounds="119.95,0,97.41,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Gallery" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Gallery" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=8127 StartCharacterOffset=4 EndLineNumber=8127 EndCharacterOffset=4)" />
+    <Node Id="@17" Category="CodeSchema_Class" Bounds="646.34,0,105.893333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Member" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Member" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=8571 StartCharacterOffset=4 EndLineNumber=8571 EndCharacterOffset=4)" />
+    <Node Id="@18" Category="CodeSchema_Class" Bounds="483.883333333334,165,134.843333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="MemberEvent" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="MemberEvent" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=9172 StartCharacterOffset=4 EndLineNumber=9172 EndCharacterOffset=4)" />
+    <Node Id="@19" Category="CodeSchema_Class" Bounds="713.966666666667,55,117.44,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Participant" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Participant" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=9386 StartCharacterOffset=4 EndLineNumber=9386 EndCharacterOffset=4)" />
+    <Node Id="@20" Category="CodeSchema_Class" Bounds="378.253333333333,0,103.543333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Position" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Position" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=9859 StartCharacterOffset=4 EndLineNumber=9859 EndCharacterOffset=4)" />
+    <Node Id="@21" Category="CodeSchema_Class" Bounds="511.796666666667,0,104.543333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="Sponsor" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="Sponsor" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=9992 StartCharacterOffset=4 EndLineNumber=9992 EndCharacterOffset=4)" />
+    <Node Id="@22" Category="CodeSchema_Class" Bounds="279.38,55,113.01,25" CodeSchemaProperty_IsPublic="True" CommonLabel="University" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="University" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=10502 StartCharacterOffset=4 EndLineNumber=10502 EndCharacterOffset=4)" />
+    <Node Id="@23" Category="CodeSchema_Class" Bounds="0,275,153.643333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="websitedbEntities" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="websitedbEntities" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=55 StartCharacterOffset=4 EndLineNumber=55 EndCharacterOffset=4)" />
+    <Node Id="@3" Category="CodeSchema_Class" Bounds="373.273333333334,275,166.563333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Applications" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Applications" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=4166 StartCharacterOffset=4 EndLineNumber=4166 EndCharacterOffset=4)" />
+    <Node Id="@4" Category="CodeSchema_Class" Bounds="569.836666666667,275,168.103333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Membership" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Membership" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=4391 StartCharacterOffset=4 EndLineNumber=4391 EndCharacterOffset=4)" />
+    <Node Id="@5" Category="CodeSchema_Class" Bounds="0,165,130.143333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Paths" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Paths" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=5036 StartCharacterOffset=4 EndLineNumber=5036 EndCharacterOffset=4)" />
+    <Node Id="@6" Category="CodeSchema_Class" Bounds="252.653333333333,440,224.13,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_PersonalizationAllUsers" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_PersonalizationAllUsers" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=5273 StartCharacterOffset=4 EndLineNumber=5273 EndCharacterOffset=4)" />
+    <Node Id="@7" Category="CodeSchema_Class" Bounds="-1.4210854715202E-14,440,222.653333333333,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_PersonalizationPerUser" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_PersonalizationPerUser" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=5424 StartCharacterOffset=4 EndLineNumber=5424 EndCharacterOffset=4)" />
+    <Node Id="@8" Category="CodeSchema_Class" Bounds="648.726666666667,165,135.136666666667,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Profile" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Profile" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=5661 StartCharacterOffset=4 EndLineNumber=5661 EndCharacterOffset=4)" />
+    <Node Id="@9" Category="CodeSchema_Class" Bounds="465.573333333333,110,129.85,25" CodeSchemaProperty_IsPublic="True" CommonLabel="aspnet_Roles" DelayedChildNodesState="NotFetched" DelayedCrossGroupLinksState="Fetched" Group="Collapsed" Icon="CodeSchema_Class" Label="aspnet_Roles" Language="{B5E9BD34-6D3E-4B5D-925E-8A43B79820B4}" SourceLocation="(Assembly=file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/websitedbmodel.Designer.cs StartLineNumber=5864 StartCharacterOffset=4 EndLineNumber=5864 EndCharacterOffset=4)" />
+  </Nodes>
+  <Links>
+    <Link Source="@10" Target="@3" Category="References" Bounds="222.199478149414,189.999954223633,207.899765014648,80.3099212646484" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@10" Target="@4" Category="References" Bounds="246.241134643555,189.999954223633,400.500137329102,82.1816864013672" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@10" Target="@7" Category="References" Bounds="159.79264831543,189.999954223633,53.9695129394531,243.413528442383" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@10" Target="@8" Category="References" Bounds="245.680450439453,150.928848266602,442.687103271484,14.0711059570313" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@10" Target="@9" Category="References" Bounds="213.489608764648,138.082427978516,281.102096557617,26.9175262451172" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@11" Target="@17" Category="References" Bounds="320.193969726563,24.9996929168701,333.419799804688,14.0128231048584" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@11" Target="@22" Category="References" Bounds="307.261596679688,24.9996929168701,16.4273986816406,24.6833896636963" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@12" Target="@17" Category="References" Bounds="60.3016738891602,30.2372875213623,616.52986907959,79.7626056671143" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@13" Target="@16" Category="References" Bounds="89.9499969482422,14.2984809875488,21.0007247924805,0.341527938842773" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@13" Target="@17" Category="References" Bounds="53.2532806396484,24.9996929168701,617.726455688477,22.2690906524658" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@13" Target="@21" Category="References" Bounds="87.3607559204102,24.3801345825195,453.685081481934,10.4525337219238" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@13" Target="@22" Category="References" Bounds="35.2360420227051,24.9996929168701,277.40970993042,22.5277347564697" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@14" Target="@21" Category="References" Bounds="367.972808837891,32.8019065856934,181.107086181641,132.198047637939" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@15" Target="@22" Category="References" Bounds="68.5723114013672,84.5500946044922,249.13410949707,135.449996948242" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@16" Target="@13" Category="References" Bounds="98.9493103027344,8.43993377685547,21.0006866455078,0.313558578491211" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@17" Target="@11" Category="References" Bounds="318.287445068359,24.9995994567871,348.261383056641,16.7643432617188" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@17" Target="@12" Category="References" Bounds="107.360252380371,24.9995994567871,582.673072814941,83.5852165222168" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@17" Target="@13" Category="References" Bounds="79.9611892700195,24.9995994567871,592.442558288574,19.5160102844238" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@17" Target="@18" Category="References" Bounds="558.662719726563,24.9995994567871,144.786865234375,132.967502593994" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@17" Target="@19" Category="References" Bounds="711.789245605469,24.9995994567871,59.1475830078125,26.363208770752" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@17" Target="@20" Category="References" Bounds="441.574127197266,24.9995994567871,213.382720947266,11.2613334655762" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@18" Target="@17" Category="References" Bounds="545.928100585938,33.9944877624512,150.509155273438,131.005405426025" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@19" Target="@17" Category="References" Bounds="710.316162109375,32.8128929138184,54.07763671875,22.1868057250977" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@20" Target="@17" Category="References" Bounds="443.134246826172,24.9996929168701,198.049041748047,8.50995826721191" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@21" Target="@13" Category="References" Bounds="98.6026458740234,22.3442993164063,444.285659790039,9.67255401611328" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@21" Target="@14" Category="References" Bounds="372.140502929688,24.9996490478516,186.764282226563,132.532196044922" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@22" Target="@11" Category="References" Bounds="307.645599365234,30.4653224945068,16.62109375,24.5344715118408" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@22" Target="@13" Category="References" Bounds="25.879976272583,27.5569458007813,285.116727828979,27.4428482055664" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@22" Target="@15" Category="References" Bounds="101.240463256836,79.9997940063477,236.116836547852,137.718727111816" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=ContactU)" Category="References" Bounds="105.892570495605,84.7799835205078,59.6175003051758,190.220199584961" IsSourceVirtualized="True" Weight="8" />
+    <Link Source="@23" Target="(@1 @2 Type=EventsName)" Category="References" Bounds="105.892570495605,139.196823120117,74.8776016235352,135.803359985352" IsSourceVirtualized="True" Weight="8" />
+    <Link Source="@23" Target="(@1 @2 Type=GalleryName)" Category="References" Bounds="105.892570495605,139.269790649414,233.737159729004,135.730392456055" IsSourceVirtualized="True" Weight="8" />
+    <Link Source="@23" Target="(@1 @2 Type=Interview)" Category="References" Bounds="91.8727188110352,83.6286392211914,55.9164962768555,191.371543884277" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=MembersName)" Category="References" Bounds="114.657931412793,247.823305092612,82.2617563373553,27.1768886573883" IsSourceVirtualized="True" Weight="8" />
+    <Link Source="@23" Target="(@1 @2 Type=SponsorView)" Category="References" Bounds="153.005142211914,133.460647583008,463.993698120117,144.095230102539" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="(@1 @2 Type=StaticPage)" Category="References" Bounds="105.892570495605,79.9806442260742,454.243843078613,195.019538879395" IsSourceVirtualized="True" Weight="16" />
+    <Link Source="@23" Target="(@1 @2 Type=Workshop)" Category="References" Bounds="105.892570495605,88.2299423217773,364.995735168457,186.770240783691" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=aspnet_SchemaVersions)" Category="References" Bounds="129.764036763485,300.00019375,118.302759629052,27.9319662617829" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=aspnet_WebEvent_Events)" Category="References" Bounds="-10.1341819763184,300.000183105469,57.1075973510742,82.3913879394531" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_Applications)" Category="References" Bounds="80.4943872617201,300.00019375,6.27744623381263,21.3651095670989" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_MembershipUsers)" Category="References" Bounds="122.88703918457,300.000183105469,151.710891723633,82.7639770507813" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_Profiles)" Category="References" Bounds="153.643333333333,287.500170819362,21.0000000000003,4.92266610763181E-06" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_Roles)" Category="References" Bounds="150.994280374139,245.561315593335,186.950630580904,30.0260504904931" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_Users)" Category="References" Bounds="153.005142211914,243.015975952148,362.330123901367,34.5399017333984" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_UsersInRoles)" Category="References" Bounds="153.296349745016,296.830340813111,273.054721495031,33.3135176933702" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_WebPartState_Paths)" Category="References" Bounds="122.88703918457,300.000183105469,426.727828979492,138.217529296875" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_WebPartState_Shared)" Category="References" Bounds="-10.1341819763184,300.000183105469,69.6260147094727,192.788421630859" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="(@1 @2 Type=vw_aspnet_WebPartState_User)" Category="References" Bounds="153.204788208008,297.047912597656,358.298141479492,86.1445007324219" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@10" Category="References" Bounds="105.892570495605,194.125091552734,86.8737411499023,80.8750915527344" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@11" Category="References" Bounds="105.892570495605,33.0712394714355,181.76734161377,241.928943634033" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="@12" Category="References" Bounds="99.2530517578125,138.39990234375,49.797607421875,136.600280761719" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="@13" Category="References" Bounds="-10.1341819763184,29.7978229522705,53.3727416992188,245.202360153198" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="@14" Category="References" Bounds="105.892570495605,188.306198120117,206.01798248291,86.6939849853516" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@15" Category="References" Bounds="73.2582098650606,253.949754873992,2.235807700362,21.0504388760081" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@16" Category="References" Bounds="105.892570495605,31.0973300933838,41.7469863891602,243.902853012085" IsSourceVirtualized="True" Weight="16" />
+    <Link Source="@23" Target="@17" Category="References" Bounds="105.892570495605,26.1085948944092,533.818428039551,248.89158821106" IsSourceVirtualized="True" Weight="20" />
+    <Link Source="@23" Target="@18" Category="References" Bounds="153.005142211914,188.799041748047,322.628829956055,88.7568359375" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@19" Category="References" Bounds="153.005142211914,80.9394378662109,554.323226928711,196.616439819336" IsSourceVirtualized="True" Weight="28" />
+    <Link Source="@23" Target="@20" Category="References" Bounds="105.892570495605,33.483154296875,316.699348449707,241.517028808594" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="@21" Category="References" Bounds="105.892570495605,33.8098602294922,453.728706359863,241.190322875977" IsSourceVirtualized="True" Weight="16" />
+    <Link Source="@23" Target="@22" Category="References" Bounds="105.892570495605,87.0021286010742,214.24341583252,187.998054504395" IsSourceVirtualized="True" Weight="12" />
+    <Link Source="@23" Target="@3" Category="References" Bounds="153.39680480957,264.865936279297,216.50080871582,13.5836181640625" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@4" Category="References" Bounds="130.218597412109,300.000183105469,462.901947021484,10.1341247558594" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@5" Category="References" Bounds="105.892570495605,192.616760253906,43.158088684082,82.3834228515625" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@6" Category="References" Bounds="122.88703918457,300.000183105469,160.100357055664,138.478454589844" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@7" Category="References" Bounds="-10.1341819763184,300.000183105469,65.856086730957,137.679138183594" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@8" Category="References" Bounds="153.005142211914,192.489837646484,511.728988647461,85.0660400390625" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@23" Target="@9" Category="References" Bounds="105.892570495605,133.289367675781,351.185554504395,141.710815429688" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@3" Target="@10" Category="References" Bounds="242.204452514648,194.153671264648,206.160781860352,80.8464202880859" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@3" Target="@4" Category="References" Bounds="487.745910644531,265.386138916016,139.920959472656,9.61395263671875" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@3" Target="@5" Category="References" Bounds="137.022399902344,191.75651550293,279.588684082031,83.2435760498047" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@3" Target="@9" Category="References" Bounds="458.540802001953,138.414794921875,52.5026550292969,136.585296630859" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@4" Target="@10" Category="References" Bounds="266.855224609375,192.67497253418,407.51220703125,82.3251190185547" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@4" Target="@3" Category="References" Bounds="525.373352050781,270.782104492188,91.7574462890625,4.21798706054688" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@5" Target="@3" Category="References" Bounds="130.143325805664,183.117752075195,289.276290893555,87.3512725830078" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@5" Target="@6" Category="References" Bounds="118.67115020752,190,233.00609588623,248.006774902344" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@5" Target="@7" Category="References" Bounds="78.4060134887695,190,124.196296691895,243.651763916016" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@6" Target="@5" Category="References" Bounds="109.227638244629,191.873031616211,224.14022064209,248.127426147461" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@7" Target="@10" Category="References" Bounds="161.557098388672,194.662750244141,55.9329528808594,245.337738037109" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@7" Target="@5" Category="References" Bounds="62.161979675293,191.425338745117,136.709037780762,248.575149536133" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@8" Target="@10" Category="References" Bounds="286.871154785156,156.902679443359,383.81494140625,8.09721374511719" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+    <Link Source="@9" Target="@10" Category="References" Bounds="190.17301940918,134.999847412109,295.361770629883,28.3395080566406" IsSourceVirtualized="True" Weight="4" />
+    <Link Source="@9" Target="@3" Category="References" Bounds="472.574127197266,134.999847412109,61.9299011230469,135.184326171875" IsSourceVirtualized="True" Weight="10">
+      <Category Ref="CodeSchema_ReturnTypeLink" />
+    </Link>
+  </Links>
+  <Categories>
+    <Category Id="CodeSchema_Class" Label="Class" BasedOn="CodeSchema_Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Classes" />
+    <Category Id="CodeSchema_ReturnTypeLink" Label="Return" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Return types" OutgoingActionLabel="Return types" />
+    <Category Id="CodeSchema_Type" Label="Type" CanBeDataDriven="True" DefaultAction="Node:Both:CodeSchema_Member" Icon="CodeSchema_Class" NavigationActionLabel="Types" />
+    <Category Id="References" Label="References" CanBeDataDriven="True" CanLinkedNodesBeDataDriven="True" IncomingActionLabel="Referenced By" OutgoingActionLabel="References" />
+  </Categories>
+  <Properties>
+    <Property Id="Bounds" DataType="System.Windows.Rect" />
+    <Property Id="CanBeDataDriven" Label="CanBeDataDriven" Description="CanBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CanLinkedNodesBeDataDriven" Label="CanLinkedNodesBeDataDriven" Description="CanLinkedNodesBeDataDriven" DataType="System.Boolean" />
+    <Property Id="CodeSchemaProperty_IsPublic" Label="Is Public" Description="Flag to indicate the scope is Public" DataType="System.Boolean" />
+    <Property Id="CommonLabel" DataType="System.String" />
+    <Property Id="DataVirtualized" Label="Data Virtualized" Description="If true, the graph can contain nodes and links that represent data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="DefaultAction" Label="DefaultAction" Description="DefaultAction" DataType="System.String" />
+    <Property Id="DelayedChildNodesState" Label="Delayed Child Nodes State" Description="Unspecified if the delayed child nodes state is not specified. NotFetched if the group contains child nodes that are not fetched into the graph yet. Fetched if the group has all its delayed child nodes already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="DelayedCrossGroupLinksState" Label="Delayed Cross-Group Links State" Description="Unspecified if the delayed cross-group links state is not specified. NotFetched if delayed cross-group links on this node are not fetched into the graph yet. Fetched if all delayed cross-group links have already fetched." DataType="Microsoft.VisualStudio.GraphModel.DelayedDataState" />
+    <Property Id="Expression" DataType="System.String" />
+    <Property Id="Group" Label="Group" Description="Display the node as a group" DataType="Microsoft.VisualStudio.GraphModel.GraphGroupStyle" />
+    <Property Id="GroupLabel" DataType="System.String" />
+    <Property Id="Icon" Label="Icon" Description="Icon" DataType="System.String" />
+    <Property Id="IncomingActionLabel" Label="IncomingActionLabel" Description="IncomingActionLabel" DataType="System.String" />
+    <Property Id="IsEnabled" DataType="System.Boolean" />
+    <Property Id="IsSourceVirtualized" Label="Link Source Virtualized" Description="If true, the link source end contains data for virtualized nodes/links (i.e. not actually created in the graph)." DataType="System.Boolean" />
+    <Property Id="Label" Label="Label" Description="Displayable label of an Annotatable object" DataType="System.String" />
+    <Property Id="Language" Label="Language" Description="Language" DataType="System.String" />
+    <Property Id="Layout" DataType="System.String" />
+    <Property Id="NavigationActionLabel" Label="NavigationActionLabel" Description="NavigationActionLabel" DataType="System.String" />
+    <Property Id="OutgoingActionLabel" Label="OutgoingActionLabel" Description="OutgoingActionLabel" DataType="System.String" />
+    <Property Id="SourceLocation" Label="Start Line Number" DataType="Microsoft.VisualStudio.GraphModel.CodeSchema.SourceLocation" />
+    <Property Id="TargetType" DataType="System.Type" />
+    <Property Id="Value" DataType="System.String" />
+    <Property Id="ValueLabel" DataType="System.String" />
+    <Property Id="Visibility" Label="Visibility" Description="Defines whether a node in the graph is visible or not" DataType="System.Windows.Visibility" />
+    <Property Id="Weight" Label="Weight" Description="Weight" DataType="System.Double" />
+  </Properties>
+  <QualifiedNames>
+    <Name Id="Assembly" Label="Assembly" ValueType="Uri" />
+    <Name Id="Namespace" Label="Namespace" ValueType="System.String" />
+    <Name Id="Type" Label="Type" ValueType="System.Object" />
+  </QualifiedNames>
+  <IdentifierAliases>
+    <Alias n="1" Uri="Assembly=$(128b0486-c425-45ea-9940-1755f07689a5.OutputPathUri)" />
+    <Alias n="2" Id="Namespace=WebsiteSUPPORTASUDomain" />
+    <Alias n="3" Id="(@1 @2 Type=aspnet_Applications)" />
+    <Alias n="4" Id="(@1 @2 Type=aspnet_Membership)" />
+    <Alias n="5" Id="(@1 @2 Type=aspnet_Paths)" />
+    <Alias n="6" Id="(@1 @2 Type=aspnet_PersonalizationAllUsers)" />
+    <Alias n="7" Id="(@1 @2 Type=aspnet_PersonalizationPerUser)" />
+    <Alias n="8" Id="(@1 @2 Type=aspnet_Profile)" />
+    <Alias n="9" Id="(@1 @2 Type=aspnet_Roles)" />
+    <Alias n="10" Id="(@1 @2 Type=aspnet_Users)" />
+    <Alias n="11" Id="(@1 @2 Type=College)" />
+    <Alias n="12" Id="(@1 @2 Type=Committee)" />
+    <Alias n="13" Id="(@1 @2 Type=Event)" />
+    <Alias n="14" Id="(@1 @2 Type=EventSponsor)" />
+    <Alias n="15" Id="(@1 @2 Type=EventUniversity)" />
+    <Alias n="16" Id="(@1 @2 Type=Gallery)" />
+    <Alias n="17" Id="(@1 @2 Type=Member)" />
+    <Alias n="18" Id="(@1 @2 Type=MemberEvent)" />
+    <Alias n="19" Id="(@1 @2 Type=Participant)" />
+    <Alias n="20" Id="(@1 @2 Type=Position)" />
+    <Alias n="21" Id="(@1 @2 Type=Sponsor)" />
+    <Alias n="22" Id="(@1 @2 Type=University)" />
+    <Alias n="23" Id="(@1 @2 Type=websitedbEntities)" />
+  </IdentifierAliases>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="Results" ValueLabel="True">
+      <Condition Expression="HasCategory('QueryResult')" />
+      <Setter Property="Background" Value="#FFBCFFBE" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Assembly" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Assembly')" />
+      <Setter Property="Background" Value="#FF094167" />
+      <Setter Property="Stroke" Value="#FF094167" />
+      <Setter Property="Icon" Value="CodeSchema_Assembly" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Namespace" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Namespace')" />
+      <Setter Property="Background" Value="#FF0E619A" />
+      <Setter Property="Stroke" Value="#FF0E619A" />
+      <Setter Property="Icon" Value="CodeSchema_Namespace" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Interface" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Interface')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Interface" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Struct" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Struct')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Struct" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enumeration" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Enum')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Enum" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Delegate" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Delegate')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Delegate" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Class" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Type')" />
+      <Setter Property="Background" Value="#FF1382CE" />
+      <Setter Property="Stroke" Value="#FF1382CE" />
+      <Setter Property="Icon" Value="CodeSchema_Class" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Property')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Property" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Method" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Method') Or HasCategory('CodeSchema_CallStackUnresolvedMethod')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Method" />
+      <Setter Property="LayoutSettings" Value="List" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Event" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Event')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Event" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Field" ValueLabel="Has category">
+      <Condition Expression="HasCategory('CodeSchema_Field')" />
+      <Setter Property="Background" Value="#FFE0E0E0" />
+      <Setter Property="Stroke" Value="#FFE0E0E0" />
+      <Setter Property="Icon" Value="CodeSchema_Field" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Out Parameter" ValueLabel="True">
+      <Condition Expression="CodeSchemaProperty_IsOut = 'True'" />
+      <Setter Property="Icon" Value="CodeSchema_OutParameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Parameter" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_Parameter')" />
+      <Setter Property="Icon" Value="CodeSchema_Parameter" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Local Variable" ValueLabel="True">
+      <Condition Expression="HasCategory('CodeSchema_LocalExpression')" />
+      <Setter Property="Icon" Value="CodeSchema_LocalExpression" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Externals" ValueLabel="Has category">
+      <Condition Expression="HasCategory('Externals')" />
+      <Setter Property="Background" Value="#FF424242" />
+      <Setter Property="Stroke" Value="#FF424242" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Inherits From" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('InheritsFrom') And Target.HasCategory('CodeSchema_Class')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Implements" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="HasCategory('Implements') And Target.HasCategory('CodeSchema_Interface')" />
+      <Setter Property="TargetDecorator" Value="OpenArrow" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Field Read" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Target.HasCategory('CodeSchema_Field') And HasCategory('CodeSchema_FieldRead')" />
+      <Setter Property="StrokeDashArray" Value="2 2" />
+    </Style>
+    <Style TargetType="Link" GroupLabel="Comment Link" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="Source.HasCategory('Comment')" />
+      <Setter Property="Stroke" Value="#FFE5C365" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Cursor Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCursorLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Disabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="DisabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Enabled Breakpoint Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="EnabledBreakpointCount" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Instruction Pointer Location Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsInstructionPointerLocation" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Current Callstack Changed" ValueLabel="True" Visibility="Hidden">
+      <Condition Expression="IsCurrentCallstackFrame" />
+      <Setter Property="IndicatorWest" Value="WestIndicator" />
+    </Style>
+  </Styles>
+  <Paths>
+    <Path Id="128b0486-c425-45ea-9940-1755f07689a5.OutputPathUri" Value="file:///D:/Alhassan/Fcis/programs/WebsiteSUPPORTASU/WebsiteSUPPORTASUDomain/bin/Debug/WebsiteSUPPORTASUDomain.dll" />
+  </Paths>
+</DirectedGraph>

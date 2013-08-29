@@ -99,7 +99,7 @@ namespace WebsiteSUPPORTASUCore
             }
             catch (Exception e)
             {
-                return "Not";
+                return e.Message.ToString();
             }
         }
 
@@ -138,7 +138,7 @@ namespace WebsiteSUPPORTASUCore
             }
             catch (Exception e)
             {
-                return "Not";
+                return e.Message.ToString();
             }
         }
 
@@ -174,7 +174,7 @@ namespace WebsiteSUPPORTASUCore
             }
             catch (Exception e)
             {
-                return "Not";
+                return e.Message.ToString();
             }
         }
 

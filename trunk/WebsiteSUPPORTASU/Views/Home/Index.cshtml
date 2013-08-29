@@ -1,34 +1,3 @@
-﻿@{
-    ViewBag.Title = "Home";
-    Layout = "~/Views/Shared/_Layout.cshtml";
-}
+﻿
 
-
-<link rel="stylesheet" href="@Url.Content("~/Content/slider/default.css")" type="text/css" media="screen" />
-<link rel="stylesheet" href="@Url.Content("~/Content/slider/nivo-slider.css")" type="text/css" media="screen" />
-<script type="text/javascript" src="@Url.Content("~/Content/scripts/jquery-1.9.0.min.js")"></script>
-<script type="text/javascript" src="@Url.Content("~/Content/scripts/jquery.nivo.slider.js")"></script>
-<script type="text/javascript">
-    $(window).load(function () {
-        $('#slider').nivoSlider();
-    });
-</script>
-
-
-<div class=" push_1 grid_12">
-    <div class="slider-wrapper theme-default">
-        <div id="slider" class="nivoSlider">
-        @if (@ViewBag.Slider != null)
-        {
-            foreach (var Slice in @ViewBag.Slider)
-            {
-                <img src="@Url.Content("~/Content/images/"+@Slice.Location)" data-thumb="@Url.Content("~/Content/images/"+@Slice.Location)" alt="" title="@Slice.Comments"/>
-            }
-        }
-            </div>
-    </div>
-</div>
-
-<div class="grid_12 p_edit">
-@Html.Raw(@ViewBag.Home)
-</div>
+@ViewBag.Home

@@ -97,7 +97,7 @@ namespace WebsiteSUPPORTASU.Models
         public ActionResult EditGallery()
         {
             ViewBag.ElementsNames = objAdmin.GalleryCore.getGalleryNames().ToList();
-            return View("SelectEdit");
+            return View("../Admin/SelectEdit");
         }
 
         //
@@ -133,7 +133,7 @@ namespace WebsiteSUPPORTASU.Models
         public ActionResult DeleteGallery()
         {
             ViewBag.ElementsNames = objAdmin.GalleryCore.getGalleryNames().ToList();
-            return View("SelectDelete");
+            return View("../Admin/SelectDelete");
         }
 
         //

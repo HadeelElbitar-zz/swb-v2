@@ -91,7 +91,7 @@ namespace WebsiteSUPPORTASU.SponsorsControllers
         public ActionResult EditSponsor()
         {
             ViewBag.ElementsNames = objAdmin.SponsorCore.GetSponsors().ToList();
-            return View("SelectEdit");
+            return View("../Admin/SelectEdit");
         }
 
         //
@@ -126,7 +126,7 @@ namespace WebsiteSUPPORTASU.SponsorsControllers
         public ActionResult DeleteSponsor()
         {
             ViewBag.ElementsNames = objAdmin.SponsorCore.GetSponsors().ToList();
-            return View("SelectDelete");
+            return View("../Admin/SelectDelete");
         }
 
         //

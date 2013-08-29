@@ -3,63 +3,89 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>@ViewBag.Title</title>
-<link href="@Url.Content("~/Content/css/normalize.css")" type="text/css" rel="stylesheet" />
-<link  href="@Url.Content("~/Content/css/960_12_col.css")" type="text/css" rel="stylesheet" />
-<link  href="@Url.Content("~/Content/css/960_16_col.css")" type="text/css" rel="stylesheet" />
-<link href="@Url.Content("~/Content/css/mystyle.css")" rel="stylesheet" type="text/css" />
-<link rel="icon" href="@Url.Content("~/Content/images/icon.png")" />
+    <!-- Le styles -->
+    <link href="@Url.Content("~/Content/assets/css/bootstrap.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/assets/css/bootstrap-responsive.css")" rel="stylesheet">
+    <link href="@Url.Content("~/Content/assets/css/style.css")" rel="stylesheet">   
+    <link href="@Url.Content("~/Content/assets/css/bounce.css")" rel="stylesheet">
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Fav and touch icons -->
+    <link rel="shortcut icon" href="@Url.Content("~/Content/assets/ico/favicon.ico")">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="@Url.Content("~/Content/assets/ico/apple-touch-icon-144-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="@Url.Content("~/Content/assets/ico/apple-touch-icon-114-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="@Url.Content("~/Content/assets/ico/apple-touch-icon-72-precomposed.png")">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 </head>
 
 <body>
-
-<h5 style="margin:20px;">
-<a href="@Url.Action("EventTagUniversity", "Admin")">Event Tag University</a> | 
-<a href="@Url.Action("EventTagSponsor", "Admin")">Event Tag Sponsor</a> | 
-<a></a> | 
-<a></a> | 
-<a></a>
-</h5>
-
-
-    <div class=" push_5 grid_5">
-    <h6>
-        <li><a>Member</a>
+          <!-- NAVBAR
+    ================================================== -->
+    <!-- Wrap the .navbar in .container to center it on the page and provide easy way to target it with .navbar-wrapper. -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+          <!-- Responsive Navbar Part 1: Button for triggering responsive navbar (not covered in tutorial). Include responsive CSS to utilize. -->
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <!-- Responsive Navbar Part 2: Place all navbar contents you want collapsed withing .navbar-collapse.collapse. -->
+              <div class="nav-collapse collapse">
+            <ul class="nav">
+<li><a href="@Url.Action("EventTagUniversity", "Admin")">Event Tag University</a> </li>
+<li><a href="@Url.Action("EventTagSponsor", "Admin")">Event Tag Sponsor</a></li>
+<li><a></a> </li>
+<li><a></a> </li> 
+<li><a></a></li>
+                </ul>
+          </div><!--/.nav-collapse -->
+             </div><!-- /.navbar-inner -->
+      </div><!-- /.navbar -->
+     <br /><br /><br /> <br /><br /><br />
+        <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+        <li class="nav-header"><a>Member</a>
             <ul class="subnav">
-                <li><a href="@Url.Action("AddMember", "Admin")" class="icon list">AddMember</a></li>
-                <li><a href="@Url.Action("EditMember", "Admin")" class="icon list">EdiMembert</a></li>
-                <li><a href="@Url.Action("DeleteMember", "Admin")" class="icon list">DeleteMember</a></li>
+                <li><a href="@Url.Action("AddMember", "Supportians")" class="icon list">AddMember</a></li>
+                <li><a href="@Url.Action("EditMember", "Supportians")" class="icon list">EdiMembert</a></li>
+                <li><a href="@Url.Action("DeleteMember", "Supportians")" class="icon list">DeleteMember</a></li>
             </ul>
         </li>
-         <li><a>Gallery</a>
+         <li class="nav-header"><a>Gallery</a>
             <ul class="subnav">
-                <li><a href="@Url.Action("AddGallery", "Admin")" class="icon list">AddGallery</a></li>
-                <li><a href="@Url.Action("EditGallery", "Admin")" class="icon list">EditGallery</a></li>
-                <li><a href="@Url.Action("DeleteGallery", "Admin")" class="icon list">DeleteGallery</a></li>
+                <li><a href="@Url.Action("AddGallery", "Gallery")" class="icon list">AddGallery</a></li>
+                <li><a href="@Url.Action("EditGallery", "Gallery")" class="icon list">EditGallery</a></li>
+                <li><a href="@Url.Action("DeleteGallery", "Gallery")" class="icon list">DeleteGallery</a></li>
             </ul>
         </li>
-         <li><a>Sponsor</a>
+         <li class="nav-header"><a>Sponsor</a>
             <ul class="subnav">
-                <li><a href="@Url.Action("AddSponsor", "Admin")" class="icon list">AddSponsor</a></li>
-                <li><a href="@Url.Action("EditSponsor", "Admin")" class="icon list">EditSponsor</a></li>
-                <li><a href="@Url.Action("DeleteSponsor", "Admin")" class="icon list">DeleteSponsor</a></li>
+                <li><a href="@Url.Action("AddSponsor", "Sponsors")" class="icon list">AddSponsor</a></li>
+                <li><a href="@Url.Action("EditSponsor", "Sponsors")" class="icon list">EditSponsor</a></li>
+                <li><a href="@Url.Action("DeleteSponsor", "Sponsors")" class="icon list">DeleteSponsor</a></li>
             </ul>
         </li>
-         <li><a>StaticPage</a>
+         <li class="nav-header"><a>StaticPage</a>
             <ul class="subnav">
                 <li><a href="@Url.Action("AddStaticPage", "Admin")" class="icon list">AddStaticPage</a></li>
                 <li><a href="@Url.Action("EditStaticPage", "Admin")" class="icon list">EditStaticPage</a></li>
                 <li><a href="@Url.Action("DeleteStaticPage", "Admin")" class="icon list">DeleteStaticPage</a></li>
             </ul>
         </li>
-         <li><a>Event</a>
+         <li class="nav-header"><a>Event</a>
             <ul class="subnav">
-                <li><a href="@Url.Action("AddEvent", "Admin")" class="icon list">AddEvent</a></li>
-                <li><a href="@Url.Action("EditEvent", "Admin")" class="icon list">EditEvent</a></li>
-                <li><a href="@Url.Action("DeleteEvent", "Admin")" class="icon list">DeleteEvent</a></li>
+                <li><a href="@Url.Action("AddEvent", "Events")" class="icon list">AddEvent</a></li>
+                <li><a href="@Url.Action("EditEvent", "Events")" class="icon list">EditEvent</a></li>
+                <li><a href="@Url.Action("DeleteEvent", "Events")" class="icon list">DeleteEvent</a></li>
             </ul>
         </li>
-        <li><a>Extra Data</a>
+        <li class="nav-header"><a>Extra Data</a>
             <ul class="subnav">
                 <li><a href="@Url.Action("AddCommittee", "Admin")" class="icon list">AddCommittee</a></li>
                 <li><a href="@Url.Action("EditCommittee", "Admin")" class="icon list">EditCommittee</a></li>
@@ -79,12 +105,14 @@
             
             </ul>
         </li>
-        </h6>
-    </div>
+                
+          </div><!--/.well -->
+        </div><!--/span-->
     
-    <br /><br /><br />
-    <div class="container_16" id="content">
+        <div class="span9">
+          <div class="row-fluid featurette">
         @RenderBody()
     </div>
+            </div>
 </body>
 </html>

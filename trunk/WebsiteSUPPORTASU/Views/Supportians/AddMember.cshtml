@@ -1,0 +1,162 @@
+﻿@model WebsiteSUPPORTASU.Models.MemberModel
+
+@{
+    ViewBag.Title = "AddMember";
+    Layout = "~/Views/Shared/_Admin.cshtml";
+}
+
+<h2>AddMember</h2>
+
+<script src="@Url.Content("~/Scripts/jquery.validate.min.js")" type="text/javascript"></script>
+<script src="@Url.Content("~/Scripts/jquery.validate.unobtrusive.min.js")" type="text/javascript"></script>
+
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <legend>MemberModel</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.FullName)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.FullName)
+            @Html.ValidationMessageFor(model => model.FullName)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CommitteeID)
+        </div>
+        <div class="editor-field">
+        <select name = "Committee" >
+        <option value=""></option>
+        @foreach (var Committee in @ViewBag.Committee)
+            {
+                <option value="@Committee.ID">@Committee.Name</option>
+            }
+            </select>
+            @Html.ValidationMessageFor(model => model.CommitteeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Mobile)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Mobile)
+            @Html.ValidationMessageFor(model => model.Mobile)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HomePhone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HomePhone)
+            @Html.ValidationMessageFor(model => model.HomePhone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Email)
+            @Html.ValidationMessageFor(model => model.Email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.PositionID)
+        </div>
+        <div class="editor-field">
+            <select name="Position">
+            <option value=""></option>
+            @foreach (var Position in @ViewBag.Position)
+            {
+                <option value="@Position.ID">@Position.Name</option>
+            }
+            </select>
+            @Html.ValidationMessageFor(model => model.PositionID)
+        </div>
+        
+        <div class="editor-label">
+            @Html.LabelFor(model => model.UniversityID)
+        </div>
+        <div class="editor-field">
+            <select name="University">
+                <option value=""></option>
+                @foreach (var University in @ViewBag.University)
+            {
+                <option value="@University.ID">@University.Name</option>
+            }
+            </select>
+            @Html.ValidationMessageFor(model => model.UniversityID)
+        </div>
+         
+        <div class="editor-label">
+            @Html.LabelFor(model => model.CollegeID)
+        </div>
+        <div class="editor-field">
+            <select name="College">
+                <option value=""></option>
+                @foreach (var College in @ViewBag.College)
+        {
+            <option value="@College.ID">@College.Name</option>
+        }
+            </select>
+            @Html.ValidationMessageFor(model => model.CollegeID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.state)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.state)
+            @Html.ValidationMessageFor(model => model.state)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Address)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Address)
+            @Html.ValidationMessageFor(model => model.Address)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.HireYear)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.HireYear)
+            @Html.ValidationMessageFor(model => model.HireYear)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Birthdate)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Birthdate)
+            @Html.ValidationMessageFor(model => model.Birthdate)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ProfilePicture)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ProfilePicture)
+            @Html.ValidationMessageFor(model => model.ProfilePicture)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.Comments)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.Comments)
+            @Html.ValidationMessageFor(model => model.Comments)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
