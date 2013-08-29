@@ -44,7 +44,6 @@ namespace WebsiteSUPPORTASU.Models
         [HttpPost]
         public ActionResult SendEmail(FormCollection form, ParticipantsEmailsModel p)
         {
-            int i = 0;
             char[] ss = {','};
             string res = "";
             p.Emails = form["emails"].Split(ss); 
@@ -694,6 +693,96 @@ namespace WebsiteSUPPORTASU.Models
             }
         }
 
+        /**********  StaticPage ************/
+        //
+        // GET: /AboutUs/Add
+        [Authorize(Users = "admin")]
+        public ActionResult AddStaticPage()
+        {
+            return View("../Admin/AddStaticPage");
+        }
+
+        //
+        // POST: /StaticPage/Add
+
+        [HttpPost]
+        public ActionResult AddStaticPage(StaticPagesModel page)
+        {
+            if (ModelState.IsValid)
+            {
+                objAdmin.StaticPageCore.AddStaticPage(page.Name, page.Content);
+                return RedirectToAction("AddStaticPage");
+            }
+            else
+            {
+                return View(page);
+            }
+
+
+        }
+
+        //
+        // GET: /AboutUs/Edit/5
+
+        [Authorize(Users = "Admin")]
+        public ActionResult EditStaticPage()
+        {
+            ViewBag.ElementsNames = objAdmin.StaticPageCore.GetStaticPages().ToList();
+            return View("SelectEdit");
+        }
+
+        //
+        // POST: /AboutUs/Edit/5
+
+        [HttpPost]
+        public ActionResult EditStaticPage(StaticPagesModel Page, FormCollection form)
+        {
+            if (ModelState.IsValid)
+            {
+                int ID = Page.ID;
+                objAdmin.StaticPageCore.EditStaticPage(ID, Page.Name, Page.Content);
+                return RedirectToAction("EditStaticPage", "Admin");
+            }
+            else
+            {
+                int ID = int.Parse(form["Elements"]);
+                StaticPage ePage = objAdmin.StaticPageCore.GetStaticPageByID(ID).FirstOrDefault();
+                Page.ID = ID;
+                Page.Name = ePage.Name;
+                Page.Content = ePage.Content;
+                return View("EditStaticPage", Page);
+            }
+        }
+
+        //
+        // GET: /AboutUs/Delete/5
+
+        [Authorize(Users = "Admin")]
+        public ActionResult DeleteStaticPage()
+        {
+            ViewBag.ElementsNames = objAdmin.StaticPageCore.GetStaticPages().ToList();
+            return View("../Admin/SelectDelete");
+        }
+
+        //
+        // POST: /AboutUs/Delete/5
+
+        [HttpPost]
+        public ActionResult DeleteStaticPage(FormCollection form)
+        {
+            try
+            {
+                // TODO: Add delete logic here
+                int id = int.Parse(form["Elements"]);
+                objAdmin.StaticPageCore.DeleteStaticPage(id);
+                return RedirectToAction("Index");
+            }
+            catch
+            {
+                return RedirectToAction("DeleteStaticPage");
+            }
+
+        }
 
     }
 }

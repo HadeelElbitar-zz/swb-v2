@@ -16,8 +16,6 @@ using System.Linq;
 using System.Runtime.Serialization;
 using System.Xml.Serialization;
 
-using WebsiteSUPPORTASUDomain;
-
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
@@ -4151,6 +4149,159 @@ namespace WebsiteSUPPORTASUDomain
             }
     
             return base.ExecuteFunction("EditStaticPage1", iDParameter, nameParameter, textParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="applicationName">No Metadata Documentation available.</param>
+        /// <param name="userNames">No Metadata Documentation available.</param>
+        /// <param name="roleNames">No Metadata Documentation available.</param>
+        /// <param name="currentTimeUtc">No Metadata Documentation available.</param>
+        public ObjectResult<global::System.String> aspnet_UsersInRoles_AddUsersToRoles(global::System.String applicationName, global::System.String userNames, global::System.String roleNames, Nullable<global::System.DateTime> currentTimeUtc)
+        {
+            ObjectParameter applicationNameParameter;
+            if (applicationName != null)
+            {
+                applicationNameParameter = new ObjectParameter("ApplicationName", applicationName);
+            }
+            else
+            {
+                applicationNameParameter = new ObjectParameter("ApplicationName", typeof(global::System.String));
+            }
+    
+            ObjectParameter userNamesParameter;
+            if (userNames != null)
+            {
+                userNamesParameter = new ObjectParameter("UserNames", userNames);
+            }
+            else
+            {
+                userNamesParameter = new ObjectParameter("UserNames", typeof(global::System.String));
+            }
+    
+            ObjectParameter roleNamesParameter;
+            if (roleNames != null)
+            {
+                roleNamesParameter = new ObjectParameter("RoleNames", roleNames);
+            }
+            else
+            {
+                roleNamesParameter = new ObjectParameter("RoleNames", typeof(global::System.String));
+            }
+    
+            ObjectParameter currentTimeUtcParameter;
+            if (currentTimeUtc.HasValue)
+            {
+                currentTimeUtcParameter = new ObjectParameter("CurrentTimeUtc", currentTimeUtc);
+            }
+            else
+            {
+                currentTimeUtcParameter = new ObjectParameter("CurrentTimeUtc", typeof(global::System.DateTime));
+            }
+    
+            return base.ExecuteFunction<global::System.String>("aspnet_UsersInRoles_AddUsersToRoles", applicationNameParameter, userNamesParameter, roleNamesParameter, currentTimeUtcParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="applicationName">No Metadata Documentation available.</param>
+        /// <param name="userNames">No Metadata Documentation available.</param>
+        /// <param name="roleNames">No Metadata Documentation available.</param>
+        public ObjectResult<aspnet_UsersInRoles_RemoveUsersFromRoles_Result> aspnet_UsersInRoles_RemoveUsersFromRoles(global::System.String applicationName, global::System.String userNames, global::System.String roleNames)
+        {
+            ObjectParameter applicationNameParameter;
+            if (applicationName != null)
+            {
+                applicationNameParameter = new ObjectParameter("ApplicationName", applicationName);
+            }
+            else
+            {
+                applicationNameParameter = new ObjectParameter("ApplicationName", typeof(global::System.String));
+            }
+    
+            ObjectParameter userNamesParameter;
+            if (userNames != null)
+            {
+                userNamesParameter = new ObjectParameter("UserNames", userNames);
+            }
+            else
+            {
+                userNamesParameter = new ObjectParameter("UserNames", typeof(global::System.String));
+            }
+    
+            ObjectParameter roleNamesParameter;
+            if (roleNames != null)
+            {
+                roleNamesParameter = new ObjectParameter("RoleNames", roleNames);
+            }
+            else
+            {
+                roleNamesParameter = new ObjectParameter("RoleNames", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<aspnet_UsersInRoles_RemoveUsersFromRoles_Result>("aspnet_UsersInRoles_RemoveUsersFromRoles", applicationNameParameter, userNamesParameter, roleNamesParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        public int DeleteText(Nullable<global::System.Int32> iD)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("DeleteText", iDParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        /// <param name="name">No Metadata Documentation available.</param>
+        /// <param name="text">No Metadata Documentation available.</param>
+        public int EditText(Nullable<global::System.Int32> iD, global::System.String name, global::System.String text)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter nameParameter;
+            if (name != null)
+            {
+                nameParameter = new ObjectParameter("Name", name);
+            }
+            else
+            {
+                nameParameter = new ObjectParameter("Name", typeof(global::System.String));
+            }
+    
+            ObjectParameter textParameter;
+            if (text != null)
+            {
+                textParameter = new ObjectParameter("text", text);
+            }
+            else
+            {
+                textParameter = new ObjectParameter("text", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("EditText", iDParameter, nameParameter, textParameter);
         }
 
         #endregion
@@ -12579,6 +12730,89 @@ namespace WebsiteSUPPORTASUDomain
         #endregion
 
     
+    }
+
+    #endregion
+
+    #region ComplexTypes
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="websitedbModel", Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class aspnet_UsersInRoles_RemoveUsersFromRoles_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new aspnet_UsersInRoles_RemoveUsersFromRoles_Result object.
+        /// </summary>
+        /// <param name="column1">Initial value of the Column1 property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        public static aspnet_UsersInRoles_RemoveUsersFromRoles_Result Createaspnet_UsersInRoles_RemoveUsersFromRoles_Result(global::System.String column1, global::System.String name)
+        {
+            aspnet_UsersInRoles_RemoveUsersFromRoles_Result aspnet_UsersInRoles_RemoveUsersFromRoles_Result = new aspnet_UsersInRoles_RemoveUsersFromRoles_Result();
+            aspnet_UsersInRoles_RemoveUsersFromRoles_Result.Column1 = column1;
+            aspnet_UsersInRoles_RemoveUsersFromRoles_Result.Name = name;
+            return aspnet_UsersInRoles_RemoveUsersFromRoles_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Column1
+        {
+            get
+            {
+                return _Column1;
+            }
+            set
+            {
+                OnColumn1Changing(value);
+                ReportPropertyChanging("Column1");
+                _Column1 = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Column1");
+                OnColumn1Changed();
+            }
+        }
+        private global::System.String _Column1;
+        partial void OnColumn1Changing(global::System.String value);
+        partial void OnColumn1Changed();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+
+        #endregion
+
     }
 
     #endregion

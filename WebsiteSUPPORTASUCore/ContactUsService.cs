@@ -41,6 +41,7 @@ namespace WebsiteSUPPORTASUCore
             }
             catch (Exception e)
             {
+                 e.Message.ToString();
             }
         }
         

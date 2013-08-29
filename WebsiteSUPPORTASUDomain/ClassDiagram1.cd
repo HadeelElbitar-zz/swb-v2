@@ -1,0 +1,244 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="WebsiteSUPPORTASUDomain.websitedbEntities" Collapsed="true">
+    <Position X="5.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>z2dkneU/pHUOz37tEkIH227rWytyppR+Un9MWCSiS4g=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Applications" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEEAAAAAACEkMAAEAQAACAAwAAAAgBAEAAQAxAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Membership" Collapsed="true">
+    <Position X="2.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lTABICgEAKhLbFLIBaAECEyTEAWrGZJSEAhRBAS8BR4=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Paths" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAQAAAABAAYgIAAQAAAAAAEAIBDAAQYAAADAIgAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_PersonalizationAllUsers" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAQAAAEAAAIgAAAABBQAAAAAgAAAAAIACAIAgAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_PersonalizationPerUser" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEECQAAAEAAAIgAIAABBQAwABAAAAJAAIACAIAgUAAk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Profile" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAACAAAAAAAIACABgAwAAEAIIJQAQAAAIAgwAAk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Roles" Collapsed="true">
+    <Position X="11" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAIAAAkgqBAAIQAAgABAEAAAABCEIEQAFAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_SchemaVersions" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEgAAAAAAAAAIAAAAAgAAECCAAAAAAAACAAwCABAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_Users" Collapsed="true">
+    <Position X="2.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAAAFAAgANKAAIgQIAAAwgEAUEBEBAARAAVAA0UAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.aspnet_WebEvent_Events" Collapsed="true">
+    <Position X="4" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAKA4BAgCAxREAAohAHMFgeVAZCKCBAAQAwAOE2EAgE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.College" Collapsed="true">
+    <Position X="5.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIEBgAAAAgAAAAAIEoAQAAAAAQAAAABAUEEAEIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Committee" Collapsed="true">
+    <Position X="7.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAEggAAAAAAEIAQAAAAAQAAEABQEAAAEACA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.ContactU" Collapsed="true">
+    <Position X="9.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADABAAACAAgAAABICEIAQAABEIQAAAABAAIAEEECA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Event" Collapsed="true">
+    <Position X="11" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQCAEBABAkggAAAIAAEKAQgIAhAYAAUIJQUEEEkIQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.EventsName" Collapsed="true">
+    <Position X="0.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAEIAQAAAIAQAAAABAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.EventSponsor" Collapsed="true">
+    <Position X="2.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACMgAAAAAAAAAAAAAAAABgAAAAEAAAEAAAQAAAAYAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.EventUniversity" Collapsed="true">
+    <Position X="4" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACIQAAAAAAAAIAAAAYAAAAAAAAEAAAIAAEQAQAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Gallery" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACICIABgAoAAgABAAAMEoAQAAgEAQAAAARQQEAAEJAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.GalleryName" Collapsed="true">
+    <Position X="7.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAgAAAAAAEIAQAAAAAQAAAABAAAAAEEAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Interview" Collapsed="true">
+    <Position X="9.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAgEAAAAgQAAAAAEEAQAAABABAAAABIQACAEAQA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Member" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhgBSGtAJCQAoLCjDYAECFYIkgEBAICG7HAQUAEMJDA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.MemberEvent" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ICIAAAAAAAEAAAAAgAAAAAAAAAEIAAAAAAQAAAABEAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.MembersName" Collapsed="true">
+    <Position X="2.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAgKBAAAAEAAAAAAAAAAAAIBAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Participant" Collapsed="true">
+    <Position X="4" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MiIBQUJILCEAiaAADAAFAAIAAhGJAAGVIDQXVIAMJiE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Position" Collapsed="true">
+    <Position X="5.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAABAAAAAgAAAAAAEoAQAAAAAQAAAABAUEAAEIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Sponsor" Collapsed="true">
+    <Position X="7.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAADABBAACABgAAABAAEIAQABkEAQgAAAhAQkBAFIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.SponsorView" Collapsed="true">
+    <Position X="9.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACICAABABAAAgAAAAIAEIAYAAIEAQAAAABQQEAAEIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.StaticPage" Collapsed="true">
+    <Position X="11" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAECAAAAAgAAgAEAAAAEIAQABCAAQAAAABAAAAAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.University" Collapsed="true">
+    <Position X="0.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACIAAgAAAAoAAAAAIFoAQAAgAAQAAAABAAACAEAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_Applications" Collapsed="true">
+    <Position X="2.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAAACEkMAAEAQAACAAAAAAAgAAEAAQAhAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_MembershipUsers" Collapsed="true">
+    <Position X="4" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ATABIClEAqhJbBLIhaIACEyTAAWvHUJSEQgRFAS8VR4=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_Profiles" Collapsed="true">
+    <Position X="5.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAEAAIAAIBQAwQAAAAAgAAAAAAIAgAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_Roles" Collapsed="true">
+    <Position X="7.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAkgrBAAIQAAgABAAAAAAACEAEQAFAAgAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_Users" Collapsed="true">
+    <Position X="9.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAFAAgAMKAAIgQIAAAwAAAUEBEBAAQAAFAA0UAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_UsersInRoles" Collapsed="true">
+    <Position X="11" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAAAAAABAIIAAAAAwAAAAAABAEAAAAAAAAAAg=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_WebPartState_Paths" Collapsed="true">
+    <Position X="0.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAABAAYgIAAQAAAAAAAAABCAACIAAADAIgAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_WebPartState_Shared" Collapsed="true">
+    <Position X="2.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAIAAEgAAAAABQAAQAAAAAgAAIAAAIAgAAAE=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.vw_aspnet_WebPartState_User" Collapsed="true">
+    <Position X="4" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAEgAIAAABQAwQAAAAAgAIIAAAIAgAAAk=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="WebsiteSUPPORTASUDomain.Workshop" Collapsed="true">
+    <Position X="7.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACICAAJAAAAAgAAAAAAEIAQAAAEAQAAAABQQEAAEIAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
