@@ -81,18 +81,19 @@ namespace WebsiteSUPPORTASUCore
 
         public string SendEMail(string EmailFrom, string EmailTo, string Subject, string Body)
         {
-            System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
-
-            message.From = new System.Net.Mail.MailAddress(EmailFrom, "SUPPORT ASU");
-            message.To.Add(new System.Net.Mail.MailAddress(EmailTo));
-            message.IsBodyHtml = true;
-            message.BodyEncoding = Encoding.UTF8;
-            message.Subject = Subject;
-            message.Body = Body;
-
-            System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
             try
             {
+                System.Net.Mail.MailMessage message = new System.Net.Mail.MailMessage();
+
+                message.From = new System.Net.Mail.MailAddress(EmailFrom, "SUPPORT ASU");
+                message.To.Add(new System.Net.Mail.MailAddress(EmailTo));
+                message.IsBodyHtml = true;
+                message.BodyEncoding = Encoding.UTF8;
+                message.Subject = Subject;
+                message.Body = Body;
+
+                System.Net.Mail.SmtpClient client = new System.Net.Mail.SmtpClient();
+            
                 client.Send(message);
                 return "Done";
             }

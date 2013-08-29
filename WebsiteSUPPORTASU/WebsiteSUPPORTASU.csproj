@@ -20,6 +20,11 @@
     <UpgradeBackupLocation>
     </UpgradeBackupLocation>
     <OldToolsVersion>4.0</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -418,6 +423,7 @@
     <Content Include="Views\Registration\AddBlock.cshtml" />
     <Content Include="Views\Events\Live Streaming.cshtml" />
     <Content Include="Views\Events\Map.cshtml" />
+    <Content Include="Views\Admin\SendEmail.cshtml" />
     <None Include="Views\Sponsors\Sponsors.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
   </ItemGroup>

@@ -34,7 +34,28 @@ namespace WebsiteSUPPORTASU.Models
         {
             return View();
         }
-         
+
+        [HttpGet]
+        public ActionResult SendEmail()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult SendEmail(FormCollection form, ParticipantsEmailsModel p)
+        {
+            int i = 0;
+            char[] ss = {','};
+            string res = "";
+            p.Emails = form["emails"].Split(ss); 
+            foreach (var email in p.Emails)
+            {
+                res += objAdmin.SendBlockEmails(email, p.Subject, p.body);
+                res += "\n";
+            }
+            ModelState.AddModelError("", res);
+            return View();
+        }
 
         /********** HR Area **********/
 
