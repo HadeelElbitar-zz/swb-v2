@@ -13,6 +13,7 @@ namespace WebsiteSUPPORTASU.Controllers
     public class AboutUsController : Controller
     {
         StaticPageService Core;
+        
         public AboutUsController()
         {
             Core = new StaticPageService();
