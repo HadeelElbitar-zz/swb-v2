@@ -1,6 +1,4 @@
-﻿
-
-namespace WebsiteSUPPORTASU.Models
+﻿namespace WebsiteSUPPORTASU.Models
 {
 
 using System;
@@ -92,12 +90,12 @@ using WebsiteSUPPORTASU.Models;
             if (ModelState.IsValid)
             {
                 int ID = Member.ID;
-                Member.CollegeID = int.Parse(form["OldCollege"]);
-                Member.UniversityID = int.Parse(form["OldUniversity"]);
-                Member.PositionID = int.Parse(form["OldPosition"]);
-                Member.CommitteeID = int.Parse(form["OldCommittee"]);
+                Member.CollegeID = (form["College"].ToString().Equals(""))?Member.CollegeID:int.Parse(form["College"]);
+                Member.UniversityID = (form["University"].ToString().Equals("")) ? Member.UniversityID: int.Parse(form["University"]);
+                Member.PositionID = (form["Position"].ToString().Equals("")) ? Member.PositionID : int.Parse(form["Position"]);
+                Member.CommitteeID = (form["Committee"].ToString().Equals("")) ? Member.CommitteeID : int.Parse(form["Committee"]);
 
-                objAdmin.SupportiansCore.edit(ID, Member.FullName, Member.Mobile, Member.HomePhone, Member.Email, Member.CommitteeID, Member.CollegeID, Member.UniversityID, Member.PositionID, Member.state, Member.Address, Member.HireYear, Member.Birthdate, Member.ProfilePicture, Member.Comments);
+                objAdmin.SupportiansCore.edit(ID, Member.FullName.Trim(), Member.Mobile.Trim(), Member.HomePhone, Member.Email, Member.CommitteeID, Member.CollegeID, Member.UniversityID, Member.PositionID, Member.state.Trim(), Member.Address.Trim(), Member.HireYear, Member.Birthdate, Member.ProfilePicture.Trim(), Member.Comments);
 
                 return RedirectToAction("EditMember");
             }
@@ -111,7 +109,24 @@ using WebsiteSUPPORTASU.Models;
                 int ID = int.Parse(form["Elements"]);
                 Member eMember = objAdmin.SupportiansCore.GetMember(ID).FirstOrDefault();
                 Member.ID = ID;
-                Member.FullName = eMember.FullName; Member.Mobile = eMember.Mobile; Member.HomePhone = eMember.HomePhone; Member.Email = eMember.Email; ViewBag.Committee = Member.CommitteeID; ViewBag.Committee = Member.CollegeID; ViewBag.Committee = Member.UniversityID; ViewBag.Committee = Member.PositionID; Member.state = eMember.state; Member.Address = eMember.Address; Member.HireYear = eMember.HireYear; Member.Birthdate = eMember.Birthdate; Member.ProfilePicture = eMember.ProfilePicture; Member.Comments = eMember.Comments;
+                Member.FullName = eMember.FullName; 
+                Member.Mobile = eMember.Mobile; 
+                Member.HomePhone = eMember.HomePhone; 
+                Member.Email = eMember.Email;
+                Member.CommitteeID = eMember.CommitteeID;
+                Member.CollegeID = eMember.CollegeID;
+                Member.UniversityID = eMember.UniversityID;
+                Member.PositionID = eMember.PositionID;
+                ViewBag.Committee = objAdmin.GetCommittee(eMember.CommitteeID).FirstOrDefault().Name;
+                ViewBag.College = objAdmin.GetCollege(eMember.CollegeID).FirstOrDefault().Name;
+                ViewBag.University = objAdmin.GetUniversity(eMember.UniversityID).FirstOrDefault().Name;
+                ViewBag.Position = objAdmin.GetPosition(eMember.PositionID).FirstOrDefault().Name;
+                Member.state = eMember.state; 
+                Member.Address = eMember.Address; 
+                Member.HireYear = eMember.HireYear; 
+                Member.Birthdate = eMember.Birthdate; 
+                Member.ProfilePicture = eMember.ProfilePicture; 
+                Member.Comments = eMember.Comments;
                 return View("EditMember", Member);
             }
         }
