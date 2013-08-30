@@ -4094,66 +4094,6 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        /// <param name="iD">No Metadata Documentation available.</param>
-        public int DeleteStaticPage1(Nullable<global::System.Int32> iD)
-        {
-            ObjectParameter iDParameter;
-            if (iD.HasValue)
-            {
-                iDParameter = new ObjectParameter("ID", iD);
-            }
-            else
-            {
-                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
-            }
-    
-            return base.ExecuteFunction("DeleteStaticPage1", iDParameter);
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        /// <param name="iD">No Metadata Documentation available.</param>
-        /// <param name="name">No Metadata Documentation available.</param>
-        /// <param name="text">No Metadata Documentation available.</param>
-        public int EditStaticPage1(Nullable<global::System.Int32> iD, global::System.String name, global::System.String text)
-        {
-            ObjectParameter iDParameter;
-            if (iD.HasValue)
-            {
-                iDParameter = new ObjectParameter("ID", iD);
-            }
-            else
-            {
-                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter nameParameter;
-            if (name != null)
-            {
-                nameParameter = new ObjectParameter("Name", name);
-            }
-            else
-            {
-                nameParameter = new ObjectParameter("Name", typeof(global::System.String));
-            }
-    
-            ObjectParameter textParameter;
-            if (text != null)
-            {
-                textParameter = new ObjectParameter("text", text);
-            }
-            else
-            {
-                textParameter = new ObjectParameter("text", typeof(global::System.String));
-            }
-    
-            return base.ExecuteFunction("EditStaticPage1", iDParameter, nameParameter, textParameter);
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         /// <param name="applicationName">No Metadata Documentation available.</param>
         /// <param name="userNames">No Metadata Documentation available.</param>
         /// <param name="roleNames">No Metadata Documentation available.</param>
@@ -8732,33 +8672,23 @@ namespace WebsiteSUPPORTASUDomain
         /// </summary>
         /// <param name="id">Initial value of the ID property.</param>
         /// <param name="fullName">Initial value of the FullName property.</param>
-        /// <param name="mobile">Initial value of the Mobile property.</param>
-        /// <param name="email">Initial value of the Email property.</param>
         /// <param name="committeeID">Initial value of the CommitteeID property.</param>
         /// <param name="collegeID">Initial value of the CollegeID property.</param>
         /// <param name="universityID">Initial value of the UniversityID property.</param>
         /// <param name="positionID">Initial value of the PositionID property.</param>
-        /// <param name="state">Initial value of the state property.</param>
-        /// <param name="address">Initial value of the Address property.</param>
         /// <param name="hireYear">Initial value of the HireYear property.</param>
         /// <param name="birthdate">Initial value of the Birthdate property.</param>
-        /// <param name="profilePicture">Initial value of the ProfilePicture property.</param>
-        public static Member CreateMember(global::System.Int32 id, global::System.String fullName, global::System.String mobile, global::System.String email, global::System.Int32 committeeID, global::System.Int32 collegeID, global::System.Int32 universityID, global::System.Int32 positionID, global::System.String state, global::System.String address, global::System.DateTime hireYear, global::System.DateTime birthdate, global::System.String profilePicture)
+        public static Member CreateMember(global::System.Int32 id, global::System.String fullName, global::System.Int32 committeeID, global::System.Int32 collegeID, global::System.Int32 universityID, global::System.Int32 positionID, global::System.DateTime hireYear, global::System.DateTime birthdate)
         {
             Member member = new Member();
             member.ID = id;
             member.FullName = fullName;
-            member.Mobile = mobile;
-            member.Email = email;
             member.CommitteeID = committeeID;
             member.CollegeID = collegeID;
             member.UniversityID = universityID;
             member.PositionID = positionID;
-            member.state = state;
-            member.Address = address;
             member.HireYear = hireYear;
             member.Birthdate = birthdate;
-            member.ProfilePicture = profilePicture;
             return member;
         }
 
@@ -8820,7 +8750,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Mobile
         {
@@ -8832,7 +8762,7 @@ namespace WebsiteSUPPORTASUDomain
             {
                 OnMobileChanging(value);
                 ReportPropertyChanging("Mobile");
-                _Mobile = StructuralObject.SetValidValue(value, false);
+                _Mobile = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Mobile");
                 OnMobileChanged();
             }
@@ -8868,7 +8798,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Email
         {
@@ -8880,7 +8810,7 @@ namespace WebsiteSUPPORTASUDomain
             {
                 OnEmailChanging(value);
                 ReportPropertyChanging("Email");
-                _Email = StructuralObject.SetValidValue(value, false);
+                _Email = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Email");
                 OnEmailChanged();
             }
@@ -8988,7 +8918,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String state
         {
@@ -9000,7 +8930,7 @@ namespace WebsiteSUPPORTASUDomain
             {
                 OnstateChanging(value);
                 ReportPropertyChanging("state");
-                _state = StructuralObject.SetValidValue(value, false);
+                _state = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("state");
                 OnstateChanged();
             }
@@ -9012,7 +8942,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String Address
         {
@@ -9024,7 +8954,7 @@ namespace WebsiteSUPPORTASUDomain
             {
                 OnAddressChanging(value);
                 ReportPropertyChanging("Address");
-                _Address = StructuralObject.SetValidValue(value, false);
+                _Address = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("Address");
                 OnAddressChanged();
             }
@@ -9084,7 +9014,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
         public global::System.String ProfilePicture
         {
@@ -9096,7 +9026,7 @@ namespace WebsiteSUPPORTASUDomain
             {
                 OnProfilePictureChanging(value);
                 ReportPropertyChanging("ProfilePicture");
-                _ProfilePicture = StructuralObject.SetValidValue(value, false);
+                _ProfilePicture = StructuralObject.SetValidValue(value, true);
                 ReportPropertyChanged("ProfilePicture");
                 OnProfilePictureChanged();
             }

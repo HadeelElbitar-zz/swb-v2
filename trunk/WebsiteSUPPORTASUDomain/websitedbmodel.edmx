@@ -488,18 +488,18 @@
           </Key>
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="FullName" Type="nvarchar(max)" Nullable="false" />
-          <Property Name="Mobile" Type="nchar" Nullable="false" MaxLength="12" />
-          <Property Name="HomePhone" Type="nchar" MaxLength="10" />
-          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Mobile" Type="nvarchar(max)" />
+          <Property Name="HomePhone" Type="nvarchar(max)" />
+          <Property Name="Email" Type="nvarchar(max)" />
           <Property Name="CommitteeID" Type="int" Nullable="false" />
           <Property Name="CollegeID" Type="int" Nullable="false" />
           <Property Name="UniversityID" Type="int" Nullable="false" />
           <Property Name="PositionID" Type="int" Nullable="false" />
-          <Property Name="state" Type="nchar" Nullable="false" MaxLength="20" />
-          <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="state" Type="nvarchar(max)" />
+          <Property Name="Address" Type="nvarchar(max)" />
           <Property Name="HireYear" Type="datetime" Nullable="false" />
           <Property Name="Birthdate" Type="datetime" Nullable="false" />
-          <Property Name="ProfilePicture" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="ProfilePicture" Type="nvarchar(max)" />
           <Property Name="Comments" Type="nvarchar(max)" />
         </EntityType>
         <!--Errors Found During Generation:
@@ -2171,14 +2171,6 @@
           </FunctionImport>
           <FunctionImport Name="GetOffParticipants" EntitySet="Participant" ReturnType="Collection(websitedbModel.Participant)" />
           <FunctionImport Name="GetParticipants" EntitySet="Participant" ReturnType="Collection(websitedbModel.Participant)" />
-          <FunctionImport Name="DeleteStaticPage1">
-            <Parameter Name="ID" Mode="In" Type="Int32" />
-          </FunctionImport>
-          <FunctionImport Name="EditStaticPage1">
-            <Parameter Name="ID" Mode="In" Type="Int32" />
-            <Parameter Name="Name" Mode="In" Type="String" />
-            <Parameter Name="text" Mode="In" Type="String" />
-          </FunctionImport>
           <FunctionImport Name="aspnet_UsersInRoles_AddUsersToRoles" ReturnType="Collection(String)">
             <Parameter Name="ApplicationName" Mode="In" Type="String" />
             <Parameter Name="UserNames" Mode="In" Type="String" />
@@ -2191,7 +2183,7 @@
             <Parameter Name="RoleNames" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="DeleteText">
-            <Parameter Name="ID" Mode="In" Type="Int32" />
+          <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="EditText">
             <Parameter Name="ID" Mode="In" Type="Int32" />
@@ -2417,18 +2409,18 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="FullName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Mobile" Type="String" Nullable="false" MaxLength="12" Unicode="true" FixedLength="true" />
-          <Property Name="HomePhone" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
-          <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Mobile" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="HomePhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="CommitteeID" Type="Int32" Nullable="false" />
           <Property Name="CollegeID" Type="Int32" Nullable="false" />
           <Property Name="UniversityID" Type="Int32" Nullable="false" />
           <Property Name="PositionID" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="String" Nullable="false" MaxLength="20" Unicode="true" FixedLength="true" />
-          <Property Name="Address" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="state" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="HireYear" Type="DateTime" Nullable="false" Precision="3" />
           <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ProfilePicture" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
+          <Property Name="ProfilePicture" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
           <NavigationProperty Name="College" Relationship="websitedbModel.FK_Member_College" FromRole="Member" ToRole="College" />
           <NavigationProperty Name="Committee" Relationship="websitedbModel.FK_Member_Committee" FromRole="Member" ToRole="Committee" />
