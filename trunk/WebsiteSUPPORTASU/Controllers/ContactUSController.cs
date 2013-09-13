@@ -2,14 +2,18 @@
 
 namespace WebsiteSUPPORTASU.Controllers
 {
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebsiteSUPPORTASU.Models;
-using WebsiteSUPPORTASUCore;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Net.Mail;
+    using System.Web;
+    using System.Web.Mvc;
+    using WebsiteSUPPORTASU.Models;
+    using WebsiteSUPPORTASUCore;
 
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class ContactUSController : Controller
     {
 
@@ -19,33 +23,51 @@ using WebsiteSUPPORTASUCore;
         public ContactUSController()
         {
             core = new ContactUsService();
-        objAdmin = new AdminService();
+            objAdmin = new AdminService();
         }
 
-        public ActionResult Index()
-        {
-            return View();
-        }
 
         [HttpPost]
-        public ActionResult Index(Models.ContactUS contact)
+        public ActionResult AddContact(ContactUS contact, FormCollection f)
         {
-                if (ModelState.IsValid)
+            try
                 {
+                    System.Net.Mail.MailMessage email = new System.Net.Mail.MailMessage()
+                    {
+                        Subject = contact.Subject,
+                        Body = contact.Message,
+                        IsBodyHtml = false,
+
+                        From = new MailAddress(contact.Email, contact.FullName)
+
+                    };
+                    email.To.Add(new MailAddress("AlhassanNageh@gmail.com", "WebsiteSUPPORTASU"));
+                    email.Priority = System.Net.Mail.MailPriority.Normal;
+
+                    SmtpClient mSmtpClient = new SmtpClient();
+                    mSmtpClient.Send(email);
+
                     core.AddContactUs(contact.FullName, contact.Email, contact.Subject, contact.Message);
                 }
-                return View("../Shared/Thanks");
-         
-        }
+                catch
+                {
+                    return View(contact);
+                }
 
-        /****** Contact US ******/
+                return View("Thanks", contact);
 
-        [Authorize(Users = "Admin")]
-        public ActionResult DeleteContact()
-        {
-            ViewBag.ElementsNames = objAdmin.ContactUsCore.GetContacts().ToList();
-            return View("SelectDelete");
-        }
+            }
+        
+
+
+        ///****** Contact US ******/
+
+        //[Authorize(Users = "Admin")]
+        //public ActionResult DeleteContact()
+        //{
+        //    ViewBag.ElementsNames = objAdmin.ContactUsCore.GetContacts().ToList();
+        //    return View("SelectDelete");
+        //}
 
         //[HttpPost]
         //public ActionResult Edit(int id, ContactUS contact)
@@ -55,21 +77,21 @@ using WebsiteSUPPORTASUCore;
         //    return View("Updated");
         //}
 
-        [HttpPost]
-        public ActionResult DeleteContact(FormCollection form)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-                int id = int.Parse(form["Elements"]);
-                objAdmin.ContactUsCore.DeleteContact(id);
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return RedirectToAction("DeleteContact");
-            }
-        }
+        //[HttpPost]
+        //public ActionResult DeleteContact(FormCollection form)
+        //{
+        //    try
+        //    {
+        //        // TODO: Add delete logic here
+        //        int id = int.Parse(form["Elements"]);
+        //        objAdmin.ContactUsCore.DeleteContact(id);
+        //        return RedirectToAction("Index");
+        //    }
+        //    catch
+        //    {
+        //        return RedirectToAction("DeleteContact");
+        //    }
+        //}
 
     }
 }

@@ -1,1 +1,90 @@
-﻿
+﻿@{
+    ViewBag.title = "Sponsors . SUPPORT";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+   <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <div class="span12">
+      <ul class="sponcont cs-style-3">
+          @{var index = 0;}
+@foreach (var item in ViewBag.SponsorsList)
+{
+    var Tags = "";
+    
+    foreach (var Event in ViewBag.SponsorsEvents[index++])
+    {
+        Tags += Event.Name + "," + Event.ID + ",";
+    }
+        <li class="span3 holder2">
+            <div class="avatar2">
+             <a href="#myModal" data-toggle="modal">
+            <img onclick="LoadModel('@item.Name', '@item.Website', '@Tags')" src="@Url.Content("~/content/assets/img/Sponsors/main/" + @item.Name + ".png")" class="user2"/>
+            </a>
+            </div>
+        </li>    
+}
+      </ul>
+      </div>
+
+       <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+           <div class="modal-header">
+               <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+               <h3 id="myModalLabel">Sponsor Name</h3>
+           </div>
+           <div class="modal-body">
+               <div>
+                   <ul class="inline">
+                       <li>
+                           <img id="sponsorpoplogo" src=""></li>
+                       <li>
+                           <p id="SponsorsInfoPopUp"></p>
+                       </li>
+                   </ul>
+               </div>
+               <hr class="featurette-divider">
+               <div class="modal-body" id="sponsorevents">
+                   <h3>Events</h3>
+                   <ul id="EventsPopUp">
+                       <li class="span1 eventthumb"><a href="#">
+                           <img  src='@Url.Content("~/Content/assets/img/events/droop off.png")'/></a></li>
+                   </ul>
+               </div>
+           </div>
+           <div class="modal-footer">
+
+               <button class="btn btn-primary">View site</button>
+
+           </div>
+       </div>
+
+
+       <hr class="span12 featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+
+    </div><!-- /.container -->
+
+<script>
+    function LoadModel(Name, Website, Tags) {
+        var events = new Array();
+        var i;
+        events = Tags.split(",");
+        document.getElementById('myModalLabel').innerHTML = Name;
+        document.getElementById('sponsorpoplogo').src = src = "@Url.Content("~/content/assets/img/Sponsors/")" + Name + ".png";
+        document.getElementById('SponsorsInfoPopUp').innerHTML = "<b>dfghjk</b<"; 
+        //document.getElementById('btn btn-primary').innerHTML = Website;
+        Tags = "";
+        for (i = 0; i < events.length-1; i += 2) {
+            Tags += "<li class='span1 eventthumb'><a href='/Events/Details?";
+            Tags += "ID=" + events[i+1] + "&Event Name = " + events[i] + "' >";
+            Tags += "<img  src='/Content/assets/img/events/" + events[i] + ".png'/></a></li>";
+        }
+        document.getElementById('EventsPopUp').innerHTML = Tags;
+    }
+</script>

@@ -1,3 +1,48 @@
-﻿
+﻿@{
+    ViewBag.title = "About Us . Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
 
-@ViewBag.AboutUs
+
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+
+      <div class="row">
+        <div class="span4">
+           <div class="holder">
+            <div class="avatar">
+             <a>
+              <img src="@Url.Content("~/Content/assets/img/about.png")" class="user"/>
+             </a>
+            </div>
+          </div>
+        </div>
+        <div class="span8 about1">
+            @Html.Raw(@ViewBag.AboutUs)
+        </div>
+      </div>
+
+      <div class="row lastrow">
+          <div class="span8 about2">
+            @Html.Raw(@ViewBag.AboutUs2)  
+          </div>
+          <div class="span4">
+            <div class="holder">
+              <div class="avatar">
+               <a>
+                <img src="@Url.Content("~/Content/assets/img/about.png")" class="user"/>
+               </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+      </div><!-- /END THE FEATURETTES -->
+
+

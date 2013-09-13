@@ -1,0 +1,64 @@
+@{
+    Layout = null;   
+}
+
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<title>Home</title>
+	<link href='http://fonts.googleapis.com/css?family=Racing+Sans+One' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="@Url.Content("~/Content/comingsoon/js/jquery.1.7.1.min.js")"></script>
+	<script type="text/javascript" src="@Url.Content("~/Content/comingsoon/js/modernizr.2.5.3.min.js")"></script>	
+	<script type="text/javascript" src="@Url.Content("~/Content/comingsoon/js/custom.js")"></script>	
+	<link rel="stylesheet" href="@Url.Content("~/Content/comingsoon/css/styles.css")" />
+    <script>
+        //function to flip again
+        function flipAgain() {
+
+            $('.subscribe button.submit').show();
+            $('#loading').hide();
+            $('.subscribe').removeClass('flip');
+            $('.subscribe .subscribe-wrapper').removeClass('flipIt');
+            $('.subscribe .stripes').css("backgroundPosition", -1 + "px 0").scrollTop();
+        }
+    </script>
+</head>
+
+<body>
+<div class="container">
+<img id="logo" src="@Url.Content("~/Content/comingsoon/images/logo.png")">
+	<div class="subscribe">
+		<div class="subscribe-wrapper">
+			<div class="subscribe-form">
+				<div class="subscribe-space">
+					<h4>Coming Soon</h4>				
+					<p>Subscribe to our mailing list. Be one of the first to know about us!</p>
+					<hr />
+						<label for="name">Your Full Name</label>
+						<input type="text" placeholder="" id="name" data-type="name"/>
+						<label for="email">Your Email Address</label>
+						<input type="text" placeholder="" id="email" data-type="email"/>
+						<button class="submit">Subscribe</button>
+                    <div id="loading" style="display:none;margin-left:137.5px;margin-bottom:-35px;">
+                        <img src="https://a2.sndcdn.com/assets/images/loader-85923c6b.gif"/>
+                    </div>			
+				</div>
+			</div>
+			
+			<div class="subscribe-success">
+				<div class="subscribe-space">
+					
+				</div>
+			</div>
+		</div>
+		<ul>
+			<li><a href="https://www.facebook.com/SUPPORT.FCIS" target="blank"><img src="@Url.Content("~/Content/comingsoon/images/fb.png")"></a></li>
+			<li><a href="https://twitter.com/SupportASU" target="blank"><img src="@Url.Content("~/Content/comingsoon/images/tw.png")"></a></li>
+		</ul>
+	</div>		
+
+</div>
+	
+</body>
+</html>

@@ -1,1 +1,17 @@
-﻿
+﻿@{
+    
+    Layout = null;
+}
+
+         @Html.ValidationSummary(true)
+      <form class="form-signin" action="@Url.Action("Index","ContactUS")"  method="post">
+          
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <input type="text" class="input-block-level" placeholder="Full Name" value="@Model.FullName">
+        <input type="text" class="input-block-level" placeholder="Email address" value="@Model.Email">
+        <input type="text" class="input-block-level" placeholder="Subject" value="@Model.Subject">
+        <textarea class="input-block-level" placeholder="Message" >@Model.Message
+</textarea>
+       
+        <button class="btn btn-primary" type="submit">Send</button>
+      </form>

@@ -175,7 +175,8 @@ namespace WebsiteSUPPORTASU.Models
 
         public ActionResult LogOn()
         {
-            return View();
+            return RedirectToAction("Index", "Home");
+            //return View();
         }
 
         //

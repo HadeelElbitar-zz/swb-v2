@@ -1,0 +1,39 @@
+﻿
+    <!-- Carousel
+    ================================================== -->
+<div id="myCarousel" class="carousel slide">
+    <div class="carousel-inner">
+        @if (@ViewBag.Slider != null)
+        {
+            foreach (var item in @ViewBag.Slider)
+            {
+            <div class="item active">
+                <img src="@Url.Content("~/Content/assets/img/slider/" + @item.Location + "/" + @item.Name)" alt="">
+                @if (@item.Comments != null)
+                {
+                    <div class="container">
+                        <div class="carousel-caption">
+                            @Html.Raw(@item.Comments)
+                        </div>
+                    </div>
+                }
+            </div>
+        }
+        }
+    </div>
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+</div>
+<!-- /.carousel -->
+
+@if (@ViewBag.Slider != null)
+{
+    <script>
+        !function ($) {
+            $(function () {
+                // carousel demo
+                $('#myCarousel').carousel()
+            })
+        }(window.jQuery)
+    </script>
+        }

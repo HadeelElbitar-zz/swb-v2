@@ -28,6 +28,19 @@ namespace WebsiteSUPPORTASUCore
             return model.getEventGallery(eventID, Type);
         }
 
+        public Gallery getPageGallery(string PageName, string Type)
+        {
+            try
+            {
+                return model.getPageGallery(PageName, Type);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
+        }
+
         public Gallery getGallery(int ID)
         {
             return model.getGallery(ID);

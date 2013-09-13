@@ -13,6 +13,9 @@ namespace WebsiteSUPPORTASU.Models
     using eGallery = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.Gallery>;
     using EventsNames = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.EventsName>;
 
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class GalleryController : Controller
     {
 

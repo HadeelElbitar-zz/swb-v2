@@ -1,0 +1,209 @@
+
+body {
+	font-family:arial;
+	font-size:12px;
+	background: #e7e7e7 url(../images/blur.jpg) no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;				
+}
+
+
+a {
+	text-decoration:none;
+	color: #3e8ed7;
+}
+
+a:hover {
+	color: #61b7e6;
+}	
+
+.container {
+	width:360px;
+	position:absolute;
+	top:50%;
+	left:50%;
+	margin-left:-180px;
+	margin-top:-220px;
+}
+
+.subscribe {
+	display:block;
+	width:100%;
+	height:325px;
+	position:relative;
+	margin:0 auto;
+	float:left;
+	color:#333;
+}
+
+	.subscribe-wrapper {
+		display:block;
+		width:100%;
+		height:100%;
+	}
+
+	.subscribe-form,
+	.subscribe-success {
+		width:100%;
+		height:100%;
+		position:absolute;
+		display:block;		
+		background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f4f4f4));			
+		background: -webkit-linear-gradient(top, #f4f4f4, #fff);			
+		background: -moz-linear-gradient(top, #f4f4f4, #fff);			
+		background: -ms-linear-gradient(top, #f4f4f4, #fff);			
+		background: -o-linear-gradient(top, #f4f4f4, #fff);										
+		-webkit-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.3);
+		-moz-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.3);
+		-ms-box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.3);
+		-o-box-shadow: : 0 0 3px 3px rgba(100, 100, 100, 0.3);
+		box-shadow: 0 0 3px 3px rgba(100, 100, 100, 0.3);
+		border-radius:10px;
+		overflow:hidden;
+	}
+	
+	.subscribe-success {
+		display:none;
+	}				
+		
+		
+		.subscribe-space {
+			height:244px;
+			background:#fff;
+			padding:20px;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+		}			
+		
+		.subscribe h4 {
+			margin:0 0 15px 0;
+			padding:0;
+			font-size:22px;
+			font-family: 'arial';
+			letter-spacing:-1px;
+			line-height:10px;
+		}
+		
+		.subscribe p {
+			color:#aaa;
+			padding:0;
+			margin:0 0 10px 0;
+			line-height:16px;
+		}
+		
+		.subscribe hr {
+		  margin: 0 0 10px 0;
+		  border: 0;
+		  border-top: 1px dotted #ccc;
+		}			
+		
+		.subscribe label {
+			font-weight:bold;
+			display:block;
+			margin-bottom:10px;
+		}
+		
+		.subscribe input[type=text] {
+			display:block;
+			width:100%;
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			-o-box-sizing: border-box;
+			border-radius:5px;
+			padding:10px;
+			border:1px solid #ddd;
+			margin-bottom:20px;
+			outline:0;
+			box-shadow:inset 0 0 2px 1px rgba(150, 150, 150, 0.1);	
+		}
+		
+		.subscribe input[type=text].error {
+			border:1px solid #d86e6d;
+		}
+		
+		.subscribe button {
+			display:block;
+			width:100%;
+			border: none;
+			border-radius:5px;
+			padding:10px;
+			color:#fff;
+			background: #202020;
+			font-weight:bold;
+			font-size:14px;
+			cursor: pointer;			
+		}
+	
+.subscribe button:hover
+{
+	background: #f8b619;
+	color: #202020;
+}
+
+
+#logo
+{
+	margin: -80px 0 30px 55px;
+}
+
+ul
+{
+	list-style: none;
+}
+li
+{
+	float: right;
+	margin-left: 10px;
+}
+/*
+* CSS3 Vertical Flip
+*/	
+.subscribe.flip {
+	-webkit-perspective:800px;		
+	   -moz-perspective:800px;
+	    -ms-perspective:800px;		   		
+	     -o-perspective:800px;
+		        perspective:800px;
+}
+
+	.subscribe.flip .subscribe-wrapper {
+		-webkit-transition: -webkit-transform 1s;
+		   -moz-transition: -moz-transform 1s;
+		    -ms-transition: -moz-transform 1s;
+		     -o-transition: -moz-transform 1s;
+		        transition: -moz-transform 1s;
+		-webkit-transform-style: preserve-3d;
+		   -moz-transform-style: preserve-3d;			
+		    -ms-transform-style: preserve-3d;			
+		     -o-transform-style: preserve-3d;			
+				  transform-style: preserve-3d;			
+	}
+	
+	.subscribe.flip .subscribe-success {
+		display:block;
+		-webkit-transform: rotateX(-180deg);
+		   -moz-transform: rotateX(-180deg);
+		    -ms-transform: rotateX(-180deg);
+		     -o-transform: rotateX(-180deg);
+		        transform: rotateX(-180deg);			   			
+	}
+	
+	.subscribe.flip .subscribe-form,
+	.subscribe.flip .subscribe-success {
+		-webkit-backface-visibility: hidden;
+		   -moz-backface-visibility: hidden;
+		    -ms-backface-visibility: hidden;
+		     -o-backface-visibility: hidden;
+		        backface-visibility: hidden;
+	}
+	
+	.subscribe.flip .flipIt {
+		-webkit-transform: rotateX(-180deg);
+		   -moz-transform: rotateX(-180deg);			
+		    -ms-transform: rotateX(-180deg);			
+		     -o-transform: rotateX(-180deg);			
+		        transform: rotateX(-180deg);			
+	}

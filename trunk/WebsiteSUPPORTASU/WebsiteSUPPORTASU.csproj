@@ -99,6 +99,7 @@
     <Compile Include="Controllers\ContactUSController.cs" />
     <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\GalleryController.cs" />
+    <Compile Include="Controllers\SubscribeController.cs" />
     <Compile Include="Models\CollegeModel.cs" />
     <Compile Include="Models\CommitteeModel.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="Controllers\SponsorsController.cs" />
     <Compile Include="Models\HRDroopOff.cs" />
     <Compile Include="Models\PositionModel.cs" />
+    <Compile Include="Models\Subscribe.cs" />
     <Compile Include="Models\Tages.cs" />
     <Compile Include="Models\UniversityModel.cs" />
     <Compile Include="Global.asax.cs">
@@ -119,7 +121,7 @@
     <Compile Include="Models\GalleryModel.cs" />
     <Compile Include="Models\MembersModel.cs" />
     <Compile Include="Models\ParticipantModel.cs" />
-    <Compile Include="Views\SponsorModel.cs" />
+    <Compile Include="Models\SponsorModel.cs" />
     <Compile Include="Models\StaticPagesModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -136,20 +138,43 @@
     <Content Include="Content\assets\ico\apple-touch-icon-72-precomposed.png" />
     <Content Include="Content\assets\ico\favicon.ico" />
     <Content Include="Content\assets\img\about.png" />
+    <Content Include="Content\assets\img\bg.gif" />
+    <Content Include="Content\assets\img\blur.jpg" />
     <Content Include="Content\assets\img\bs-docs-masthead-pattern.png" />
-    <Content Include="Content\assets\img\events\droop_off.png" />
-    <Content Include="Content\assets\img\events\kabar.png" />
+    <Content Include="Content\assets\img\events\career key.png" />
+    <Content Include="Content\assets\img\events\droop off.png" />
+    <Content Include="Content\assets\img\events\kabbar mo5ak.png" />
     <Content Include="Content\assets\img\events\pentalk.png" />
     <Content Include="Content\assets\img\events\smartech.png" />
+    <Content Include="Content\assets\img\events\sub\career key.png" />
+    <Content Include="Content\assets\img\events\sub\droop off.png" />
+    <Content Include="Content\assets\img\events\sub\kabbar mo5ak.png" />
+    <Content Include="Content\assets\img\events\sub\pentalk.png" />
+    <Content Include="Content\assets\img\events\sub\smartech.png" />
+    <Content Include="Content\assets\img\events\sub\sub.png" />
+    <Content Include="Content\assets\img\events\sub\suppology.png" />
+    <Content Include="Content\assets\img\events\sub\support academy.png" />
+    <Content Include="Content\assets\img\events\sub\SUPPORT’11 Sessions.png" />
+    <Content Include="Content\assets\img\events\sub\technology day.png" />
+    <Content Include="Content\assets\img\events\sub\u-earn.png" />
+    <Content Include="Content\assets\img\events\suppology.png" />
+    <Content Include="Content\assets\img\events\support academy.png" />
+    <Content Include="Content\assets\img\events\SUPPORT’11 Sessions.png" />
+    <Content Include="Content\assets\img\events\technology day.png" />
+    <Content Include="Content\assets\img\events\u-earn.png" />
+    <Content Include="Content\assets\img\fb.png" />
     <Content Include="Content\assets\img\footer\feedback.png" />
     <Content Include="Content\assets\img\footer\feedbackhover.png" />
     <Content Include="Content\assets\img\glyphicons-halflings-white.png" />
     <Content Include="Content\assets\img\glyphicons-halflings.png" />
     <Content Include="Content\assets\img\grid-baseline-20px.png" />
+    <Content Include="Content\assets\img\logo.png" />
     <Content Include="Content\assets\img\logolarge.png" />
-    <Content Include="Content\assets\img\slider\slide-01.jpg" />
-    <Content Include="Content\assets\img\slider\slide-02.jpg" />
-    <Content Include="Content\assets\img\slider\slide-03.jpg" />
+    <Content Include="Content\assets\img\slider\subevent\slide-01.jpg" />
+    <Content Include="Content\assets\img\slider\subevent\slide-02.jpg" />
+    <Content Include="Content\assets\img\slider\home\slide-01.jpg" />
+    <Content Include="Content\assets\img\slider\events\slide-02.jpg" />
+    <Content Include="Content\assets\img\slider\home\slide-03.jpg" />
     <Content Include="Content\assets\img\social\behance.png" />
     <Content Include="Content\assets\img\social\behancehover.png" />
     <Content Include="Content\assets\img\social\facebook.png" />
@@ -163,14 +188,42 @@
     <Content Include="Content\assets\img\social\y.png" />
     <Content Include="Content\assets\img\social\youtube.png" />
     <Content Include="Content\assets\img\social\youtubehover.png" />
+    <Content Include="Content\assets\img\sponsors\Abo Gabal.png" />
+    <Content Include="Content\assets\img\sponsors\rahgeb.png" />
+    <Content Include="Content\assets\img\sponsors\الإتحاد العربي للصحفين الشبان.png" />
+    <Content Include="Content\assets\img\sponsors\Coca Cola.png" />
     <Content Include="Content\assets\img\sponsors\example.png" />
-    <Content Include="Content\assets\img\supportians\fr.png" />
-    <Content Include="Content\assets\img\supportians\hr.png" />
-    <Content Include="Content\assets\img\supportians\it.png" />
-    <Content Include="Content\assets\img\supportians\media.png" />
-    <Content Include="Content\assets\img\supportians\pr.png" />
+    <Content Include="Content\assets\img\sponsors\ITWORX.png" />
+    <Content Include="Content\assets\img\sponsors\LinkDevelopment.png" />
+    <Content Include="Content\assets\img\sponsors\main\Abo Gabal.png" />
+    <Content Include="Content\assets\img\sponsors\main\rahgeb.png" />
+    <Content Include="Content\assets\img\sponsors\main\الإتحاد العربي للصحفين الشبان.png" />
+    <Content Include="Content\assets\img\sponsors\main\Coca Cola.png" />
+    <Content Include="Content\assets\img\sponsors\main\ITWORX.png" />
+    <Content Include="Content\assets\img\sponsors\main\LinkDevelopment.png" />
+    <Content Include="Content\assets\img\sponsors\main\Open Vision.png" />
+    <Content Include="Content\assets\img\sponsors\main\PROEYE.png" />
+    <Content Include="Content\assets\img\sponsors\main\Quality Zone.png" />
+    <Content Include="Content\assets\img\sponsors\main\Sama IT.png" />
+    <Content Include="Content\assets\img\sponsors\main\SilverKey.png" />
+    <Content Include="Content\assets\img\sponsors\main\Tech Planet.png" />
+    <Content Include="Content\assets\img\sponsors\main\Zedny.png" />
+    <Content Include="Content\assets\img\sponsors\Open Vision.png" />
+    <Content Include="Content\assets\img\sponsors\PROEYE.png" />
+    <Content Include="Content\assets\img\sponsors\Quality Zone.png" />
+    <Content Include="Content\assets\img\sponsors\Sama IT.png" />
+    <Content Include="Content\assets\img\sponsors\SilverKey.png" />
+    <Content Include="Content\assets\img\sponsors\tech_planet.png" />
+    <Content Include="Content\assets\img\sponsors\Zedny.png" />
+    <Content Include="Content\assets\img\sponsors\_example.png" />
+    <Content Include="Content\assets\img\supportians\fr\fr.png" />
+    <Content Include="Content\assets\img\supportians\hr\hr.png" />
+    <Content Include="Content\assets\img\supportians\it\it.png" />
+    <Content Include="Content\assets\img\supportians\media\media.png" />
+    <Content Include="Content\assets\img\supportians\pr\pr.png" />
     <Content Include="Content\assets\img\supportians\temp.jpg" />
     <Content Include="Content\assets\img\support_logo.png" />
+    <Content Include="Content\assets\img\tw.png" />
     <Content Include="Content\assets\js\application.js" />
     <Content Include="Content\assets\js\bootstrap-affix.js" />
     <Content Include="Content\assets\js\bootstrap-alert.js" />
@@ -187,9 +240,12 @@
     <Content Include="Content\assets\js\bootstrap-typeahead.js" />
     <Content Include="Content\assets\js\bootstrap.js" />
     <Content Include="Content\assets\js\bootstrap.min.js" />
+    <Content Include="Content\assets\js\custom.js" />
     <Content Include="Content\assets\js\google-code-prettify\prettify.css" />
     <Content Include="Content\assets\js\google-code-prettify\prettify.js" />
+    <Content Include="Content\assets\js\jquery.1.7.1.min.js" />
     <Content Include="Content\assets\js\jquery.js" />
+    <Content Include="Content\assets\js\modernizr.2.5.3.min.js" />
     <Content Include="Content\assets\js\slide-top.js" />
     <Content Include="Content\assets\js\tests\index.html" />
     <Content Include="Content\assets\js\tests\phantom.js" />
@@ -221,6 +277,15 @@
     <Content Include="Content\assets\less\tests\navbar.html" />
     <Content Include="Content\assets\scss\tests\bootstrap-responsive.css" />
     <Content Include="Content\assets\scss\tests\bootstrap.css" />
+    <Content Include="Content\comingsoon\css\styles.css" />
+    <Content Include="Content\comingsoon\images\bg.gif" />
+    <Content Include="Content\comingsoon\images\blur.jpg" />
+    <Content Include="Content\comingsoon\images\fb.png" />
+    <Content Include="Content\comingsoon\images\logo.png" />
+    <Content Include="Content\comingsoon\images\tw.png" />
+    <Content Include="Content\comingsoon\js\custom.js" />
+    <Content Include="Content\comingsoon\js\jquery.1.7.1.min.js" />
+    <Content Include="Content\comingsoon\js\modernizr.2.5.3.min.js" />
     <Content Include="Content\css\960_12_col.css" />
     <Content Include="Content\css\960_16_col.css" />
     <Content Include="Content\css\mystyle.css" />
@@ -485,7 +550,6 @@
     <Content Include="Views\Admin\Register.cshtml" />
     <Content Include="Views\Admin\AddStaticPage.cshtml" />
     <Content Include="Views\Events\AddEvent.cshtml" />
-    <Content Include="Views\Events\RegistrationClosed.cshtml" />
     <Content Include="Views\Admin\Admin.cshtml" />
     <Content Include="Views\Admin\EditStaticPage.cshtml" />
     <Content Include="Views\Sponsors\AddSponsor.cshtml" />
@@ -507,7 +571,6 @@
     <Content Include="Views\Registration\RegistrationClosed.cshtml" />
     <Content Include="Views\Admin\EventTagSponsor.cshtml" />
     <Content Include="Views\Registration\Registration.cshtml" />
-    <Content Include="Views\Events\Registration.cshtml" />
     <Content Include="Views\Registration\FillForm.cshtml" />
     <Content Include="Views\Registration\UserLogOn.cshtml" />
     <Content Include="Views\Admin\DroopOff.cshtml" />
@@ -518,8 +581,6 @@
     <Content Include="Views\Admin\DroopOffSelect.cshtml" />
     <Content Include="Views\Registration\SendEmail.cshtml" />
     <Content Include="Views\Registration\AddBlock.cshtml" />
-    <Content Include="Views\Events\Live Streaming.cshtml" />
-    <Content Include="Views\Events\Map.cshtml" />
     <Content Include="Views\Admin\SendEmail.cshtml" />
     <Content Include="Content\assets\font\fontawesome-webfont.eot" />
     <Content Include="Content\assets\font\fontawesome-webfont.svg" />
@@ -612,10 +673,21 @@
     <Content Include="Content\assets\scss\_utilities.scss" />
     <Content Include="Content\assets\scss\_variables.scss" />
     <Content Include="Content\assets\scss\_wells.scss" />
-    <None Include="Views\Sponsors\Sponsors.cshtml" />
     <Content Include="Views\Shared\_Admin.cshtml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\assets\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Home\Index2.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\comingsoon\js\.DS_Store" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Local.pubxml" />
+    <Content Include="Views\Shared\Slider.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

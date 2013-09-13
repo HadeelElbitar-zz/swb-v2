@@ -8,6 +8,9 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class RegistrationController : Controller
     {
 
