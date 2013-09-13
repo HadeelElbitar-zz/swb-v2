@@ -53,9 +53,9 @@ using View = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.SponsorVie
             return Model.GETSponsor(ID);
         }
 
-        public View GetEventSponsors(string type, int eventID)
+        public Sponsor GetEventSponsors(string type, int eventID)
         {
-            return Model.GETEventSponsors(type, eventID);
+            return Model.GETSponsors();
         }
     }
 }

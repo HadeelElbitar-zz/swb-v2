@@ -1,1 +1,45 @@
-﻿
+﻿@{
+    ViewBag.title = ViewBag.Event.Name + " . Events . Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span2">
+          <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+              @{var tmp = ViewBag.EventsList[0].StartDate.Year;}
+                <li class="nav-header">@tmp</li>
+              @foreach (var item in ViewBag.EventsList)
+              {
+                  if(tmp != item.StartDate.Year){
+                      <hr class="menu-divider"/>
+                      <li class="nav-header">@item.StartDate.Year</li>
+                      tmp = @item.StartDate.Year;
+                  }
+              <li><a href="@Url.Action("Details", "Events")/@item.ID?Event Name=@item.Name" onclick="GetNewPartialView()" >@item.Name</a></li>
+              }
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+        
+          <div class="span9">
+          <div class="row-fluid featurette" id="droop-off">
+
+        <div class="holder featurette-image pull-left">
+            <div class="avatar">
+             <a>
+              <img src="@Url.Content("~/content/assets/img/events/sub"+"/"+ViewBag.Event.Name+".png")" class="user"/>
+             </a>
+            </div>
+          </div>
+       
+       @Html.Raw(ViewBag.Event.Description)
+
+              
+           </div>
+      </div>
+     </div><!--/row-->
+
+    </div><!--/.fluid-container-->
+         

@@ -46,6 +46,7 @@
           <EntitySet Name="Position" EntityType="websitedbModel.Store.Position" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="Sponsor" EntityType="websitedbModel.Store.Sponsor" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="StaticPage" EntityType="websitedbModel.Store.StaticPage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="Subscribe" EntityType="websitedbModel.Store.Subscribe" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="University" EntityType="websitedbModel.Store.University" store:Type="Tables" Schema="dbo" />
           <EntitySet Name="UniversityCollege" EntityType="websitedbModel.Store.UniversityCollege" store:Type="Tables" store:Schema="dbo" store:Name="UniversityCollege">
             <DefiningQuery>SELECT 
@@ -416,6 +417,7 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
           <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="PictureName" Type="nvarchar" MaxLength="100" />
         </EntityType>
         <EntityType Name="ContactUs">
           <Key>
@@ -560,6 +562,15 @@
           <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="nchar" Nullable="false" MaxLength="255" />
           <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Subscribe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="Email" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="State" Type="int" Nullable="false" />
         </EntityType>
         <EntityType Name="University">
           <Key>
@@ -1100,6 +1111,25 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="AddSubscriper" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2">
+          <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="State" Type="nvarchar(max)" Mode="In" />
+        </Function>
+        <Function Name="DelelteSubscriber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="EditSubscripers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2">
+          <Parameter Name="ID" Type="int" Mode="In" />
+          <Parameter Name="State" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetAllMembers" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2" />
+        <Function Name="GetSubscriber" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2">
+          <Parameter Name="ID" Type="int" Mode="In" />
+        </Function>
+        <Function Name="GetSubscriberbyEmail" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="C345526_bondo2">
+          <Parameter Name="Email" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="AddCollege" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="Name" Type="nvarchar(max)" Mode="In" />
           <Parameter Name="location" Type="nvarchar(max)" Mode="In" />
@@ -1669,6 +1699,10 @@
         </Function>
         <Function Name="GetMembersNames" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
         <Function Name="GetOffParticipants" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="getPageGallery" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PageName" Type="nvarchar(max)" Mode="In" />
+          <Parameter Name="Type" Type="nvarchar(max)" Mode="In" />
+        </Function>
         <Function Name="GetParticipant" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
           <Parameter Name="Barcode" Type="nvarchar(max)" Mode="In" />
@@ -1684,6 +1718,9 @@
           <Parameter Name="ID" Type="int" Mode="In" />
         </Function>
         <Function Name="GetPositions" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
+        <Function Name="GetPosName" ReturnType="nvarchar" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="PosId" Type="int" Mode="In" />
+        </Function>
         <Function Name="GETSponsor" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
           <Parameter Name="ID" Type="int" Mode="In" />
         </Function>
@@ -1765,12 +1802,8 @@
           <EntitySet Name="Colleges" EntityType="websitedbModel.College" />
           <EntitySet Name="Committees" EntityType="websitedbModel.Committee" />
           <EntitySet Name="ContactUs" EntityType="websitedbModel.ContactU" />
-          <EntitySet Name="EventSponsors" EntityType="websitedbModel.EventSponsor" />
-          <EntitySet Name="EventUniversities" EntityType="websitedbModel.EventUniversity" />
           <EntitySet Name="Galleries" EntityType="websitedbModel.Gallery" />
           <EntitySet Name="Interviews" EntityType="websitedbModel.Interview" />
-          <EntitySet Name="Members" EntityType="websitedbModel.Member" />
-          <EntitySet Name="MemberEvents" EntityType="websitedbModel.MemberEvent" />
           <EntitySet Name="Positions" EntityType="websitedbModel.Position" />
           <EntitySet Name="Sponsors" EntityType="websitedbModel.Sponsor" />
           <EntitySet Name="StaticPages" EntityType="websitedbModel.StaticPage" />
@@ -1820,30 +1853,6 @@
           <AssociationSet Name="FK__aspnet_Pr__UserI__40F9A68C" Association="websitedbModel.FK__aspnet_Pr__UserI__40F9A68C">
             <End Role="aspnet_Users" EntitySet="aspnet_Users" />
             <End Role="aspnet_Profile" EntitySet="aspnet_Profile" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Member_College" Association="websitedbModel.FK_Member_College">
-            <End Role="College" EntitySet="Colleges" />
-            <End Role="Member" EntitySet="Members" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Member_Committee" Association="websitedbModel.FK_Member_Committee">
-            <End Role="Committee" EntitySet="Committees" />
-            <End Role="Member" EntitySet="Members" />
-          </AssociationSet>
-          <AssociationSet Name="FK_EventSponsor_Sponsor" Association="websitedbModel.FK_EventSponsor_Sponsor">
-            <End Role="Sponsor" EntitySet="Sponsors" />
-            <End Role="EventSponsor" EntitySet="EventSponsors" />
-          </AssociationSet>
-          <AssociationSet Name="FK_EventUniversity_University" Association="websitedbModel.FK_EventUniversity_University">
-            <End Role="University" EntitySet="Universities" />
-            <End Role="EventUniversity" EntitySet="EventUniversities" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Member_Position" Association="websitedbModel.FK_Member_Position">
-            <End Role="Position" EntitySet="Positions" />
-            <End Role="Member" EntitySet="Members" />
-          </AssociationSet>
-          <AssociationSet Name="FK_MemberEvent_Member" Association="websitedbModel.FK_MemberEvent_Member">
-            <End Role="Member" EntitySet="Members" />
-            <End Role="MemberEvent" EntitySet="MemberEvents" />
           </AssociationSet>
           <AssociationSet Name="aspnet_UsersInRoles" Association="websitedbModel.aspnet_UsersInRoles">
             <End Role="aspnet_Roles" EntitySet="aspnet_Roles" />
@@ -1991,10 +2000,6 @@
             <End Role="Event" EntitySet="Events" />
             <End Role="University" EntitySet="Universities" />
           </AssociationSet>
-          <AssociationSet Name="MemberEvent1" Association="websitedbModel.MemberEvent1">
-            <End Role="Event" EntitySet="Events" />
-            <End Role="Member" EntitySet="Members" />
-          </AssociationSet>
           <FunctionImport Name="AddEvent">
             <Parameter Name="Name" Mode="In" Type="String" />
             <Parameter Name="StartDate" Mode="In" Type="DateTime" />
@@ -2036,7 +2041,7 @@
           <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="getGalleryNames" EntitySet="GalleryNames" ReturnType="Collection(websitedbModel.GalleryName)" />
-          <FunctionImport Name="GetMember" EntitySet="Members" ReturnType="Collection(websitedbModel.Member)">
+          <FunctionImport Name="GetMember" EntitySet="Member" ReturnType="Collection(websitedbModel.Member)">
           <Parameter Name="ID" Mode="In" Type="Int32" />
           </FunctionImport>
           <FunctionImport Name="GetMembersNames" EntitySet="MembersNames" ReturnType="Collection(websitedbModel.MembersName)" />
@@ -2065,7 +2070,7 @@
           <FunctionImport Name="selectGalleryByID" EntitySet="Galleries" ReturnType="Collection(websitedbModel.Gallery)">
           <Parameter Name="galleryID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <FunctionImport Name="EditMember" EntitySet="Members" ReturnType="Collection(websitedbModel.Member)">
+          <FunctionImport Name="EditMember">
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="fullname" Mode="In" Type="String" />
             <Parameter Name="Mobile" Mode="In" Type="String" />
@@ -2091,10 +2096,10 @@
             <Parameter Name="SponsorComment" Mode="In" Type="String" />
           </FunctionImport>
           <FunctionImport Name="ViewSponsors" EntitySet="SponsorViews" ReturnType="Collection(websitedbModel.SponsorView)" />
-          <FunctionImport Name="ViewMember" EntitySet="Members" ReturnType="Collection(websitedbModel.Member)">
+          <FunctionImport Name="ViewMember" EntitySet="Member" ReturnType="Collection(websitedbModel.Member)">
           <Parameter Name="Mobile" Mode="In" Type="String" />
           </FunctionImport>
-          <FunctionImport Name="ViewMembers" EntitySet="Members" ReturnType="Collection(websitedbModel.Member)" />
+          <FunctionImport Name="ViewMembers" ReturnType="Collection(websitedbModel.ViewMembers)" />
           <FunctionImport Name="EditEvent">
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="Name" Mode="In" Type="String" />
@@ -2139,10 +2144,6 @@
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="MemberID" Mode="In" Type="Int32" />
           </FunctionImport>
-          <AssociationSet Name="FK_Participant_Member" Association="websitedbModel.FK_Participant_Member">
-            <End Role="Member" EntitySet="Members" />
-            <End Role="Participant" EntitySet="Participant" />
-          </AssociationSet>
           <FunctionImport Name="AddParticipantLogOn">
             <Parameter Name="Barcode" Mode="In" Type="String" />
             <Parameter Name="LogState" Mode="In" Type="Boolean" />
@@ -2189,6 +2190,51 @@
             <Parameter Name="ID" Mode="In" Type="Int32" />
             <Parameter Name="Name" Mode="In" Type="String" />
             <Parameter Name="text" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="GetAllMembers" />
+          <EntitySet Name="Member" EntityType="websitedbModel.Member" />
+          <AssociationSet Name="FK_Member_College" Association="websitedbModel.FK_Member_College">
+            <End Role="College" EntitySet="Colleges" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Committee" Association="websitedbModel.FK_Member_Committee">
+            <End Role="Committee" EntitySet="Committees" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Member_Position" Association="websitedbModel.FK_Member_Position">
+            <End Role="Position" EntitySet="Positions" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Participant_Member" Association="websitedbModel.FK_Participant_Member">
+            <End Role="Member" EntitySet="Member" />
+            <End Role="Participant" EntitySet="Participant" />
+          </AssociationSet>
+          <AssociationSet Name="MemberEvent1" Association="websitedbModel.MemberEvent1">
+            <End Role="Event" EntitySet="Events" />
+            <End Role="Member" EntitySet="Member" />
+          </AssociationSet>
+          <EntitySet Name="Subscribe" EntityType="websitedbModel.Subscribe" />
+          <FunctionImport Name="AddSubscriper">
+            <Parameter Name="Name" Mode="In" Type="String" />
+            <Parameter Name="Email" Mode="In" Type="String" />
+            <Parameter Name="State" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="DelelteSubscriber">
+          <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="EditSubscripers">
+            <Parameter Name="ID" Mode="In" Type="Int32" />
+            <Parameter Name="State" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetSubscriber" EntitySet="Subscribe" ReturnType="Collection(websitedbModel.Subscribe)">
+          <Parameter Name="ID" Mode="In" Type="Int32" />
+          </FunctionImport>
+          <FunctionImport Name="GetSubscriberbyEmail" EntitySet="Subscribe" ReturnType="Collection(websitedbModel.Subscribe)">
+          <Parameter Name="Email" Mode="In" Type="String" />
+          </FunctionImport>
+          <FunctionImport Name="getPageGallery" EntitySet="Galleries" ReturnType="Collection(websitedbModel.Gallery)">
+            <Parameter Name="PageName" Mode="In" Type="String" />
+            <Parameter Name="Type" Mode="In" Type="String" />
           </FunctionImport>
         </EntityContainer>
         <EntityType Name="aspnet_Applications">
@@ -2342,8 +2388,8 @@
           <Property Name="Name" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="true" />
           <Property Name="Location" Type="String" Nullable="false" MaxLength="255" Unicode="true" FixedLength="true" />
           <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Members" Relationship="websitedbModel.FK_Member_College" FromRole="College" ToRole="Member" />
           <NavigationProperty Name="Universities" Relationship="websitedbModel.UniversityCollege" FromRole="College" ToRole="University" />
+          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Member_College" FromRole="College" ToRole="Member" />
         </EntityType>
         <EntityType Name="Committee">
           <Key>
@@ -2352,7 +2398,8 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Description" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Members" Relationship="websitedbModel.FK_Member_Committee" FromRole="Committee" ToRole="Member" />
+          <Property Type="String" Name="PictureName" MaxLength="100" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Member_Committee" FromRole="Committee" ToRole="Member" />
         </EntityType>
         <EntityType Name="ContactU">
           <Key>
@@ -2363,24 +2410,6 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="true" />
           <Property Name="Subject" Type="String" Nullable="false" MaxLength="250" Unicode="true" FixedLength="true" />
           <Property Name="Message" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-        </EntityType>
-        <EntityType Name="EventSponsor">
-          <Key>
-            <PropertyRef Name="EventID" />
-            <PropertyRef Name="SponsorID" />
-          </Key>
-          <Property Name="EventID" Type="Int32" Nullable="false" />
-          <Property Name="SponsorID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Sponsor" Relationship="websitedbModel.FK_EventSponsor_Sponsor" FromRole="EventSponsor" ToRole="Sponsor" />
-        </EntityType>
-        <EntityType Name="EventUniversity">
-          <Key>
-            <PropertyRef Name="EventID" />
-            <PropertyRef Name="UniversityID" />
-          </Key>
-          <Property Name="EventID" Type="Int32" Nullable="false" />
-          <Property Name="UniversityID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="University" Relationship="websitedbModel.FK_EventUniversity_University" FromRole="EventUniversity" ToRole="University" />
         </EntityType>
         <EntityType Name="Gallery">
           <Key>
@@ -2403,41 +2432,6 @@
           <Property Name="Count" Type="Int32" Nullable="false" />
           <Property Name="Comment" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
         </EntityType>
-        <EntityType Name="Member">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="FullName" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Mobile" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="HomePhone" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Email" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="CommitteeID" Type="Int32" Nullable="false" />
-          <Property Name="CollegeID" Type="Int32" Nullable="false" />
-          <Property Name="UniversityID" Type="Int32" Nullable="false" />
-          <Property Name="PositionID" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="HireYear" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="Birthdate" Type="DateTime" Nullable="false" Precision="3" />
-          <Property Name="ProfilePicture" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="College" Relationship="websitedbModel.FK_Member_College" FromRole="Member" ToRole="College" />
-          <NavigationProperty Name="Committee" Relationship="websitedbModel.FK_Member_Committee" FromRole="Member" ToRole="Committee" />
-          <NavigationProperty Name="Position" Relationship="websitedbModel.FK_Member_Position" FromRole="Member" ToRole="Position" />
-          <NavigationProperty Name="MemberEvents" Relationship="websitedbModel.FK_MemberEvent_Member" FromRole="Member" ToRole="MemberEvent" />
-          <NavigationProperty Name="Events" Relationship="websitedbModel.MemberEvent1" FromRole="Member" ToRole="Event" />
-          <NavigationProperty Name="Participant" Relationship="websitedbModel.FK_Participant_Member" FromRole="Member" ToRole="Participant" />
-        </EntityType>
-        <EntityType Name="MemberEvent">
-          <Key>
-            <PropertyRef Name="MemberID" />
-            <PropertyRef Name="EventID" />
-          </Key>
-          <Property Name="MemberID" Type="Int32" Nullable="false" />
-          <Property Name="EventID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_MemberEvent_Member" FromRole="MemberEvent" ToRole="Member" />
-        </EntityType>
         <EntityType Name="Position">
           <Key>
             <PropertyRef Name="ID" />
@@ -2445,7 +2439,7 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="10" Unicode="true" FixedLength="true" />
           <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="Members" Relationship="websitedbModel.FK_Member_Position" FromRole="Position" ToRole="Member" />
+          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Member_Position" FromRole="Position" ToRole="Member" />
         </EntityType>
         <EntityType Name="Sponsor">
           <Key>
@@ -2457,7 +2451,6 @@
           <Property Name="Email" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="ContactNumber" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
           <Property Name="Comments" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="EventSponsors" Relationship="websitedbModel.FK_EventSponsor_Sponsor" FromRole="Sponsor" ToRole="EventSponsor" />
           <NavigationProperty Name="Events" Relationship="websitedbModel.EventSponsor1" FromRole="Sponsor" ToRole="Event" />
         </EntityType>
         <EntityType Name="StaticPage">
@@ -2475,7 +2468,6 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
           <Property Name="Location" Type="String" Nullable="false" MaxLength="Max" Unicode="true" FixedLength="false" />
-          <NavigationProperty Name="EventUniversities" Relationship="websitedbModel.FK_EventUniversity_University" FromRole="University" ToRole="EventUniversity" />
           <NavigationProperty Name="Colleges" Relationship="websitedbModel.UniversityCollege" FromRole="University" ToRole="College" />
           <NavigationProperty Name="Events" Relationship="websitedbModel.EventUniversity1" FromRole="University" ToRole="Event" />
         </EntityType>
@@ -2727,86 +2719,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_Member_College">
-          <End Role="College" Type="websitedbModel.College" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="Member" Type="websitedbModel.Member" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="College">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Member">
-              <PropertyRef Name="CollegeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Member_Committee">
-          <End Role="Committee" Type="websitedbModel.Committee" Multiplicity="1" />
-          <End Role="Member" Type="websitedbModel.Member" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Committee">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Member">
-              <PropertyRef Name="CommitteeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_EventSponsor_Sponsor">
-          <End Role="Sponsor" Type="websitedbModel.Sponsor" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="EventSponsor" Type="websitedbModel.EventSponsor" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Sponsor">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="EventSponsor">
-              <PropertyRef Name="SponsorID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_EventUniversity_University">
-          <End Role="University" Type="websitedbModel.University" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="EventUniversity" Type="websitedbModel.EventUniversity" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="University">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="EventUniversity">
-              <PropertyRef Name="UniversityID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_Member_Position">
-          <End Role="Position" Type="websitedbModel.Position" Multiplicity="1" />
-          <End Role="Member" Type="websitedbModel.Member" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Position">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="Member">
-              <PropertyRef Name="PositionID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="FK_MemberEvent_Member">
-          <End Role="Member" Type="websitedbModel.Member" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="MemberEvent" Type="websitedbModel.MemberEvent" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="Member">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="MemberEvent">
-              <PropertyRef Name="MemberID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="aspnet_UsersInRoles">
           <End Role="aspnet_Roles" Type="websitedbModel.aspnet_Roles" Multiplicity="*" />
           <End Role="aspnet_Users" Type="websitedbModel.aspnet_Users" Multiplicity="*" />
@@ -2830,7 +2742,7 @@
           <NavigationProperty Name="Galleries" Relationship="websitedbModel.FK_Gallery_Event" FromRole="Event" ToRole="Gallery" />
           <NavigationProperty Name="Sponsors" Relationship="websitedbModel.EventSponsor1" FromRole="Event" ToRole="Sponsor" />
           <NavigationProperty Name="Universities" Relationship="websitedbModel.EventUniversity1" FromRole="Event" ToRole="University" />
-          <NavigationProperty Name="Members" Relationship="websitedbModel.MemberEvent1" FromRole="Event" ToRole="Member" />
+          <NavigationProperty Name="Member" Relationship="websitedbModel.MemberEvent1" FromRole="Event" ToRole="Member" />
         </EntityType>
         <EntityType Name="SponsorView">
           <Key>
@@ -2864,10 +2776,6 @@
         <Association Name="EventUniversity1">
           <End Type="websitedbModel.Event" Role="Event" Multiplicity="*" />
           <End Type="websitedbModel.University" Role="University" Multiplicity="*" />
-        </Association>
-        <Association Name="MemberEvent1">
-          <End Type="websitedbModel.Event" Role="Event" Multiplicity="*" />
-          <End Type="websitedbModel.Member" Role="Member" Multiplicity="*" />
         </Association>
         <EntityType Name="EventsName">
           <Key>
@@ -2912,9 +2820,76 @@
           <Property Type="DateTime" Name="timestamp" Nullable="false" Precision="3" />
           <Property Type="Int32" Name="PRID" />
           <Property Type="Boolean" Name="LogOn" />
-          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Participant_Member" FromRole="Participant" ToRole="Member" />
           <Property Type="String" Name="HRComments" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="Member" Relationship="websitedbModel.FK_Participant_Member" FromRole="Participant" ToRole="Member" />
         </EntityType>
+        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
+          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        </ComplexType>
+        <EntityType Name="Member">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="FullName" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Mobile" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="HomePhone" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Email" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="CommitteeID" Nullable="false" />
+          <Property Type="Int32" Name="CollegeID" Nullable="false" />
+          <Property Type="Int32" Name="UniversityID" Nullable="false" />
+          <Property Type="Int32" Name="PositionID" Nullable="false" />
+          <Property Type="String" Name="state" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Address" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="DateTime" Name="HireYear" Nullable="false" Precision="3" />
+          <Property Type="DateTime" Name="Birthdate" Nullable="false" Precision="3" />
+          <Property Type="String" Name="ProfilePicture" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Comments" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="College" Relationship="websitedbModel.FK_Member_College" FromRole="Member" ToRole="College" />
+          <NavigationProperty Name="Committee" Relationship="websitedbModel.FK_Member_Committee" FromRole="Member" ToRole="Committee" />
+          <NavigationProperty Name="Position" Relationship="websitedbModel.FK_Member_Position" FromRole="Member" ToRole="Position" />
+          <NavigationProperty Name="Participant" Relationship="websitedbModel.FK_Participant_Member" FromRole="Member" ToRole="Participant" />
+          <NavigationProperty Name="Event" Relationship="websitedbModel.MemberEvent1" FromRole="Member" ToRole="Event" />
+        </EntityType>
+        <Association Name="FK_Member_College">
+          <End Type="websitedbModel.College" Role="College" Multiplicity="1">
+            <OnDelete Action="Cascade" />
+          </End>
+          <End Type="websitedbModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="College">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="CollegeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Committee">
+          <End Type="websitedbModel.Committee" Role="Committee" Multiplicity="1" />
+          <End Type="websitedbModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Committee">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="CommitteeID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Member_Position">
+          <End Type="websitedbModel.Position" Role="Position" Multiplicity="1" />
+          <End Type="websitedbModel.Member" Role="Member" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Position">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="Member">
+              <PropertyRef Name="PositionID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Participant_Member">
           <End Type="websitedbModel.Member" Role="Member" Multiplicity="0..1" />
           <End Type="websitedbModel.Participant" Role="Participant" Multiplicity="*" />
@@ -2927,9 +2902,58 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <ComplexType Name="aspnet_UsersInRoles_RemoveUsersFromRoles_Result">
-          <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
-          <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
+        <Association Name="MemberEvent1">
+          <End Type="websitedbModel.Event" Role="Event" Multiplicity="*" />
+          <End Type="websitedbModel.Member" Role="Member" Multiplicity="*" />
+        </Association>
+        <ComplexType Name="ViewMembers">
+          <Property Type="String" Name="FullName" Nullable="false" />
+          <Property Type="String" Name="Mobile" Nullable="true" />
+          <Property Type="String" Name="HomePhone" Nullable="true" />
+          <Property Type="String" Name="Email" Nullable="true" />
+          <Property Type="String" Name="CommitteName" Nullable="true" MaxLength="50" />
+          <Property Type="String" Name="CollegeName" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="UniversityName" Nullable="true" MaxLength="1" />
+          <Property Type="String" Name="PositionName" Nullable="true" MaxLength="10" />
+          <Property Type="String" Name="state" Nullable="true" />
+          <Property Type="String" Name="address" Nullable="true" />
+          <Property Type="DateTime" Name="HireYear" Nullable="false" Precision="23" />
+          <Property Type="DateTime" Name="BirthDate" Nullable="false" Precision="23" />
+          <Property Type="String" Name="ProfilePicture" Nullable="true" />
+          <Property Type="String" Name="Comments" Nullable="true" />
+          <Property Type="Int32" Name="CommitteeID" Nullable="false" />
+          <Property Type="Int32" Name="CollegeID" Nullable="false" />
+          <Property Type="Int32" Name="UniversityID" Nullable="false" />
+          <Property Type="Int32" Name="PositionID" Nullable="false" />
+        </ComplexType>
+        <EntityType Name="Subscribe">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Type="Int32" Name="ID" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Type="String" Name="Email" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="String" Name="Name" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Type="Int32" Name="State" Nullable="false" />
+        </EntityType>
+        <ComplexType Name="GetSubscriber_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="State" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="GetSubscriberbyEmail_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Email" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="Int32" Name="State" Nullable="false" />
+        </ComplexType>
+        <ComplexType Name="getPageGallery_Result">
+          <Property Type="Int32" Name="ID" Nullable="false" />
+          <Property Type="String" Name="Name" Nullable="false" />
+          <Property Type="String" Name="Type" Nullable="false" />
+          <Property Type="Int32" Name="EventID" Nullable="false" />
+          <Property Type="String" Name="Location" Nullable="true" />
+          <Property Type="String" Name="Comments" Nullable="true" />
         </ComplexType>
       </Schema>
     </edmx:ConceptualModels>
@@ -3036,7 +3060,8 @@
             <ScalarProperty Name="Comments" ColumnName="Comments" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Committees"><EntityTypeMapping TypeName="websitedbModel.Committee"><MappingFragment StoreEntitySet="Committee">
-            <ScalarProperty Name="ID" ColumnName="ID" />
+            <ScalarProperty Name="PictureName" ColumnName="PictureName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
             <ScalarProperty Name="Name" ColumnName="Name" />
             <ScalarProperty Name="Description" ColumnName="Description" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
@@ -3046,14 +3071,6 @@
             <ScalarProperty Name="Email" ColumnName="Email" />
             <ScalarProperty Name="Subject" ColumnName="Subject" />
             <ScalarProperty Name="Message" ColumnName="Message" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="EventSponsors"><EntityTypeMapping TypeName="websitedbModel.EventSponsor"><MappingFragment StoreEntitySet="EventSponsor">
-            <ScalarProperty Name="EventID" ColumnName="EventID" />
-            <ScalarProperty Name="SponsorID" ColumnName="SponsorID" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="EventUniversities"><EntityTypeMapping TypeName="websitedbModel.EventUniversity"><MappingFragment StoreEntitySet="EventUniversity">
-            <ScalarProperty Name="EventID" ColumnName="EventID" />
-            <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Galleries"><EntityTypeMapping TypeName="websitedbModel.Gallery"><MappingFragment StoreEntitySet="Gallery">
             <ScalarProperty Name="ID" ColumnName="ID" />
@@ -3068,27 +3085,6 @@
             <ScalarProperty Name="Time" ColumnName="Time" />
             <ScalarProperty Name="Count" ColumnName="Count" />
             <ScalarProperty Name="Comment" ColumnName="Comment" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="Members"><EntityTypeMapping TypeName="websitedbModel.Member"><MappingFragment StoreEntitySet="Member">
-            <ScalarProperty Name="ID" ColumnName="ID" />
-            <ScalarProperty Name="FullName" ColumnName="FullName" />
-            <ScalarProperty Name="Mobile" ColumnName="Mobile" />
-            <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
-            <ScalarProperty Name="Email" ColumnName="Email" />
-            <ScalarProperty Name="CommitteeID" ColumnName="CommitteeID" />
-            <ScalarProperty Name="CollegeID" ColumnName="CollegeID" />
-            <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
-            <ScalarProperty Name="PositionID" ColumnName="PositionID" />
-            <ScalarProperty Name="state" ColumnName="state" />
-            <ScalarProperty Name="Address" ColumnName="Address" />
-            <ScalarProperty Name="HireYear" ColumnName="HireYear" />
-            <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
-            <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
-            <ScalarProperty Name="Comments" ColumnName="Comments" />
-          </MappingFragment></EntityTypeMapping></EntitySetMapping>
-          <EntitySetMapping Name="MemberEvents"><EntityTypeMapping TypeName="websitedbModel.MemberEvent"><MappingFragment StoreEntitySet="MemberEvent">
-            <ScalarProperty Name="MemberID" ColumnName="MemberID" />
-            <ScalarProperty Name="EventID" ColumnName="EventID" />
           </MappingFragment></EntityTypeMapping></EntitySetMapping>
           <EntitySetMapping Name="Positions"><EntityTypeMapping TypeName="websitedbModel.Position"><MappingFragment StoreEntitySet="Position">
             <ScalarProperty Name="ID" ColumnName="ID" />
@@ -3280,14 +3276,6 @@
               <ScalarProperty Name="ID" ColumnName="EventID" />
             </EndProperty>
           </AssociationSetMapping>
-          <AssociationSetMapping Name="MemberEvent1" TypeName="websitedbModel.MemberEvent1" StoreEntitySet="MemberEvent">
-            <EndProperty Name="Member">
-              <ScalarProperty Name="ID" ColumnName="MemberID" />
-            </EndProperty>
-            <EndProperty Name="Event">
-              <ScalarProperty Name="ID" ColumnName="EventID" />
-            </EndProperty>
-          </AssociationSetMapping>
           <FunctionImportMapping FunctionImportName="AddEvent" FunctionName="websitedbModel.Store.AddEvent" />
           <FunctionImportMapping FunctionImportName="AddMember" FunctionName="websitedbModel.Store.AddMember" />
           <FunctionImportMapping FunctionImportName="GetEvent" FunctionName="websitedbModel.Store.GetEvent" />
@@ -3309,11 +3297,35 @@
           <FunctionImportMapping FunctionImportName="GetUniversity" FunctionName="websitedbModel.Store.GetUniversity" />
           <FunctionImportMapping FunctionImportName="AddContactUs" FunctionName="websitedbModel.Store.InsertContact" />
           <FunctionImportMapping FunctionImportName="selectGalleryByID" FunctionName="websitedbModel.Store.selectGalleryByID" />
-          <FunctionImportMapping FunctionImportName="EditMember" FunctionName="websitedbModel.Store.UpdateMember" />
+          <FunctionImportMapping FunctionImportName="EditMember" FunctionName="websitedbModel.Store.UpdateMember" >
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="EditSponsor" FunctionName="websitedbModel.Store.UpdateSponsor" />
           <FunctionImportMapping FunctionImportName="ViewSponsors" FunctionName="websitedbModel.Store.ViewSponsors" />
           <FunctionImportMapping FunctionImportName="ViewMember" FunctionName="websitedbModel.Store.ViewMember" />
-          <FunctionImportMapping FunctionImportName="ViewMembers" FunctionName="websitedbModel.Store.ViewMembers" />
+          <FunctionImportMapping FunctionImportName="ViewMembers" FunctionName="websitedbModel.Store.ViewMembers" >
+            <ResultMapping>
+              <ComplexTypeMapping TypeName="websitedbModel.ViewMembers">
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="CommitteName" ColumnName="CommitteName" />
+                <ScalarProperty Name="CollegeName" ColumnName="CollegeName" />
+                <ScalarProperty Name="UniversityName" ColumnName="UniversityName" />
+                <ScalarProperty Name="PositionName" ColumnName="PositionName" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="HireYear" ColumnName="HireYear" />
+                <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+                <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="CommitteeID" ColumnName="CommitteeID" />
+                <ScalarProperty Name="CollegeID" ColumnName="CollegeID" />
+                <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+              </ComplexTypeMapping>
+            </ResultMapping>
+          </FunctionImportMapping>
           <FunctionImportMapping FunctionImportName="EditEvent" FunctionName="websitedbModel.Store.EditEvent" />
           <EntitySetMapping Name="EventsNames">
             <EntityTypeMapping TypeName="websitedbModel.EventsName">
@@ -3391,6 +3403,55 @@
           <FunctionImportMapping FunctionImportName="EditText" FunctionName="websitedbModel.Store.EditText" />
           <FunctionImportMapping FunctionImportName="EditStaticPage" FunctionName="websitedbModel.Store.EditText" />
           <FunctionImportMapping FunctionImportName="DeleteStaticPage" FunctionName="websitedbModel.Store.DeleteText" />
+          <FunctionImportMapping FunctionImportName="GetAllMembers" FunctionName="websitedbModel.Store.GetAllMembers" />
+          <EntitySetMapping Name="Member">
+            <EntityTypeMapping TypeName="websitedbModel.Member">
+              <MappingFragment StoreEntitySet="Member">
+                <ScalarProperty Name="Comments" ColumnName="Comments" />
+                <ScalarProperty Name="ProfilePicture" ColumnName="ProfilePicture" />
+                <ScalarProperty Name="Birthdate" ColumnName="Birthdate" />
+                <ScalarProperty Name="HireYear" ColumnName="HireYear" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="PositionID" ColumnName="PositionID" />
+                <ScalarProperty Name="UniversityID" ColumnName="UniversityID" />
+                <ScalarProperty Name="CollegeID" ColumnName="CollegeID" />
+                <ScalarProperty Name="CommitteeID" ColumnName="CommitteeID" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="HomePhone" ColumnName="HomePhone" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <AssociationSetMapping Name="MemberEvent1" TypeName="websitedbModel.MemberEvent1" StoreEntitySet="MemberEvent">
+            <EndProperty Name="Member">
+              <ScalarProperty Name="ID" ColumnName="MemberID" />
+            </EndProperty>
+            <EndProperty Name="Event">
+              <ScalarProperty Name="ID" ColumnName="EventID" />
+            </EndProperty>
+          </AssociationSetMapping>
+          <EntitySetMapping Name="Subscribe">
+            <EntityTypeMapping TypeName="websitedbModel.Subscribe">
+              <MappingFragment StoreEntitySet="Subscribe">
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="AddSubscriper" FunctionName="websitedbModel.Store.AddSubscriper" />
+          <FunctionImportMapping FunctionImportName="DelelteSubscriber" FunctionName="websitedbModel.Store.DelelteSubscriber" />
+          <FunctionImportMapping FunctionImportName="EditSubscripers" FunctionName="websitedbModel.Store.EditSubscripers" />
+          <FunctionImportMapping FunctionImportName="GetSubscriber" FunctionName="websitedbModel.Store.GetSubscriber">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="GetSubscriberbyEmail" FunctionName="websitedbModel.Store.GetSubscriberbyEmail">
+          </FunctionImportMapping>
+          <FunctionImportMapping FunctionImportName="getPageGallery" FunctionName="websitedbModel.Store.getPageGallery">
+          </FunctionImportMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -3411,7 +3472,7 @@
     </Options>
     <!-- Diagram content (shape and connector positions) -->
     <Diagrams>
-      <Diagram Name="websitedbmodel" ZoomLevel="63">
+      <Diagram Name="websitedbmodel" ZoomLevel="41">
         <EntityTypeShape EntityType="websitedbModel.aspnet_Applications" Width="1.5" PointX="0.75" PointY="7.875" Height="2.5571907552083326" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.aspnet_Membership" Width="1.5" PointX="6" PointY="9.5" Height="5.4417122395833317" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.aspnet_Paths" Width="1.5" PointX="3" PointY="6.5" Height="2.3648893229166665" IsExpanded="true" />
@@ -3425,12 +3486,8 @@
         <EntityTypeShape EntityType="websitedbModel.College" Width="1.5" PointX="8.75" PointY="3.875" Height="2.1725878906250031" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.Committee" Width="1.5" PointX="8.75" PointY="0.75" Height="1.7879850260416745" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.ContactU" Width="1.5" PointX="13.75" PointY="0.75" Height="1.9802864583333388" IsExpanded="true" />
-        <EntityTypeShape EntityType="websitedbModel.EventSponsor" Width="1.5" PointX="15" PointY="12.25" Height="1.5956835937500031" IsExpanded="true" />
-        <EntityTypeShape EntityType="websitedbModel.EventUniversity" Width="1.5" PointX="13.25" PointY="8.5" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.Gallery" Width="1.5" PointX="14.75" PointY="14.75" Height="2.1725878906250031" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.Interview" Width="1.5" PointX="2.75" PointY="0.75" Height="1.7879850260416674" IsExpanded="true" />
-        <EntityTypeShape EntityType="websitedbModel.Member" Width="1.5" PointX="11" PointY="2.625" Height="4.6725065104166674" IsExpanded="true" />
-        <EntityTypeShape EntityType="websitedbModel.MemberEvent" Width="1.5" PointX="13.25" PointY="4.125" Height="1.5956835937500031" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.Position" Width="1.5" PointX="8.75" PointY="7.25" Height="1.7879850260416674" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.Sponsor" Width="1.5" PointX="12.75" PointY="12" Height="2.3648893229166674" IsExpanded="true" />
         <EntityTypeShape EntityType="websitedbModel.StaticPage" Width="1.5" PointX="0.75" PointY="3.75" Height="1.5956835937500102" IsExpanded="true" />
@@ -3499,35 +3556,6 @@
           <ConnectorPoint PointX="9.75" PointY="12.9612939453125" />
           <ConnectorPoint PointX="10.5" PointY="12.9612939453125" />
         </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_Member_College" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.25" PointY="4.8983101760817309" />
-          <ConnectorPoint PointX="11" PointY="4.8983101760817309" />
-        </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_Member_Committee" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.25" PointY="1.6439925130208373" />
-          <ConnectorPoint PointX="11.75" PointY="1.6439925130208373" />
-          <ConnectorPoint PointX="11.75" PointY="2.625" />
-        </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_EventSponsor_Sponsor" ManuallyRouted="false">
-          <ConnectorPoint PointX="14.25" PointY="13.047841796875002" />
-          <ConnectorPoint PointX="15" PointY="13.047841796875002" />
-        </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_EventUniversity_University" ManuallyRouted="false">
-          <ConnectorPoint PointX="12.5" PointY="9.2978417968750016" />
-          <ConnectorPoint PointX="12.666666666666666" PointY="9.2978417968750016" />
-          <ConnectorPoint PointX="12.833333333333334" PointY="9.2978417968750016" />
-          <ConnectorPoint PointX="13.25" PointY="9.2978417968750016" />
-        </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_Member_Position" ManuallyRouted="false">
-          <ConnectorPoint PointX="10.25" PointY="7.4660546875" />
-          <ConnectorPoint PointX="10.604166666666666" PointY="7.4660546874999989" />
-          <ConnectorPoint PointX="10.770833333333334" PointY="7.4660546875" />
-          <ConnectorPoint PointX="11" PointY="7.4660546875" />
-        </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.FK_MemberEvent_Member" ManuallyRouted="false">
-          <ConnectorPoint PointX="12.5" PointY="4.9228417968750016" />
-          <ConnectorPoint PointX="13.25" PointY="4.9228417968750016" />
-        </AssociationConnector>
         <AssociationConnector Association="websitedbModel.aspnet_UsersInRoles" ManuallyRouted="false">
           <ConnectorPoint PointX="4.5" PointY="15.751152846153847" />
           <ConnectorPoint PointX="4.8761528461538468" PointY="15.375" />
@@ -3574,36 +3602,17 @@
           <ConnectorPoint PointX="11.75" PointY="10.922587890625" />
           <ConnectorPoint PointX="11.75" PointY="10.547587890625" />
         </AssociationConnector>
-        <AssociationConnector Association="websitedbModel.MemberEvent1" >
-          <ConnectorPoint PointX="1.8749995" PointY="15.25" />
-          <ConnectorPoint PointX="1.8749995" PointY="10.682190755208332" />
-          <ConnectorPoint PointX="2.5" PointY="10.682190755208332" />
-          <ConnectorPoint PointX="2.5" PointY="6.2975878906250031" />
-          <ConnectorPoint PointX="3.6666666666666665" PointY="6.2975878906250022" />
-          <ConnectorPoint PointX="3.8333333333333335" PointY="6.2975878906250031" />
-          <ConnectorPoint PointX="8.2447891666666653" PointY="6.2975878906250022" />
-          <ConnectorPoint PointX="8.4114558333333331" PointY="6.2975878906250031" />
-          <ConnectorPoint PointX="10.625" PointY="6.2975878906250031" />
-          <ConnectorPoint PointX="10.625" PointY="6.1821824317908654" />
-          <ConnectorPoint PointX="11" PointY="6.1821824317908654" />
-        </AssociationConnector>
         <EntityTypeShape EntityType="websitedbModel.EventsName" Width="1.5" PointX="17.375" PointY="17.75" Height="1.4033821614583317" />
         <EntityTypeShape EntityType="websitedbModel.GalleryName" Width="1.5" PointX="18.375" PointY="6.75" Height="1.4033821614583326" />
         <EntityTypeShape EntityType="websitedbModel.MembersName" Width="1.5" PointX="12.375" PointY="18.75" Height="1.4033821614583317" />
         <EntityTypeShape EntityType="websitedbModel.Participant" Width="1.5" PointX="14.375" PointY="18.75" Height="3.5186979166666674" />
-        <AssociationConnector Association="websitedbModel.FK_Participant_Member" >
-          <ConnectorPoint PointX="11.75" PointY="7.682109375" />
-          <ConnectorPoint PointX="11.75" PointY="8.125" />
-          <ConnectorPoint PointX="12.75" PointY="8.125" />
-          <ConnectorPoint PointX="12.75" PointY="11.625" />
-          <ConnectorPoint PointX="12.5" PointY="11.625" />
-          <ConnectorPoint PointX="12.5" PointY="15.25" />
-          <ConnectorPoint PointX="13.697916666666666" PointY="15.25" />
-          <ConnectorPoint PointX="13.864583333333334" PointY="15.25" />
-          <ConnectorPoint PointX="14.125" PointY="15.25" />
-          <ConnectorPoint PointX="14.125" PointY="20.797801106770834" />
-          <ConnectorPoint PointX="14.375" PointY="20.797801106770834" />
-        </AssociationConnector>
+        <EntityTypeShape EntityType="websitedbModel.Member" Width="1.5" PointX="5.2954562480074614" PointY="14.232011146020149" />
+        <AssociationConnector Association="websitedbModel.FK_Member_College" />
+        <AssociationConnector Association="websitedbModel.FK_Member_Committee" />
+        <AssociationConnector Association="websitedbModel.FK_Member_Position" />
+        <AssociationConnector Association="websitedbModel.FK_Participant_Member" />
+        <AssociationConnector Association="websitedbModel.MemberEvent1" />
+        <EntityTypeShape EntityType="websitedbModel.Subscribe" Width="1.5" PointX="9.11882386967485" PointY="29.608004211265595" />
       </Diagram>
     </Diagrams>
   </Designer>

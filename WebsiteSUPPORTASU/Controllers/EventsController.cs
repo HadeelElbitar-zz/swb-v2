@@ -12,15 +12,21 @@ namespace WebsiteSUPPORTASU.Models
 
     using EventsNames = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.EventsName>;
 
+
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class EventsController : Controller
     {
         WebsiteSUPPORTASUCore.EventService EventsCore;
         AdminService objAdmin;
+        GalleryService GalleryCore;
 
         public EventsController()
         {
             EventsCore = new EventService();
-        objAdmin = new AdminService();
+            objAdmin = new AdminService();
+            GalleryCore = new GalleryService();
         }
 
         //
@@ -30,6 +36,7 @@ namespace WebsiteSUPPORTASU.Models
         {
             ViewBag.EventsList = EventsCore.GetEvents().OrderBy(X => X.StartDate.Year).Reverse().ToList();
             //ViewBag.EventsList.OrderBy(X => X.StartDate);
+            ViewBag.Slider = GalleryCore.getPageGallery("events", "slider").ToList();
             return View();
         }
 
@@ -38,44 +45,17 @@ namespace WebsiteSUPPORTASU.Models
 
         public ActionResult Details(int Id)
         {
-            ViewBag.Event = EventsCore.GetEvent(Id).FirstOrDefault() ;
+            ViewBag.Event = EventsCore.GetEvent(Id).FirstOrDefault();
+            ViewBag.EventsList = EventsCore.GetEvents().OrderBy(X => X.StartDate.Year).Reverse().ToList();
+            ViewBag.Slider = GalleryCore.getPageGallery("subevent", "slider").ToList();
             return View();
         }
 
         public ActionResult GetPartialView(int ID)
         {
-            int mod = (int)(Math.Pow(10.0, (double)ID.ToString().Count()-1));
-            int EventID = ID%mod;
-            ID /= mod;
-            WebsiteSUPPORTASUDomain.Event Event = EventsCore.GetEvent(EventID).FirstOrDefault();
-            if (ID == 1)
-            {
-                ViewBag.Description = Event.Description;
-                return PartialView("Description");
-            }
-            else if (ID == 2)
-            {
-                return RedirectToAction("GetPartialView", "Sponsors", new { ID = EventID });
-            }
-            else if (ID == 3)
-            {
-                return RedirectToAction("GetPartialView", "Gallery", new { ID = EventID });
-            }
-            else if (ID == 4)
-            {
-                if (Event.state == false || Event.state == null)
-                    return PartialView("RegistrationClosed");
-                else
-                    return PartialView("Registration");
-            }
-            else if(ID == 5)
-            {
-                return PartialView("Live Streaming");
-            }
-            else
-            {
-                return PartialView("Map");
-            }
+            WebsiteSUPPORTASUDomain.Event Event = EventsCore.GetEvent(ID).FirstOrDefault();
+            ViewBag.Description = Event.Description;
+            return PartialView("Description");
 
         }
 
@@ -86,7 +66,7 @@ namespace WebsiteSUPPORTASU.Models
 
 
         // GET: /Events/Add
-
+        [ValidateInput(false)]
         [Authorize(Users = "Admin")]
         public ActionResult AddEvent()
         {
@@ -95,7 +75,7 @@ namespace WebsiteSUPPORTASU.Models
 
         //
         // POST: /Events/Add
-
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult AddEvent(EventModel eEvent)
         {
@@ -112,16 +92,17 @@ namespace WebsiteSUPPORTASU.Models
 
         //
         // GET: /Events/Edit/5
+        [ValidateInput(false)]
         [Authorize(Users = "Admin")]
         public ActionResult EditEvent()
         {
             ViewBag.ElementsNames = objAdmin.EventsCore.GetEventsNames().ToList();
-            return View("SelectEdit");
+            return View("../Admin/SelectEdit");
         }
 
         //
         // POST: /Events/Edit/5
-
+        [ValidateInput(false)]
         [HttpPost]
         public ActionResult EditEvent(EventModel Event, FormCollection form)
         {
@@ -133,7 +114,7 @@ namespace WebsiteSUPPORTASU.Models
             }
             else
             {
-                int ID = int.Parse(form["Elements"]);
+                int ID = int.Parse(form["Elements"]) == null ? Event.ID : int.Parse(form["Elements"]);
                 Event eEvent = objAdmin.EventsCore.GetEvent(ID).FirstOrDefault();
                 Event.ID = ID;
                 Event.Name = eEvent.Name;
@@ -148,11 +129,12 @@ namespace WebsiteSUPPORTASU.Models
 
         //
         // GET: /Events/Delete/5
+        [ValidateInput(false)]
         [Authorize(Users = "Admin")]
         public ActionResult DeleteEvent()
         {
             ViewBag.ElementsNames = objAdmin.EventsCore.GetEventsNames().ToList();
-            return View("SelectDelete");
+            return View("../Admin/SelectDelete");
         }
 
         //

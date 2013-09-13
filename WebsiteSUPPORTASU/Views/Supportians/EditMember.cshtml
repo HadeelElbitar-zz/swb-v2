@@ -24,7 +24,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CommitteeID)
+            @Html.Label("Committee")
         </div>
         <input class="input" type="text" name="OldCommittee" readonly=readonly value="@ViewBag.Committee"/>
          <div class="editor-field">
@@ -35,7 +35,6 @@
                 <option value="@Committee.ID">@Committee.Name</option>
             }
             </select>
-            @Html.ValidationMessageFor(model => model.CommitteeID)
         </div>
 
 
@@ -64,7 +63,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.PositionID)
+            @Html.Label("Position")
         </div>
         <input class="input" type="text" name="OldPosition" readonly=readonly value="@ViewBag.Position"/>
           <div class="editor-field">
@@ -75,12 +74,11 @@
                 <option value="@Position.ID">@Position.Name</option>
             }
             </select>
-            @Html.ValidationMessageFor(model => model.PositionID)
         </div>
       
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.CollegeID)
+            @Html.Label("College")
         </div>
         <input class="input" type="text" name="OldCollege" readonly=readonly value="@ViewBag.College"/>
         <div class="editor-field">
@@ -95,7 +93,7 @@
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.UniversityID)
+            @Html.Label("University")
         </div>
         <input class="input" type="text" name="OldUniversity" readonly=readonly value="@ViewBag.University"/>
         <div class="editor-field">
@@ -159,6 +157,10 @@
         </div>
 
         @Html.HiddenFor(model => model.ID)
+        @Html.HiddenFor(model => model.UniversityID)
+        @Html.HiddenFor(model => model.CollegeID)
+        @Html.HiddenFor(model => model.CommitteeID)
+        @Html.HiddenFor(model => model.PositionID)
 
         <p>
             <input type="submit" value="Save" />

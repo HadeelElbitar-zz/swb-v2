@@ -41,7 +41,15 @@ using StaticPage = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.Stat
 
         public StaticPage GetStaticPage(string Name)
         {
-            return model.GetStaticPage(Name);
+            try
+            {
+                return model.GetStaticPage(Name);
+            }
+            catch (Exception)
+            {
+                
+                throw;
+            }
         }
 
         public StaticPage GetStaticPages()

@@ -1,1 +1,108 @@
-﻿
+﻿@{
+    ViewBag.title = "Supportians . Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+ <div class="container marketing">
+
+
+      <!-- START THE FEATURETTES -->
+   
+      <hr class="featurette-divider"/>
+
+    <!-- 
+        display the Committe Name and logo
+        display the members pictures as they are sorted by Committe !-->        
+    
+    @foreach (var committy in ViewBag.Committees)
+    {
+        <div class="offset4 span4">
+            <div class="holder">
+                <div class="avatar">
+                    <a>
+                        <img src="@Url.Content("~/Content/assets/img/Supportians/"+@committy.Name+"/"+@committy.PictureName)" class="user" alt=""/>
+                    </a>
+                </div>
+            </div>
+        </div>
+            
+        <div class="span12">
+
+        <ul class="sponcont cs-style-3">
+
+        @foreach (var member in ViewBag.Members)
+        {        
+            if(member.CommitteName == committy.Name)
+            {
+                <li class="span2 holder2">
+                    <div class="avatar2">
+                        <a href="#myModal" data-toggle="modal">
+                            <img onclick="ModalLoadData('@member.FullName', '@member.CollegeName', '@member.CommitteName', '@member.PositionName', '@member.HireYear.Year', '@member.BirthDate.Year')" 
+                            src="@Url.Content("~/Content/assets//img/Supportians/"+@committy.Name+"/"+@member.ProfilePicture)" class="user2" alt="" />
+                        </a>
+                    </div>
+                </li>
+            }
+        }
+        </ul>
+        </div>
+  
+        <hr class="span12 featurette-divider"/>
+    }
+
+
+
+        <!-- Modal -->
+        <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+            aria-hidden="true">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    ×</button>
+                <h3 id="myModalLabel">
+                    Committee</h3>
+            </div>
+            <div class="modal-body">
+                <img src="@Url.Content("~/Content/assets/img/supportians/temp.jpg")" />
+                <ul class="member-data">
+                    <li>
+                        <p>
+                            <span class="muted">Name: </span><span id="Modal_Name"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="muted">Age: </span><span id="Modal_Age"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="muted">Faculty: </span><span id="Modal_Faculty"> </span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="muted">Year of joining: </span><span id="Modal_JoinYear"></span>
+                        </p>
+                    </li>
+                    <li>
+                        <p>
+                            <span class="muted">Position: </span><span id="Modal_Position"></span>
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    <!-- /END THE FEATURETTES -->    
+     </div>
+<script>
+    function ModalLoadData(FullName, CollegeName, CommitteName, PositionName, HireYear, BirthDate) {
+
+        document.getElementById("myModalLabel").innerHTML = CommitteName;
+        document.getElementById("Modal_Name").innerHTML = FullName;
+            document.getElementById("Modal_Age").innerHTML = BirthDate;
+            document.getElementById("Modal_Faculty").innerHTML = CollegeName;
+            document.getElementById("Modal_JoinYear").innerHTML = HireYear;
+            document.getElementById("Modal_Position").innerHTML = PositionName;
+            document.getElementById("Modal_Image").src = $('#avatar2').src;
+        };
+    </script>

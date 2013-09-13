@@ -1,30 +1,40 @@
 ﻿namespace WebsiteSUPPORTASU.Models
 {
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using WebsiteSUPPORTASU.Models;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Web;
+    using System.Web.Mvc;
+    using WebsiteSUPPORTASU.Models;
     using WebsiteSUPPORTASUCore;
     using WebsiteSUPPORTASUDomain;
 
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class SupportiansController : Controller
     {
-        WebsiteSUPPORTASUCore.SupportiansService obj;
+        SupportiansService objSuppService;
+        CommitteService objCommService;
         AdminService objAdmin;
-        
-        public SupportiansController ()
+        GalleryService GalleryCore;
+
+        public SupportiansController()
         {
-            obj = new WebsiteSUPPORTASUCore.SupportiansService();
-            objAdmin = new AdminService();   
+            objSuppService = new SupportiansService();
+            objCommService = new CommitteService();
+            objAdmin = new AdminService();
+            GalleryCore = new GalleryService();
         }
-        
+
         // GET: /Member/
 
-        public ActionResult Index()
+        public ActionResult Index(int Year)
         {
+            ViewBag.Committees = objSuppService.GetAllCommitties().OrderBy(x => x.ID);
+            ViewBag.Members = objSuppService.GetAllMembers().OrderBy(x => x.CommitteeID).OrderBy(x => x.PositionID);
+            ViewBag.Slider = GalleryCore.getPageGallery("supportians", "slider").ToList();
             return View();
         }
 
@@ -90,8 +100,8 @@ using WebsiteSUPPORTASU.Models;
             if (ModelState.IsValid)
             {
                 int ID = Member.ID;
-                Member.CollegeID = (form["College"].ToString().Equals(""))?Member.CollegeID:int.Parse(form["College"]);
-                Member.UniversityID = (form["University"].ToString().Equals("")) ? Member.UniversityID: int.Parse(form["University"]);
+                Member.CollegeID = (form["College"].ToString().Equals("")) ? Member.CollegeID : int.Parse(form["College"]);
+                Member.UniversityID = (form["University"].ToString().Equals("")) ? Member.UniversityID : int.Parse(form["University"]);
                 Member.PositionID = (form["Position"].ToString().Equals("")) ? Member.PositionID : int.Parse(form["Position"]);
                 Member.CommitteeID = (form["Committee"].ToString().Equals("")) ? Member.CommitteeID : int.Parse(form["Committee"]);
 
@@ -109,9 +119,9 @@ using WebsiteSUPPORTASU.Models;
                 int ID = int.Parse(form["Elements"]);
                 Member eMember = objAdmin.SupportiansCore.GetMember(ID).FirstOrDefault();
                 Member.ID = ID;
-                Member.FullName = eMember.FullName; 
-                Member.Mobile = eMember.Mobile; 
-                Member.HomePhone = eMember.HomePhone; 
+                Member.FullName = eMember.FullName;
+                Member.Mobile = eMember.Mobile;
+                Member.HomePhone = eMember.HomePhone;
                 Member.Email = eMember.Email;
                 Member.CommitteeID = eMember.CommitteeID;
                 Member.CollegeID = eMember.CollegeID;
@@ -121,11 +131,11 @@ using WebsiteSUPPORTASU.Models;
                 ViewBag.College = objAdmin.GetCollege(eMember.CollegeID).FirstOrDefault().Name;
                 ViewBag.University = objAdmin.GetUniversity(eMember.UniversityID).FirstOrDefault().Name;
                 ViewBag.Position = objAdmin.GetPosition(eMember.PositionID).FirstOrDefault().Name;
-                Member.state = eMember.state; 
-                Member.Address = eMember.Address; 
-                Member.HireYear = eMember.HireYear; 
-                Member.Birthdate = eMember.Birthdate; 
-                Member.ProfilePicture = eMember.ProfilePicture; 
+                Member.state = eMember.state;
+                Member.Address = eMember.Address;
+                Member.HireYear = eMember.HireYear;
+                Member.Birthdate = eMember.Birthdate;
+                Member.ProfilePicture = eMember.ProfilePicture;
                 Member.Comments = eMember.Comments;
                 return View("EditMember", Member);
             }

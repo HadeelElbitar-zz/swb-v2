@@ -11,15 +11,19 @@ namespace WebsiteSUPPORTASU.SponsorsControllers
     using WebsiteSUPPORTASUCore;
     using WebsiteSUPPORTASU.Models;
 
-    using vSponsor = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.SponsorView>;
+    using eSponsor = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.Sponsor>;
     using EventsNames = System.Data.Objects.ObjectResult<WebsiteSUPPORTASUDomain.EventsName>;
 
+    using System.Web.Security;
+
+    [Authorize(Users = "admin")]
     public class SponsorsController : Controller
     {
 
         WebsiteSUPPORTASUCore.SponsorService SponsorCore;
         WebsiteSUPPORTASUCore.EventService EventCore;
         AdminService objAdmin;
+        GalleryService GalleryCore;
 
         //
         // GET: /Sponser/
@@ -28,31 +32,26 @@ namespace WebsiteSUPPORTASU.SponsorsControllers
         {
             SponsorCore = new SponsorService();
             EventCore = new EventService();
-        objAdmin = new AdminService();
+            objAdmin = new AdminService();
+            GalleryCore = new GalleryService();
         }
 
         public ActionResult Index()
         {
-            EventsNames objEvent = EventCore.GetEventsNames();
-            ViewBag.EventsList = objEvent.OrderBy(X => X.ID).Reverse().ToList();
+            eSponsor Sponsors = SponsorCore.GetSponsors();
+            List<Sponsor> SponsorsList = Sponsors.ToList();
+            List<List<Event>> SponsorsEvents = new List<List<Event>>();
+            SponsorsList.OrderBy(x => x.Events.OrderBy(Y => Y.StartDate.Year).ElementAt(0).StartDate.Year).Reverse();
+            foreach (var sponsor in SponsorsList)
+            {
+                SponsorsEvents.Add(sponsor.Events.ToList());
+            }
+            ViewBag.SponsorsList = SponsorsList;
+            ViewBag.SponsorsEvents = SponsorsEvents;
+            ViewBag.Slider = GalleryCore.getPageGallery("sponsors", "slider").ToList();
             return View();
         }
 
-        public ActionResult GetPartialView(int ID) 
-        {
-            ViewBag.CurrentEventName = EventCore.GetEventsNames().ToList().Find(x => x.ID == ID).Name;
-            vSponsor objSponsor = SponsorCore.GetEventSponsors("2", ID);
-            //if(objGallery.FirstOrDefault() != null)
-            ViewBag.CurrentEventAcademic = objSponsor.ToList();
-            objSponsor = SponsorCore.GetEventSponsors("1", ID);
-            //if (objGallery.FirstOrDefault() != null)
-            ViewBag.CurrentEventMain = objSponsor.ToList();
-            foreach (var x in ViewBag.CurrentEventMain)
-            {
-                var y = x;
-            }
-            return PartialView("Sponsors");
-        }
 
         /******** Sponsors *********/
 

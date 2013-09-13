@@ -28,19 +28,16 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("websitedbModel", "FK__aspnet_Pe__PathI__3F115E1A", "aspnet_Paths", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebsiteSUPPORTASUDomain.aspnet_Paths), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.aspnet_PersonalizationPerUser), true)]
 [assembly: EdmRelationshipAttribute("websitedbModel", "FK__aspnet_Pe__UserI__40058253", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebsiteSUPPORTASUDomain.aspnet_Users), "aspnet_PersonalizationPerUser", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.aspnet_PersonalizationPerUser), true)]
 [assembly: EdmRelationshipAttribute("websitedbModel", "FK__aspnet_Pr__UserI__40F9A68C", "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.aspnet_Users), "aspnet_Profile", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebsiteSUPPORTASUDomain.aspnet_Profile), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_College", "College", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.College), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_Committee", "Committee", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Committee), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_EventSponsor_Sponsor", "Sponsor", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Sponsor), "EventSponsor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.EventSponsor), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_EventUniversity_University", "University", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.University), "EventUniversity", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.EventUniversity), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_Position", "Position", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Position), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
-[assembly: EdmRelationshipAttribute("websitedbModel", "FK_MemberEvent_Member", "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Member), "MemberEvent", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.MemberEvent), true)]
 [assembly: EdmRelationshipAttribute("websitedbModel", "aspnet_UsersInRoles", "aspnet_Roles", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.aspnet_Roles), "aspnet_Users", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.aspnet_Users))]
 [assembly: EdmRelationshipAttribute("websitedbModel", "UniversityCollege", "College", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.College), "University", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.University))]
 [assembly: EdmRelationshipAttribute("websitedbModel", "FK_Gallery_Event", "Event", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Event), "Gallery", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Gallery), true)]
 [assembly: EdmRelationshipAttribute("websitedbModel", "EventSponsor1", "Event", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Event), "Sponsor", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Sponsor))]
 [assembly: EdmRelationshipAttribute("websitedbModel", "EventUniversity1", "Event", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Event), "University", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.University))]
-[assembly: EdmRelationshipAttribute("websitedbModel", "MemberEvent1", "Event", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Event), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member))]
+[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_College", "College", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.College), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
+[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_Committee", "Committee", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Committee), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
+[assembly: EdmRelationshipAttribute("websitedbModel", "FK_Member_Position", "Position", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(WebsiteSUPPORTASUDomain.Position), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member), true)]
 [assembly: EdmRelationshipAttribute("websitedbModel", "FK_Participant_Member", "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(WebsiteSUPPORTASUDomain.Member), "Participant", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Participant), true)]
+[assembly: EdmRelationshipAttribute("websitedbModel", "MemberEvent1", "Event", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Event), "Member", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(WebsiteSUPPORTASUDomain.Member))]
 
 #endregion
 
@@ -303,38 +300,6 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<EventSponsor> EventSponsors
-        {
-            get
-            {
-                if ((_EventSponsors == null))
-                {
-                    _EventSponsors = base.CreateObjectSet<EventSponsor>("EventSponsors");
-                }
-                return _EventSponsors;
-            }
-        }
-        private ObjectSet<EventSponsor> _EventSponsors;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<EventUniversity> EventUniversities
-        {
-            get
-            {
-                if ((_EventUniversities == null))
-                {
-                    _EventUniversities = base.CreateObjectSet<EventUniversity>("EventUniversities");
-                }
-                return _EventUniversities;
-            }
-        }
-        private ObjectSet<EventUniversity> _EventUniversities;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<Gallery> Galleries
         {
             get
@@ -363,38 +328,6 @@ namespace WebsiteSUPPORTASUDomain
             }
         }
         private ObjectSet<Interview> _Interviews;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Member> Members
-        {
-            get
-            {
-                if ((_Members == null))
-                {
-                    _Members = base.CreateObjectSet<Member>("Members");
-                }
-                return _Members;
-            }
-        }
-        private ObjectSet<Member> _Members;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<MemberEvent> MemberEvents
-        {
-            get
-            {
-                if ((_MemberEvents == null))
-                {
-                    _MemberEvents = base.CreateObjectSet<MemberEvent>("MemberEvents");
-                }
-                return _MemberEvents;
-            }
-        }
-        private ObjectSet<MemberEvent> _MemberEvents;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -715,6 +648,38 @@ namespace WebsiteSUPPORTASUDomain
             }
         }
         private ObjectSet<Participant> _Participant;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Member> Member
+        {
+            get
+            {
+                if ((_Member == null))
+                {
+                    _Member = base.CreateObjectSet<Member>("Member");
+                }
+                return _Member;
+            }
+        }
+        private ObjectSet<Member> _Member;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Subscribe> Subscribe
+        {
+            get
+            {
+                if ((_Subscribe == null))
+                {
+                    _Subscribe = base.CreateObjectSet<Subscribe>("Subscribe");
+                }
+                return _Subscribe;
+            }
+        }
+        private ObjectSet<Subscribe> _Subscribe;
 
         #endregion
 
@@ -825,22 +790,6 @@ namespace WebsiteSUPPORTASUDomain
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the EventSponsors EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEventSponsors(EventSponsor eventSponsor)
-        {
-            base.AddObject("EventSponsors", eventSponsor);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the EventUniversities EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEventUniversities(EventUniversity eventUniversity)
-        {
-            base.AddObject("EventUniversities", eventUniversity);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the Galleries EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToGalleries(Gallery gallery)
@@ -854,22 +803,6 @@ namespace WebsiteSUPPORTASUDomain
         public void AddToInterviews(Interview interview)
         {
             base.AddObject("Interviews", interview);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Members EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMembers(Member member)
-        {
-            base.AddObject("Members", member);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the MemberEvents EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToMemberEvents(MemberEvent memberEvent)
-        {
-            base.AddObject("MemberEvents", memberEvent);
         }
     
         /// <summary>
@@ -1030,6 +963,22 @@ namespace WebsiteSUPPORTASUDomain
         public void AddToParticipant(Participant participant)
         {
             base.AddObject("Participant", participant);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Member EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToMember(Member member)
+        {
+            base.AddObject("Member", member);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Subscribe EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToSubscribe(Subscribe subscribe)
+        {
+            base.AddObject("Subscribe", subscribe);
         }
 
         #endregion
@@ -2905,7 +2854,7 @@ namespace WebsiteSUPPORTASUDomain
         /// <param name="birthDate">No Metadata Documentation available.</param>
         /// <param name="profilePicture">No Metadata Documentation available.</param>
         /// <param name="comments">No Metadata Documentation available.</param>
-        public ObjectResult<Member> EditMember(Nullable<global::System.Int32> iD, global::System.String fullname, global::System.String mobile, global::System.String homePhone, global::System.String email, Nullable<global::System.Int32> committeeID, Nullable<global::System.Int32> collegeID, Nullable<global::System.Int32> universityID, Nullable<global::System.Int32> positionID, global::System.String state, global::System.String address, Nullable<global::System.DateTime> hiredate, Nullable<global::System.DateTime> birthDate, global::System.String profilePicture, global::System.String comments)
+        public int EditMember(Nullable<global::System.Int32> iD, global::System.String fullname, global::System.String mobile, global::System.String homePhone, global::System.String email, Nullable<global::System.Int32> committeeID, Nullable<global::System.Int32> collegeID, Nullable<global::System.Int32> universityID, Nullable<global::System.Int32> positionID, global::System.String state, global::System.String address, Nullable<global::System.DateTime> hiredate, Nullable<global::System.DateTime> birthDate, global::System.String profilePicture, global::System.String comments)
         {
             ObjectParameter iDParameter;
             if (iD.HasValue)
@@ -3057,180 +3006,7 @@ namespace WebsiteSUPPORTASUDomain
                 commentsParameter = new ObjectParameter("Comments", typeof(global::System.String));
             }
     
-            return base.ExecuteFunction<Member>("EditMember", iDParameter, fullnameParameter, mobileParameter, homePhoneParameter, emailParameter, committeeIDParameter, collegeIDParameter, universityIDParameter, positionIDParameter, stateParameter, addressParameter, hiredateParameter, birthDateParameter, profilePictureParameter, commentsParameter);
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        /// <param name="mergeOption"></param>
-        /// <param name="iD">No Metadata Documentation available.</param>
-        /// <param name="fullname">No Metadata Documentation available.</param>
-        /// <param name="mobile">No Metadata Documentation available.</param>
-        /// <param name="homePhone">No Metadata Documentation available.</param>
-        /// <param name="email">No Metadata Documentation available.</param>
-        /// <param name="committeeID">No Metadata Documentation available.</param>
-        /// <param name="collegeID">No Metadata Documentation available.</param>
-        /// <param name="universityID">No Metadata Documentation available.</param>
-        /// <param name="positionID">No Metadata Documentation available.</param>
-        /// <param name="state">No Metadata Documentation available.</param>
-        /// <param name="address">No Metadata Documentation available.</param>
-        /// <param name="hiredate">No Metadata Documentation available.</param>
-        /// <param name="birthDate">No Metadata Documentation available.</param>
-        /// <param name="profilePicture">No Metadata Documentation available.</param>
-        /// <param name="comments">No Metadata Documentation available.</param>
-        public ObjectResult<Member> EditMember(Nullable<global::System.Int32> iD, global::System.String fullname, global::System.String mobile, global::System.String homePhone, global::System.String email, Nullable<global::System.Int32> committeeID, Nullable<global::System.Int32> collegeID, Nullable<global::System.Int32> universityID, Nullable<global::System.Int32> positionID, global::System.String state, global::System.String address, Nullable<global::System.DateTime> hiredate, Nullable<global::System.DateTime> birthDate, global::System.String profilePicture, global::System.String comments, MergeOption mergeOption)
-        {
-            ObjectParameter iDParameter;
-            if (iD.HasValue)
-            {
-                iDParameter = new ObjectParameter("ID", iD);
-            }
-            else
-            {
-                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter fullnameParameter;
-            if (fullname != null)
-            {
-                fullnameParameter = new ObjectParameter("fullname", fullname);
-            }
-            else
-            {
-                fullnameParameter = new ObjectParameter("fullname", typeof(global::System.String));
-            }
-    
-            ObjectParameter mobileParameter;
-            if (mobile != null)
-            {
-                mobileParameter = new ObjectParameter("Mobile", mobile);
-            }
-            else
-            {
-                mobileParameter = new ObjectParameter("Mobile", typeof(global::System.String));
-            }
-    
-            ObjectParameter homePhoneParameter;
-            if (homePhone != null)
-            {
-                homePhoneParameter = new ObjectParameter("HomePhone", homePhone);
-            }
-            else
-            {
-                homePhoneParameter = new ObjectParameter("HomePhone", typeof(global::System.String));
-            }
-    
-            ObjectParameter emailParameter;
-            if (email != null)
-            {
-                emailParameter = new ObjectParameter("Email", email);
-            }
-            else
-            {
-                emailParameter = new ObjectParameter("Email", typeof(global::System.String));
-            }
-    
-            ObjectParameter committeeIDParameter;
-            if (committeeID.HasValue)
-            {
-                committeeIDParameter = new ObjectParameter("CommitteeID", committeeID);
-            }
-            else
-            {
-                committeeIDParameter = new ObjectParameter("CommitteeID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter collegeIDParameter;
-            if (collegeID.HasValue)
-            {
-                collegeIDParameter = new ObjectParameter("CollegeID", collegeID);
-            }
-            else
-            {
-                collegeIDParameter = new ObjectParameter("CollegeID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter universityIDParameter;
-            if (universityID.HasValue)
-            {
-                universityIDParameter = new ObjectParameter("UniversityID", universityID);
-            }
-            else
-            {
-                universityIDParameter = new ObjectParameter("UniversityID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter positionIDParameter;
-            if (positionID.HasValue)
-            {
-                positionIDParameter = new ObjectParameter("PositionID", positionID);
-            }
-            else
-            {
-                positionIDParameter = new ObjectParameter("PositionID", typeof(global::System.Int32));
-            }
-    
-            ObjectParameter stateParameter;
-            if (state != null)
-            {
-                stateParameter = new ObjectParameter("state", state);
-            }
-            else
-            {
-                stateParameter = new ObjectParameter("state", typeof(global::System.String));
-            }
-    
-            ObjectParameter addressParameter;
-            if (address != null)
-            {
-                addressParameter = new ObjectParameter("address", address);
-            }
-            else
-            {
-                addressParameter = new ObjectParameter("address", typeof(global::System.String));
-            }
-    
-            ObjectParameter hiredateParameter;
-            if (hiredate.HasValue)
-            {
-                hiredateParameter = new ObjectParameter("hiredate", hiredate);
-            }
-            else
-            {
-                hiredateParameter = new ObjectParameter("hiredate", typeof(global::System.DateTime));
-            }
-    
-            ObjectParameter birthDateParameter;
-            if (birthDate.HasValue)
-            {
-                birthDateParameter = new ObjectParameter("BirthDate", birthDate);
-            }
-            else
-            {
-                birthDateParameter = new ObjectParameter("BirthDate", typeof(global::System.DateTime));
-            }
-    
-            ObjectParameter profilePictureParameter;
-            if (profilePicture != null)
-            {
-                profilePictureParameter = new ObjectParameter("ProfilePicture", profilePicture);
-            }
-            else
-            {
-                profilePictureParameter = new ObjectParameter("ProfilePicture", typeof(global::System.String));
-            }
-    
-            ObjectParameter commentsParameter;
-            if (comments != null)
-            {
-                commentsParameter = new ObjectParameter("Comments", comments);
-            }
-            else
-            {
-                commentsParameter = new ObjectParameter("Comments", typeof(global::System.String));
-            }
-    
-            return base.ExecuteFunction<Member>("EditMember", mergeOption, iDParameter, fullnameParameter, mobileParameter, homePhoneParameter, emailParameter, committeeIDParameter, collegeIDParameter, universityIDParameter, positionIDParameter, stateParameter, addressParameter, hiredateParameter, birthDateParameter, profilePictureParameter, commentsParameter);
+            return base.ExecuteFunction("EditMember", iDParameter, fullnameParameter, mobileParameter, homePhoneParameter, emailParameter, committeeIDParameter, collegeIDParameter, universityIDParameter, positionIDParameter, stateParameter, addressParameter, hiredateParameter, birthDateParameter, profilePictureParameter, commentsParameter);
         }
     
         /// <summary>
@@ -3438,17 +3214,9 @@ namespace WebsiteSUPPORTASUDomain
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectResult<Member> ViewMembers()
+        public ObjectResult<ViewMembers> ViewMembers()
         {
-            return base.ExecuteFunction<Member>("ViewMembers");
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        /// <param name="mergeOption"></param>
-        public ObjectResult<Member> ViewMembers(MergeOption mergeOption)
-        {
-            return base.ExecuteFunction<Member>("ViewMembers", mergeOption);
+            return base.ExecuteFunction<ViewMembers>("ViewMembers");
         }
     
         /// <summary>
@@ -4242,6 +4010,240 @@ namespace WebsiteSUPPORTASUDomain
             }
     
             return base.ExecuteFunction("EditText", iDParameter, nameParameter, textParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public int GetAllMembers()
+        {
+            return base.ExecuteFunction("GetAllMembers");
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="name">No Metadata Documentation available.</param>
+        /// <param name="email">No Metadata Documentation available.</param>
+        /// <param name="state">No Metadata Documentation available.</param>
+        public int AddSubscriper(global::System.String name, global::System.String email, global::System.String state)
+        {
+            ObjectParameter nameParameter;
+            if (name != null)
+            {
+                nameParameter = new ObjectParameter("Name", name);
+            }
+            else
+            {
+                nameParameter = new ObjectParameter("Name", typeof(global::System.String));
+            }
+    
+            ObjectParameter emailParameter;
+            if (email != null)
+            {
+                emailParameter = new ObjectParameter("Email", email);
+            }
+            else
+            {
+                emailParameter = new ObjectParameter("Email", typeof(global::System.String));
+            }
+    
+            ObjectParameter stateParameter;
+            if (state != null)
+            {
+                stateParameter = new ObjectParameter("State", state);
+            }
+            else
+            {
+                stateParameter = new ObjectParameter("State", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction("AddSubscriper", nameParameter, emailParameter, stateParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        public int DelelteSubscriber(Nullable<global::System.Int32> iD)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("DelelteSubscriber", iDParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        /// <param name="state">No Metadata Documentation available.</param>
+        public int EditSubscripers(Nullable<global::System.Int32> iD, Nullable<global::System.Int32> state)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            ObjectParameter stateParameter;
+            if (state.HasValue)
+            {
+                stateParameter = new ObjectParameter("State", state);
+            }
+            else
+            {
+                stateParameter = new ObjectParameter("State", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction("EditSubscripers", iDParameter, stateParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        public ObjectResult<Subscribe> GetSubscriber(Nullable<global::System.Int32> iD)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction<Subscribe>("GetSubscriber", iDParameter);
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="mergeOption"></param>
+        /// <param name="iD">No Metadata Documentation available.</param>
+        public ObjectResult<Subscribe> GetSubscriber(Nullable<global::System.Int32> iD, MergeOption mergeOption)
+        {
+            ObjectParameter iDParameter;
+            if (iD.HasValue)
+            {
+                iDParameter = new ObjectParameter("ID", iD);
+            }
+            else
+            {
+                iDParameter = new ObjectParameter("ID", typeof(global::System.Int32));
+            }
+    
+            return base.ExecuteFunction<Subscribe>("GetSubscriber", mergeOption, iDParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="email">No Metadata Documentation available.</param>
+        public ObjectResult<Subscribe> GetSubscriberbyEmail(global::System.String email)
+        {
+            ObjectParameter emailParameter;
+            if (email != null)
+            {
+                emailParameter = new ObjectParameter("Email", email);
+            }
+            else
+            {
+                emailParameter = new ObjectParameter("Email", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Subscribe>("GetSubscriberbyEmail", emailParameter);
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="mergeOption"></param>
+        /// <param name="email">No Metadata Documentation available.</param>
+        public ObjectResult<Subscribe> GetSubscriberbyEmail(global::System.String email, MergeOption mergeOption)
+        {
+            ObjectParameter emailParameter;
+            if (email != null)
+            {
+                emailParameter = new ObjectParameter("Email", email);
+            }
+            else
+            {
+                emailParameter = new ObjectParameter("Email", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Subscribe>("GetSubscriberbyEmail", mergeOption, emailParameter);
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="pageName">No Metadata Documentation available.</param>
+        /// <param name="type">No Metadata Documentation available.</param>
+        public ObjectResult<Gallery> getPageGallery(global::System.String pageName, global::System.String type)
+        {
+            ObjectParameter pageNameParameter;
+            if (pageName != null)
+            {
+                pageNameParameter = new ObjectParameter("PageName", pageName);
+            }
+            else
+            {
+                pageNameParameter = new ObjectParameter("PageName", typeof(global::System.String));
+            }
+    
+            ObjectParameter typeParameter;
+            if (type != null)
+            {
+                typeParameter = new ObjectParameter("Type", type);
+            }
+            else
+            {
+                typeParameter = new ObjectParameter("Type", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Gallery>("getPageGallery", pageNameParameter, typeParameter);
+        }
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        /// <param name="mergeOption"></param>
+        /// <param name="pageName">No Metadata Documentation available.</param>
+        /// <param name="type">No Metadata Documentation available.</param>
+        public ObjectResult<Gallery> getPageGallery(global::System.String pageName, global::System.String type, MergeOption mergeOption)
+        {
+            ObjectParameter pageNameParameter;
+            if (pageName != null)
+            {
+                pageNameParameter = new ObjectParameter("PageName", pageName);
+            }
+            else
+            {
+                pageNameParameter = new ObjectParameter("PageName", typeof(global::System.String));
+            }
+    
+            ObjectParameter typeParameter;
+            if (type != null)
+            {
+                typeParameter = new ObjectParameter("Type", type);
+            }
+            else
+            {
+                typeParameter = new ObjectParameter("Type", typeof(global::System.String));
+            }
+    
+            return base.ExecuteFunction<Gallery>("getPageGallery", mergeOption, pageNameParameter, typeParameter);
         }
 
         #endregion
@@ -7206,28 +7208,6 @@ namespace WebsiteSUPPORTASUDomain
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_Member_College", "Member")]
-        public EntityCollection<Member> Members
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Member>("websitedbModel.FK_Member_College", "Member");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Member>("websitedbModel.FK_Member_College", "Member", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "UniversityCollege", "University")]
         public EntityCollection<University> Universities
         {
@@ -7240,6 +7220,28 @@ namespace WebsiteSUPPORTASUDomain
                 if ((value != null))
                 {
                     ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<University>("websitedbModel.UniversityCollege", "University", value);
+                }
+            }
+        }
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_Member_College", "Member")]
+        public EntityCollection<Member> Member
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Member>("websitedbModel.FK_Member_College", "Member");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Member>("websitedbModel.FK_Member_College", "Member", value);
                 }
             }
         }
@@ -7351,6 +7353,30 @@ namespace WebsiteSUPPORTASUDomain
         private global::System.String _Description;
         partial void OnDescriptionChanging(global::System.String value);
         partial void OnDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PictureName
+        {
+            get
+            {
+                return _PictureName;
+            }
+            set
+            {
+                OnPictureNameChanging(value);
+                ReportPropertyChanging("PictureName");
+                _PictureName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PictureName");
+                OnPictureNameChanged();
+            }
+        }
+        private global::System.String _PictureName;
+        partial void OnPictureNameChanging(global::System.String value);
+        partial void OnPictureNameChanged();
 
         #endregion
 
@@ -7364,7 +7390,7 @@ namespace WebsiteSUPPORTASUDomain
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_Member_Committee", "Member")]
-        public EntityCollection<Member> Members
+        public EntityCollection<Member> Member
         {
             get
             {
@@ -7852,7 +7878,7 @@ namespace WebsiteSUPPORTASUDomain
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "MemberEvent1", "Member")]
-        public EntityCollection<Member> Members
+        public EntityCollection<Member> Member
         {
             get
             {
@@ -7955,262 +7981,6 @@ namespace WebsiteSUPPORTASUDomain
         #endregion
 
     
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="websitedbModel", Name="EventSponsor")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EventSponsor : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EventSponsor object.
-        /// </summary>
-        /// <param name="eventID">Initial value of the EventID property.</param>
-        /// <param name="sponsorID">Initial value of the SponsorID property.</param>
-        public static EventSponsor CreateEventSponsor(global::System.Int32 eventID, global::System.Int32 sponsorID)
-        {
-            EventSponsor eventSponsor = new EventSponsor();
-            eventSponsor.EventID = eventID;
-            eventSponsor.SponsorID = sponsorID;
-            return eventSponsor;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 EventID
-        {
-            get
-            {
-                return _EventID;
-            }
-            set
-            {
-                if (_EventID != value)
-                {
-                    OnEventIDChanging(value);
-                    ReportPropertyChanging("EventID");
-                    _EventID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("EventID");
-                    OnEventIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _EventID;
-        partial void OnEventIDChanging(global::System.Int32 value);
-        partial void OnEventIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 SponsorID
-        {
-            get
-            {
-                return _SponsorID;
-            }
-            set
-            {
-                if (_SponsorID != value)
-                {
-                    OnSponsorIDChanging(value);
-                    ReportPropertyChanging("SponsorID");
-                    _SponsorID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("SponsorID");
-                    OnSponsorIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _SponsorID;
-        partial void OnSponsorIDChanging(global::System.Int32 value);
-        partial void OnSponsorIDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_EventSponsor_Sponsor", "Sponsor")]
-        public Sponsor Sponsor
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sponsor>("websitedbModel.FK_EventSponsor_Sponsor", "Sponsor").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sponsor>("websitedbModel.FK_EventSponsor_Sponsor", "Sponsor").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Sponsor> SponsorReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Sponsor>("websitedbModel.FK_EventSponsor_Sponsor", "Sponsor");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Sponsor>("websitedbModel.FK_EventSponsor_Sponsor", "Sponsor", value);
-                }
-            }
-        }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="websitedbModel", Name="EventUniversity")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class EventUniversity : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new EventUniversity object.
-        /// </summary>
-        /// <param name="eventID">Initial value of the EventID property.</param>
-        /// <param name="universityID">Initial value of the UniversityID property.</param>
-        public static EventUniversity CreateEventUniversity(global::System.Int32 eventID, global::System.Int32 universityID)
-        {
-            EventUniversity eventUniversity = new EventUniversity();
-            eventUniversity.EventID = eventID;
-            eventUniversity.UniversityID = universityID;
-            return eventUniversity;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 EventID
-        {
-            get
-            {
-                return _EventID;
-            }
-            set
-            {
-                if (_EventID != value)
-                {
-                    OnEventIDChanging(value);
-                    ReportPropertyChanging("EventID");
-                    _EventID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("EventID");
-                    OnEventIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _EventID;
-        partial void OnEventIDChanging(global::System.Int32 value);
-        partial void OnEventIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 UniversityID
-        {
-            get
-            {
-                return _UniversityID;
-            }
-            set
-            {
-                if (_UniversityID != value)
-                {
-                    OnUniversityIDChanging(value);
-                    ReportPropertyChanging("UniversityID");
-                    _UniversityID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("UniversityID");
-                    OnUniversityIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _UniversityID;
-        partial void OnUniversityIDChanging(global::System.Int32 value);
-        partial void OnUniversityIDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_EventUniversity_University", "University")]
-        public University University
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<University>("websitedbModel.FK_EventUniversity_University", "University").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<University>("websitedbModel.FK_EventUniversity_University", "University").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<University> UniversityReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<University>("websitedbModel.FK_EventUniversity_University", "University");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<University>("websitedbModel.FK_EventUniversity_University", "University", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -9184,50 +8954,6 @@ namespace WebsiteSUPPORTASUDomain
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_MemberEvent_Member", "MemberEvent")]
-        public EntityCollection<MemberEvent> MemberEvents
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<MemberEvent>("websitedbModel.FK_MemberEvent_Member", "MemberEvent");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<MemberEvent>("websitedbModel.FK_MemberEvent_Member", "MemberEvent", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "MemberEvent1", "Event")]
-        public EntityCollection<Event> Events
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Event>("websitedbModel.MemberEvent1", "Event");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Event>("websitedbModel.MemberEvent1", "Event", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_Participant_Member", "Participant")]
         public EntityCollection<Participant> Participant
         {
@@ -9243,96 +8969,6 @@ namespace WebsiteSUPPORTASUDomain
                 }
             }
         }
-
-        #endregion
-
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="websitedbModel", Name="MemberEvent")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class MemberEvent : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new MemberEvent object.
-        /// </summary>
-        /// <param name="memberID">Initial value of the MemberID property.</param>
-        /// <param name="eventID">Initial value of the EventID property.</param>
-        public static MemberEvent CreateMemberEvent(global::System.Int32 memberID, global::System.Int32 eventID)
-        {
-            MemberEvent memberEvent = new MemberEvent();
-            memberEvent.MemberID = memberID;
-            memberEvent.EventID = eventID;
-            return memberEvent;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 MemberID
-        {
-            get
-            {
-                return _MemberID;
-            }
-            set
-            {
-                if (_MemberID != value)
-                {
-                    OnMemberIDChanging(value);
-                    ReportPropertyChanging("MemberID");
-                    _MemberID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("MemberID");
-                    OnMemberIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _MemberID;
-        partial void OnMemberIDChanging(global::System.Int32 value);
-        partial void OnMemberIDChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int32 EventID
-        {
-            get
-            {
-                return _EventID;
-            }
-            set
-            {
-                if (_EventID != value)
-                {
-                    OnEventIDChanging(value);
-                    ReportPropertyChanging("EventID");
-                    _EventID = StructuralObject.SetValidValue(value);
-                    ReportPropertyChanged("EventID");
-                    OnEventIDChanged();
-                }
-            }
-        }
-        private global::System.Int32 _EventID;
-        partial void OnEventIDChanging(global::System.Int32 value);
-        partial void OnEventIDChanged();
-
-        #endregion
-
-    
-        #region Navigation Properties
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -9340,34 +8976,18 @@ namespace WebsiteSUPPORTASUDomain
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_MemberEvent_Member", "Member")]
-        public Member Member
+        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "MemberEvent1", "Event")]
+        public EntityCollection<Event> Event
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Member>("websitedbModel.FK_MemberEvent_Member", "Member").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Member>("websitedbModel.FK_MemberEvent_Member", "Member").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Member> MemberReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Member>("websitedbModel.FK_MemberEvent_Member", "Member");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Event>("websitedbModel.MemberEvent1", "Event");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Member>("websitedbModel.FK_MemberEvent_Member", "Member", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Event>("websitedbModel.MemberEvent1", "Event", value);
                 }
             }
         }
@@ -10049,7 +9669,7 @@ namespace WebsiteSUPPORTASUDomain
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
         [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_Member_Position", "Member")]
-        public EntityCollection<Member> Members
+        public EntityCollection<Member> Member
         {
             get
             {
@@ -10252,28 +9872,6 @@ namespace WebsiteSUPPORTASUDomain
 
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_EventSponsor_Sponsor", "EventSponsor")]
-        public EntityCollection<EventSponsor> EventSponsors
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EventSponsor>("websitedbModel.FK_EventSponsor_Sponsor", "EventSponsor");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EventSponsor>("websitedbModel.FK_EventSponsor_Sponsor", "EventSponsor", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -10581,6 +10179,141 @@ namespace WebsiteSUPPORTASUDomain
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="websitedbModel", Name="Subscribe")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Subscribe : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Subscribe object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="email">Initial value of the Email property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="state">Initial value of the State property.</param>
+        public static Subscribe CreateSubscribe(global::System.Int32 id, global::System.String email, global::System.String name, global::System.Int32 state)
+        {
+            Subscribe subscribe = new Subscribe();
+            subscribe.ID = id;
+            subscribe.Email = email;
+            subscribe.Name = name;
+            subscribe.State = state;
+            return subscribe;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                if (_ID != value)
+                {
+                    OnIDChanging(value);
+                    ReportPropertyChanging("ID");
+                    _ID = StructuralObject.SetValidValue(value);
+                    ReportPropertyChanged("ID");
+                    OnIDChanged();
+                }
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 State
+        {
+            get
+            {
+                return _State;
+            }
+            set
+            {
+                OnStateChanging(value);
+                ReportPropertyChanging("State");
+                _State = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("State");
+                OnStateChanged();
+            }
+        }
+        private global::System.Int32 _State;
+        partial void OnStateChanging(global::System.Int32 value);
+        partial void OnStateChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="websitedbModel", Name="University")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -10686,28 +10419,6 @@ namespace WebsiteSUPPORTASUDomain
 
     
         #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("websitedbModel", "FK_EventUniversity_University", "EventUniversity")]
-        public EntityCollection<EventUniversity> EventUniversities
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<EventUniversity>("websitedbModel.FK_EventUniversity_University", "EventUniversity");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<EventUniversity>("websitedbModel.FK_EventUniversity_University", "EventUniversity", value);
-                }
-            }
-        }
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -12740,6 +12451,920 @@ namespace WebsiteSUPPORTASUDomain
         private global::System.String _Name;
         partial void OnNameChanging(global::System.String value);
         partial void OnNameChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="websitedbModel", Name="getPageGallery_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class getPageGallery_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new getPageGallery_Result object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="type">Initial value of the Type property.</param>
+        /// <param name="eventID">Initial value of the EventID property.</param>
+        public static getPageGallery_Result CreategetPageGallery_Result(global::System.Int32 id, global::System.String name, global::System.String type, global::System.Int32 eventID)
+        {
+            getPageGallery_Result getPageGallery_Result = new getPageGallery_Result();
+            getPageGallery_Result.ID = id;
+            getPageGallery_Result.Name = name;
+            getPageGallery_Result.Type = type;
+            getPageGallery_Result.EventID = eventID;
+            return getPageGallery_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                OnIDChanging(value);
+                ReportPropertyChanging("ID");
+                _ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ID");
+                OnIDChanged();
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Type
+        {
+            get
+            {
+                return _Type;
+            }
+            set
+            {
+                OnTypeChanging(value);
+                ReportPropertyChanging("Type");
+                _Type = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Type");
+                OnTypeChanged();
+            }
+        }
+        private global::System.String _Type;
+        partial void OnTypeChanging(global::System.String value);
+        partial void OnTypeChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 EventID
+        {
+            get
+            {
+                return _EventID;
+            }
+            set
+            {
+                OnEventIDChanging(value);
+                ReportPropertyChanging("EventID");
+                _EventID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("EventID");
+                OnEventIDChanged();
+            }
+        }
+        private global::System.Int32 _EventID;
+        partial void OnEventIDChanging(global::System.Int32 value);
+        partial void OnEventIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Location
+        {
+            get
+            {
+                return _Location;
+            }
+            set
+            {
+                OnLocationChanging(value);
+                ReportPropertyChanging("Location");
+                _Location = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Location");
+                OnLocationChanged();
+            }
+        }
+        private global::System.String _Location;
+        partial void OnLocationChanging(global::System.String value);
+        partial void OnLocationChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Comments
+        {
+            get
+            {
+                return _Comments;
+            }
+            set
+            {
+                OnCommentsChanging(value);
+                ReportPropertyChanging("Comments");
+                _Comments = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Comments");
+                OnCommentsChanged();
+            }
+        }
+        private global::System.String _Comments;
+        partial void OnCommentsChanging(global::System.String value);
+        partial void OnCommentsChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="websitedbModel", Name="GetSubscriber_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class GetSubscriber_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new GetSubscriber_Result object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="email">Initial value of the Email property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="state">Initial value of the State property.</param>
+        public static GetSubscriber_Result CreateGetSubscriber_Result(global::System.Int32 id, global::System.String email, global::System.String name, global::System.Int32 state)
+        {
+            GetSubscriber_Result getSubscriber_Result = new GetSubscriber_Result();
+            getSubscriber_Result.ID = id;
+            getSubscriber_Result.Email = email;
+            getSubscriber_Result.Name = name;
+            getSubscriber_Result.State = state;
+            return getSubscriber_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                OnIDChanging(value);
+                ReportPropertyChanging("ID");
+                _ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ID");
+                OnIDChanged();
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 State
+        {
+            get
+            {
+                return _State;
+            }
+            set
+            {
+                OnStateChanging(value);
+                ReportPropertyChanging("State");
+                _State = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("State");
+                OnStateChanged();
+            }
+        }
+        private global::System.Int32 _State;
+        partial void OnStateChanging(global::System.Int32 value);
+        partial void OnStateChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="websitedbModel", Name="GetSubscriberbyEmail_Result")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class GetSubscriberbyEmail_Result : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new GetSubscriberbyEmail_Result object.
+        /// </summary>
+        /// <param name="id">Initial value of the ID property.</param>
+        /// <param name="email">Initial value of the Email property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="state">Initial value of the State property.</param>
+        public static GetSubscriberbyEmail_Result CreateGetSubscriberbyEmail_Result(global::System.Int32 id, global::System.String email, global::System.String name, global::System.Int32 state)
+        {
+            GetSubscriberbyEmail_Result getSubscriberbyEmail_Result = new GetSubscriberbyEmail_Result();
+            getSubscriberbyEmail_Result.ID = id;
+            getSubscriberbyEmail_Result.Email = email;
+            getSubscriberbyEmail_Result.Name = name;
+            getSubscriberbyEmail_Result.State = state;
+            return getSubscriberbyEmail_Result;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 ID
+        {
+            get
+            {
+                return _ID;
+            }
+            set
+            {
+                OnIDChanging(value);
+                ReportPropertyChanging("ID");
+                _ID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("ID");
+                OnIDChanged();
+            }
+        }
+        private global::System.Int32 _ID;
+        partial void OnIDChanging(global::System.Int32 value);
+        partial void OnIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 State
+        {
+            get
+            {
+                return _State;
+            }
+            set
+            {
+                OnStateChanging(value);
+                ReportPropertyChanging("State");
+                _State = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("State");
+                OnStateChanged();
+            }
+        }
+        private global::System.Int32 _State;
+        partial void OnStateChanging(global::System.Int32 value);
+        partial void OnStateChanged();
+
+        #endregion
+
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmComplexTypeAttribute(NamespaceName="websitedbModel", Name="ViewMembers")]
+    [DataContractAttribute(IsReference=true)]
+    [Serializable()]
+    public partial class ViewMembers : ComplexObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new ViewMembers object.
+        /// </summary>
+        /// <param name="fullName">Initial value of the FullName property.</param>
+        /// <param name="hireYear">Initial value of the HireYear property.</param>
+        /// <param name="birthDate">Initial value of the BirthDate property.</param>
+        /// <param name="committeeID">Initial value of the CommitteeID property.</param>
+        /// <param name="collegeID">Initial value of the CollegeID property.</param>
+        /// <param name="universityID">Initial value of the UniversityID property.</param>
+        /// <param name="positionID">Initial value of the PositionID property.</param>
+        public static ViewMembers CreateViewMembers(global::System.String fullName, global::System.DateTime hireYear, global::System.DateTime birthDate, global::System.Int32 committeeID, global::System.Int32 collegeID, global::System.Int32 universityID, global::System.Int32 positionID)
+        {
+            ViewMembers viewMembers = new ViewMembers();
+            viewMembers.FullName = fullName;
+            viewMembers.HireYear = hireYear;
+            viewMembers.BirthDate = birthDate;
+            viewMembers.CommitteeID = committeeID;
+            viewMembers.CollegeID = collegeID;
+            viewMembers.UniversityID = universityID;
+            viewMembers.PositionID = positionID;
+            return viewMembers;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String FullName
+        {
+            get
+            {
+                return _FullName;
+            }
+            set
+            {
+                OnFullNameChanging(value);
+                ReportPropertyChanging("FullName");
+                _FullName = StructuralObject.SetValidValue(value, false);
+                ReportPropertyChanged("FullName");
+                OnFullNameChanged();
+            }
+        }
+        private global::System.String _FullName;
+        partial void OnFullNameChanging(global::System.String value);
+        partial void OnFullNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Mobile
+        {
+            get
+            {
+                return _Mobile;
+            }
+            set
+            {
+                OnMobileChanging(value);
+                ReportPropertyChanging("Mobile");
+                _Mobile = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Mobile");
+                OnMobileChanged();
+            }
+        }
+        private global::System.String _Mobile;
+        partial void OnMobileChanging(global::System.String value);
+        partial void OnMobileChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String HomePhone
+        {
+            get
+            {
+                return _HomePhone;
+            }
+            set
+            {
+                OnHomePhoneChanging(value);
+                ReportPropertyChanging("HomePhone");
+                _HomePhone = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("HomePhone");
+                OnHomePhoneChanged();
+            }
+        }
+        private global::System.String _HomePhone;
+        partial void OnHomePhoneChanging(global::System.String value);
+        partial void OnHomePhoneChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Email
+        {
+            get
+            {
+                return _Email;
+            }
+            set
+            {
+                OnEmailChanging(value);
+                ReportPropertyChanging("Email");
+                _Email = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Email");
+                OnEmailChanged();
+            }
+        }
+        private global::System.String _Email;
+        partial void OnEmailChanging(global::System.String value);
+        partial void OnEmailChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CommitteName
+        {
+            get
+            {
+                return _CommitteName;
+            }
+            set
+            {
+                OnCommitteNameChanging(value);
+                ReportPropertyChanging("CommitteName");
+                _CommitteName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CommitteName");
+                OnCommitteNameChanged();
+            }
+        }
+        private global::System.String _CommitteName;
+        partial void OnCommitteNameChanging(global::System.String value);
+        partial void OnCommitteNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String CollegeName
+        {
+            get
+            {
+                return _CollegeName;
+            }
+            set
+            {
+                OnCollegeNameChanging(value);
+                ReportPropertyChanging("CollegeName");
+                _CollegeName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("CollegeName");
+                OnCollegeNameChanged();
+            }
+        }
+        private global::System.String _CollegeName;
+        partial void OnCollegeNameChanging(global::System.String value);
+        partial void OnCollegeNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String UniversityName
+        {
+            get
+            {
+                return _UniversityName;
+            }
+            set
+            {
+                OnUniversityNameChanging(value);
+                ReportPropertyChanging("UniversityName");
+                _UniversityName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("UniversityName");
+                OnUniversityNameChanged();
+            }
+        }
+        private global::System.String _UniversityName;
+        partial void OnUniversityNameChanging(global::System.String value);
+        partial void OnUniversityNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String PositionName
+        {
+            get
+            {
+                return _PositionName;
+            }
+            set
+            {
+                OnPositionNameChanging(value);
+                ReportPropertyChanging("PositionName");
+                _PositionName = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("PositionName");
+                OnPositionNameChanged();
+            }
+        }
+        private global::System.String _PositionName;
+        partial void OnPositionNameChanging(global::System.String value);
+        partial void OnPositionNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String state
+        {
+            get
+            {
+                return _state;
+            }
+            set
+            {
+                OnstateChanging(value);
+                ReportPropertyChanging("state");
+                _state = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("state");
+                OnstateChanged();
+            }
+        }
+        private global::System.String _state;
+        partial void OnstateChanging(global::System.String value);
+        partial void OnstateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String address
+        {
+            get
+            {
+                return _address;
+            }
+            set
+            {
+                OnaddressChanging(value);
+                ReportPropertyChanging("address");
+                _address = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("address");
+                OnaddressChanged();
+            }
+        }
+        private global::System.String _address;
+        partial void OnaddressChanging(global::System.String value);
+        partial void OnaddressChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime HireYear
+        {
+            get
+            {
+                return _HireYear;
+            }
+            set
+            {
+                OnHireYearChanging(value);
+                ReportPropertyChanging("HireYear");
+                _HireYear = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("HireYear");
+                OnHireYearChanged();
+            }
+        }
+        private global::System.DateTime _HireYear;
+        partial void OnHireYearChanging(global::System.DateTime value);
+        partial void OnHireYearChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTime BirthDate
+        {
+            get
+            {
+                return _BirthDate;
+            }
+            set
+            {
+                OnBirthDateChanging(value);
+                ReportPropertyChanging("BirthDate");
+                _BirthDate = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("BirthDate");
+                OnBirthDateChanged();
+            }
+        }
+        private global::System.DateTime _BirthDate;
+        partial void OnBirthDateChanging(global::System.DateTime value);
+        partial void OnBirthDateChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ProfilePicture
+        {
+            get
+            {
+                return _ProfilePicture;
+            }
+            set
+            {
+                OnProfilePictureChanging(value);
+                ReportPropertyChanging("ProfilePicture");
+                _ProfilePicture = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("ProfilePicture");
+                OnProfilePictureChanged();
+            }
+        }
+        private global::System.String _ProfilePicture;
+        partial void OnProfilePictureChanging(global::System.String value);
+        partial void OnProfilePictureChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Comments
+        {
+            get
+            {
+                return _Comments;
+            }
+            set
+            {
+                OnCommentsChanging(value);
+                ReportPropertyChanging("Comments");
+                _Comments = StructuralObject.SetValidValue(value, true);
+                ReportPropertyChanged("Comments");
+                OnCommentsChanged();
+            }
+        }
+        private global::System.String _Comments;
+        partial void OnCommentsChanging(global::System.String value);
+        partial void OnCommentsChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 CommitteeID
+        {
+            get
+            {
+                return _CommitteeID;
+            }
+            set
+            {
+                OnCommitteeIDChanging(value);
+                ReportPropertyChanging("CommitteeID");
+                _CommitteeID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CommitteeID");
+                OnCommitteeIDChanged();
+            }
+        }
+        private global::System.Int32 _CommitteeID;
+        partial void OnCommitteeIDChanging(global::System.Int32 value);
+        partial void OnCommitteeIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 CollegeID
+        {
+            get
+            {
+                return _CollegeID;
+            }
+            set
+            {
+                OnCollegeIDChanging(value);
+                ReportPropertyChanging("CollegeID");
+                _CollegeID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("CollegeID");
+                OnCollegeIDChanged();
+            }
+        }
+        private global::System.Int32 _CollegeID;
+        partial void OnCollegeIDChanging(global::System.Int32 value);
+        partial void OnCollegeIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 UniversityID
+        {
+            get
+            {
+                return _UniversityID;
+            }
+            set
+            {
+                OnUniversityIDChanging(value);
+                ReportPropertyChanging("UniversityID");
+                _UniversityID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("UniversityID");
+                OnUniversityIDChanged();
+            }
+        }
+        private global::System.Int32 _UniversityID;
+        partial void OnUniversityIDChanging(global::System.Int32 value);
+        partial void OnUniversityIDChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int32 PositionID
+        {
+            get
+            {
+                return _PositionID;
+            }
+            set
+            {
+                OnPositionIDChanging(value);
+                ReportPropertyChanging("PositionID");
+                _PositionID = StructuralObject.SetValidValue(value);
+                ReportPropertyChanged("PositionID");
+                OnPositionIDChanged();
+            }
+        }
+        private global::System.Int32 _PositionID;
+        partial void OnPositionIDChanging(global::System.Int32 value);
+        partial void OnPositionIDChanged();
 
         #endregion
 

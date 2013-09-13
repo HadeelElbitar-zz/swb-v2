@@ -1,1 +1,44 @@
-﻿
+﻿@{
+    ViewBag.title = "Events . Support";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+   <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+    <div class="container marketing">
+
+      <!-- START THE FEATURETTES -->
+
+      <hr class="featurette-divider">
+      <div class="span12">
+      <ul class="imgcont cs-style-3">
+
+
+@foreach (var item in ViewBag.EventsList)
+{
+   <li class="span3">
+        <div class="img-polaroid">
+          <figure>
+            <img class="span3 thumb" src="@Url.Content("~/content/assets/img/events/"+@item.Name+".png")" />
+            <figcaption>
+              <h3>@item.Name</h3>
+              <p> @item.ShortDescription</p>
+              <a class="btn btn-primary" href="@Url.Action("Details","Events",new {ID = @item.ID})?Event Name=@item.Name" > Read more</a>
+            </figcaption>
+          </figure></div>
+        </li>
+    
+}
+    
+           </ul>
+
+      </div>
+
+
+      
+      <hr class="span12 featurette-divider">
+
+      <!-- /END THE FEATURETTES -->
+    </div><!-- /.container -->
